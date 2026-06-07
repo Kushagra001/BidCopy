@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BidCopy</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="logo">BidCopy</div>
+    <div class="tagline">Write bids that win.</div>
+  </div>
+
+  <div id="state-no-job" class="state hidden">
+    <div class="icon">👀</div>
+    <p class="state-title">No job detected</p>
+    <p class="state-desc">Navigate to a job post on Upwork, Freelancer.com, or Contra to get started.</p>
+    <a href="https://bidcopy.com/dashboard" target="_blank" class="btn btn-secondary">Open dashboard →</a>
+  </div>
+
+  <div id="state-job-found" class="state hidden">
+    <div class="badge" id="platform-badge">Upwork</div>
+    <div class="job-title" id="job-title-display">Loading…</div>
+    <a id="generate-btn" href="#" target="_blank" class="btn btn-primary">Generate bid in BidCopy →</a>
+    <p class="hint">Opens BidCopy with this job pre-filled.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

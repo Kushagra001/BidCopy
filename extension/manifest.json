@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "BidCopy — AI Bid Writer",
+  "version": "1.0.0",
+  "description": "Generate winning freelance proposals in 30 seconds. Works on Upwork, Freelancer.com, and Contra.",
+  "permissions": ["activeTab", "storage", "scripting", "clipboardWrite"],
+  "host_permissions": [
+    "https://www.upwork.com/*",
+    "https://www.freelancer.com/*",
+    "https://contra.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://www.upwork.com/jobs/*",
+      "https://www.freelancer.com/projects/*",
+      "https://contra.com/opportunity/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

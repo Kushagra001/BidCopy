@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ───────── BidCopy Design Tokens ───────── */
+@theme inline {
+  /* Brand colors */
+  --color-bc-blue:       #2563eb;
+  --color-bc-blue-dark:  #1d4ed8;
+  --color-bc-blue-light: #eff6ff;
+  --color-bc-blue-mid:   #bfdbfe;
+  --color-bc-ink:        #0f172a;
+  --color-bc-ink-2:      #334155;
+  --color-bc-muted:      #64748b;
+  --color-bc-faint:      #94a3b8;
+  --color-bc-border:     #e2e8f0;
+  --color-bc-surface:    #f8fafc;
+  --color-bc-white:      #ffffff;
+
+  /* Font */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* ───────── Base ───────── */
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f1f5f9;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* ───────── Scrollbar ───────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ───────── Prose overrides ───────── */
+.prose p { margin-bottom: 0.75rem; }
+.prose p:last-child { margin-bottom: 0; }

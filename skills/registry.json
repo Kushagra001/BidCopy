@@ -1,0 +1,41 @@
+{
+  "skills": [
+    {
+      "name": "impeccable",
+      "capabilities": ["audit_ui", "polish_ui", "critique_design", "craft_feature", "animate_ui", "harden_ui"],
+      "tags": ["design", "frontend", "quality"],
+      "install_method": "prebuilt-bundle",
+      "invoke": "/impeccable <command>",
+      "imported_at": "2026-06-07"
+    },
+    {
+      "name": "caveman",
+      "capabilities": ["compress_tokens", "terse_mode", "caveman_mode"],
+      "tags": ["tokens", "efficiency", "communication"],
+      "invoke": "/caveman [lite|full|ultra]",
+      "imported_at": "2026-06-07"
+    },
+    {
+      "name": "design-extract",
+      "capabilities": ["extract_design_system", "grade_design", "clone_site_design", "compare_designs", "audit_wcag"],
+      "tags": ["design", "tokens", "css", "extraction", "mcp"],
+      "invoke": "designlang <url>",
+      "imported_at": "2026-06-07"
+    },
+    {
+      "name": "browser-harness",
+      "capabilities": ["automate_browser", "scrape_page", "fill_form", "click_element", "screenshot_page", "bulk_http"],
+      "tags": ["browser", "automation", "scraping", "CDP"],
+      "requires_env": ["BROWSER_USE_API_KEY"],
+      "invoke": "browser-harness <<'PY' ... PY",
+      "imported_at": "2026-06-07"
+    },
+    {
+      "name": "humanizer",
+      "capabilities": ["humanize_text", "detect_ai_writing", "calibrate_voice"],
+      "tags": ["writing", "editing", "quality"],
+      "invoke": "/humanize [text|file]",
+      "imported_at": "2026-06-07"
+    }
+  ]
+}
