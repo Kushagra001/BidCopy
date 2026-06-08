@@ -43,3 +43,13 @@ next-env.d.ts
 # temp dirs
 .tmp/
 
+# agentic framework
+.agents/
+.claude/
+.github/
+directives/
+execution/
+skills/
+mcp.config.json
+[Aa]gents.md
+CLAUDE.md
