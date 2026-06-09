@@ -6,17 +6,33 @@
  */
 
 export interface HumaniseTip {
-  id:      string
-  text:    string
-  checked: boolean
+  id:          string
+  original:    string
+  replacement: string
+  explanation: string
+  checked:     boolean
 }
 
-export function buildChecklist(tips: string[]): HumaniseTip[] {
-  return tips.map((text, i) => ({
-    id:      `tip-${i}`,
-    text,
-    checked: false,
-  }))
+export function buildChecklist(tips: any[]): HumaniseTip[] {
+  if (!Array.isArray(tips)) return []
+  return tips.map((tip, i) => {
+    if (typeof tip === 'string') {
+      return {
+        id:          `tip-${i}`,
+        original:    '',
+        replacement: '',
+        explanation: tip,
+        checked:     false,
+      }
+    }
+    return {
+      id:          `tip-${i}`,
+      original:    tip.original || '',
+      replacement: tip.replacement || '',
+      explanation: tip.explanation || tip.reason || '',
+      checked:     false,
+    }
+  })
 }
 
 export function countChecked(tips: HumaniseTip[]): number {

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* ───────── BidCopy Design Tokens ───────── */
-@theme inline {
-  /* Brand colors */
+@theme {
+  /* Brand colors — generate bg-bc-blue, text-bc-blue, border-bc-blue etc. */
   --color-bc-blue:       #2563eb;
   --color-bc-blue-dark:  #1d4ed8;
   --color-bc-blue-light: #eff6ff;
@@ -23,6 +23,19 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+
+  /* BidCopy tokens as real CSS vars (needed for arbitrary class var() usage) */
+  --color-bc-blue:       #2563eb;
+  --color-bc-blue-dark:  #1d4ed8;
+  --color-bc-blue-light: #eff6ff;
+  --color-bc-blue-mid:   #bfdbfe;
+  --color-bc-ink:        #0f172a;
+  --color-bc-ink-2:      #334155;
+  --color-bc-muted:      #64748b;
+  --color-bc-faint:      #94a3b8;
+  --color-bc-border:     #e2e8f0;
+  --color-bc-surface:    #f8fafc;
+  --color-bc-white:      #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,3 +70,50 @@ body {
 /* ───────── Prose overrides ───────── */
 .prose p { margin-bottom: 0.75rem; }
 .prose p:last-child { margin-bottom: 0; }
+
+/* ───────── BidCopy color utility shim ───────────────────────────────────────
+   Tailwind v4 arbitrary [--var] syntax does not apply CSS vars as color values.
+   These explicit classes make bg-[--color-bc-*] / text-[--color-bc-*] work by
+   providing the equivalent CSS directly via @layer utilities.
+   ─────────────────────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* backgrounds */
+  .bg-\[--color-bc-blue\]        { background-color: var(--color-bc-blue); }
+  .bg-\[--color-bc-blue-dark\]   { background-color: var(--color-bc-blue-dark); }
+  .bg-\[--color-bc-blue-light\]  { background-color: var(--color-bc-blue-light); }
+  .bg-\[--color-bc-blue-mid\]    { background-color: var(--color-bc-blue-mid); }
+  .bg-\[--color-bc-ink\]         { background-color: var(--color-bc-ink); }
+  .bg-\[--color-bc-ink-2\]       { background-color: var(--color-bc-ink-2); }
+  .bg-\[--color-bc-muted\]       { background-color: var(--color-bc-muted); }
+  .bg-\[--color-bc-faint\]       { background-color: var(--color-bc-faint); }
+  .bg-\[--color-bc-border\]      { background-color: var(--color-bc-border); }
+  .bg-\[--color-bc-surface\]     { background-color: var(--color-bc-surface); }
+  .bg-\[--color-bc-white\]       { background-color: var(--color-bc-white); }
+
+  /* text */
+  .text-\[--color-bc-blue\]      { color: var(--color-bc-blue); }
+  .text-\[--color-bc-blue-dark\] { color: var(--color-bc-blue-dark); }
+  .text-\[--color-bc-ink\]       { color: var(--color-bc-ink); }
+  .text-\[--color-bc-ink-2\]     { color: var(--color-bc-ink-2); }
+  .text-\[--color-bc-muted\]     { color: var(--color-bc-muted); }
+  .text-\[--color-bc-faint\]     { color: var(--color-bc-faint); }
+  .text-\[--color-bc-border\]    { color: var(--color-bc-border); }
+  .text-\[--color-bc-surface\]   { color: var(--color-bc-surface); }
+
+  /* borders */
+  .border-\[--color-bc-blue\]    { border-color: var(--color-bc-blue); }
+  .border-\[--color-bc-blue-mid\]{ border-color: var(--color-bc-blue-mid); }
+  .border-\[--color-bc-border\]  { border-color: var(--color-bc-border); }
+  .border-\[--color-bc-ink\]     { border-color: var(--color-bc-ink); }
+
+  /* hover variants */
+  .hover\:bg-\[--color-bc-blue-dark\]:hover  { background-color: var(--color-bc-blue-dark); }
+  .hover\:bg-\[--color-bc-surface\]:hover    { background-color: var(--color-bc-surface); }
+  .hover\:bg-\[--color-bc-border\]:hover     { background-color: var(--color-bc-border); }
+  .hover\:bg-\[--color-bc-ink\]:hover        { background-color: var(--color-bc-ink); }
+  .hover\:text-\[--color-bc-ink\]:hover      { color: var(--color-bc-ink); }
+
+  /* ring */
+  .focus\:ring-\[--color-bc-blue\]:focus     { --tw-ring-color: var(--color-bc-blue); }
+}
+

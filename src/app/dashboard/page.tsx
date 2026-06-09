@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { InputPanel, type InputFormData } from '@/components/dashboard/InputPanel'
 import { OutputPanel } from '@/components/dashboard/OutputPanel'
 import type { ProposalOutput } from '@/types/proposal'
@@ -13,6 +13,73 @@ export default function DashboardPage() {
   const [generationsLeft, setGenerationsLeft] = useState<number | null>(null)
   const [error, setError]                 = useState<string | null>(null)
   const [lastInput, setLastInput]         = useState<InputFormData | null>(null)
+  const [initialInputValues, setInitialInputValues] = useState<Partial<InputFormData> | undefined>(undefined)
+
+  // Plan & Model selector states
+  const [plan, setPlan]                   = useState<'free' | 'pro'>('free')
+  const [selectedModel, setSelectedModel] = useState<'gpt-4o-mini' | 'gpt-4.1'>('gpt-4o-mini')
+  const [isModelDropdownOpen, setIsModelDropdownOpen] = useState(false)
+
+  // Load plan and initial proposal if passed in URL query parameter
+  useEffect(() => {
+    // Fetch profile to get plan
+    fetch('/api/profile')
+      .then((r) => r.json())
+      .then(({ plan: p }) => {
+        if (p) {
+          setPlan(p)
+          if (p === 'pro') {
+            setSelectedModel('gpt-4.1')
+          }
+        }
+      })
+      .catch(console.error)
+
+    const params = new URLSearchParams(window.location.search)
+    const proposalIdParam = params.get('proposal')
+    if (proposalIdParam) {
+      fetch(`/api/history?id=${proposalIdParam}`)
+        .then((r) => r.json())
+        .then(({ proposal }) => {
+          if (proposal) {
+            const loadedInput: InputFormData = {
+              platform:       (proposal.platform || 'upwork') as any,
+              jobTitle:       proposal.job_title || '',
+              jobBudget:      proposal.job_budget || '',
+              jobDescription: proposal.job_description || '',
+              extraContext:   proposal.extra_context || '',
+            }
+            setInitialInputValues(loadedInput)
+            setLastInput(loadedInput)
+
+            // Set selected model state to match the loaded proposal
+            if (proposal.model_used?.includes('gpt-4.1')) {
+              setSelectedModel('gpt-4.1')
+            } else {
+              setSelectedModel('gpt-4o-mini')
+            }
+
+            setOutput({
+              proposal:      proposal.proposal_text ?? '',
+              pricing:       proposal.pricing_table ?? [],
+              timeline:      proposal.timeline ?? [],
+              followup:      proposal.followup_text ?? '',
+              humanise_tips: proposal.humanise_tips ?? [],
+            })
+            const modelLabel = proposal.model_used?.includes('gpt-4.1')
+              ? 'GPT-4.1 (Pro)'
+              : proposal.model_used?.includes('gpt-4o-mini')
+              ? 'GPT-4o mini'
+              : proposal.model_used?.includes('gemini')
+              ? 'Gemini Flash'
+              : proposal.model_used || 'GPT-4o mini'
+            setModelUsed(modelLabel)
+            setProposalId(proposal.id)
+          }
+        })
+        .catch(console.error)
+    }
+  }, [])
 
   const generate = useCallback(async (data: InputFormData) => {
     setIsGenerating(true)
@@ -23,7 +90,7 @@ export default function DashboardPage() {
       const res = await fetch('/api/generate', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(data),
+        body:    JSON.stringify({ ...data, model: selectedModel }),
       })
 
       const json = await res.json()
@@ -50,7 +117,7 @@ export default function DashboardPage() {
     } finally {
       setIsGenerating(false)
     }
-  }, [])
+  }, [selectedModel])
 
   const regenerate = useCallback(() => {
     if (lastInput) generate(lastInput)
@@ -91,9 +158,87 @@ export default function DashboardPage() {
 
       {/* Main layout */}
       <main className="max-w-7xl mx-auto px-6 py-8">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-[--color-bc-ink]">Generate a bid</h1>
-          <p className="text-[--color-bc-muted] text-sm mt-1">Paste a job description → get a complete bid package in 30 seconds.</p>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h1 className="text-2xl font-bold text-[--color-bc-ink]">Generate a bid</h1>
+            <p className="text-[--color-bc-muted] text-sm mt-1">Paste a job description → get a complete bid package in 30 seconds.</p>
+          </div>
+
+          {/* Model Selector Dropdown */}
+          <div className="relative flex-shrink-0">
+            <button
+              onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
+              className="flex items-center gap-2 px-4 py-2 bg-white border border-[--color-bc-border] rounded-xl text-sm font-semibold text-[--color-bc-ink] hover:bg-gray-50 shadow-sm transition-all cursor-pointer"
+            >
+              <span>{selectedModel === 'gpt-4.1' ? 'GPT-4.1 (Pro)' : 'GPT-4o mini'}</span>
+              <span className="text-gray-400 text-xs">▼</span>
+            </button>
+
+            {isModelDropdownOpen && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setIsModelDropdownOpen(false)} />
+                <div className="absolute right-0 mt-2 w-72 bg-white border border-[--color-bc-border] rounded-2xl shadow-xl z-50 p-2 space-y-1">
+                  
+                  {/* GPT-4.1 Pro Option */}
+                  <div
+                    onClick={() => {
+                      if (plan === 'pro') {
+                        setSelectedModel('gpt-4.1')
+                        setIsModelDropdownOpen(false)
+                      }
+                    }}
+                    className={`flex items-center justify-between p-3 rounded-xl transition-all ${
+                      plan === 'pro'
+                        ? 'cursor-pointer hover:bg-gray-50'
+                        : 'bg-gray-50/50'
+                    }`}
+                  >
+                    <div className="flex flex-col gap-0.5">
+                      <div className="font-semibold text-sm text-[--color-bc-ink] flex items-center gap-1.5">
+                        GPT-4.1 (Pro)
+                        {selectedModel === 'gpt-4.1' && (
+                          <span className="text-xs text-[--color-bc-blue]">✓</span>
+                        )}
+                      </div>
+                      <p className="text-[10px] text-[--color-bc-muted]">Our smartest model for complex challenges</p>
+                    </div>
+                    {plan !== 'pro' && (
+                      <a
+                        href="/dashboard/upgrade"
+                        onClick={(e) => e.stopPropagation()}
+                        className="bg-[--color-bc-blue] text-white px-2.5 py-1.5 rounded-lg text-[10px] font-semibold hover:bg-[--color-bc-blue-dark] transition-colors flex-shrink-0 ml-2"
+                      >
+                        Upgrade
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Divider */}
+                  <div className="h-px bg-[--color-bc-border] my-1" />
+
+                  {/* GPT-4o Mini Option */}
+                  <div
+                    onClick={() => {
+                      setSelectedModel('gpt-4o-mini')
+                      setIsModelDropdownOpen(false)
+                    }}
+                    className="flex items-center justify-between p-3 rounded-xl cursor-pointer hover:bg-gray-50 transition-all"
+                  >
+                    <div className="flex flex-col gap-0.5">
+                      <div className="font-semibold text-sm text-[--color-bc-ink] flex items-center gap-1.5">
+                        GPT-4o mini
+                        {selectedModel === 'gpt-4o-mini' && (
+                          <span className="text-xs text-[--color-bc-blue]">✓</span>
+                        )}
+                      </div>
+                      <p className="text-[10px] text-[--color-bc-muted]">Fastest model for quick drafts</p>
+                    </div>
+                  </div>
+
+                </div>
+              </>
+            )}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -103,6 +248,7 @@ export default function DashboardPage() {
               onGenerate={generate}
               isGenerating={isGenerating}
               generationsLeft={generationsLeft}
+              initialValues={initialInputValues}
             />
           </div>
 

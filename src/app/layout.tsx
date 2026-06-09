@@ -6,7 +6,7 @@ import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
   display: 'swap',
 })
 
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={inter.variable}>
-        <body>
+        <body className="font-sans">
           {children}
           <Analytics />
         </body>

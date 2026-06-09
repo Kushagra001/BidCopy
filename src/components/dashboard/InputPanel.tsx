@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -19,6 +20,7 @@ interface InputPanelProps {
   onGenerate:      (data: InputFormData) => void
   isGenerating:    boolean
   generationsLeft: number | null
+  initialValues?:  Partial<InputFormData>
 }
 
 const PLATFORMS = [
@@ -28,17 +30,24 @@ const PLATFORMS = [
   { id: 'general',    label: 'General' },
 ] as const
 
-export function InputPanel({ onGenerate, isGenerating, generationsLeft }: InputPanelProps) {
+export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialValues }: InputPanelProps) {
   const {
     register,
     handleSubmit,
     watch,
     setValue,
+    reset,
     formState: { errors },
   } = useForm<InputFormData>({
     resolver:      zodResolver(schema),
     defaultValues: { platform: 'upwork' },
   })
+
+  useEffect(() => {
+    if (initialValues) {
+      reset(initialValues)
+    }
+  }, [initialValues, reset])
 
   const selectedPlatform = watch('platform')
 

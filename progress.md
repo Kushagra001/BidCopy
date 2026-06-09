@@ -9,7 +9,7 @@
 ## ✅ Phase 0 — Scaffold + Config
 - pnpm 10.33.2 confirmed installed
 - Next.js 16.2.7 scaffolded (TypeScript, Tailwind v4, App Router, src-dir)
-- All BidCopy deps installed: anthropic, gemini, clerk, supabase, react-hook-form, zod, lucide-react, clsx, tailwind-merge, react-markdown, remark-gfm, razorpay, @vercel/analytics, svix
+- All BidCopy deps installed: openai, gemini, clerk, supabase, react-hook-form, zod, lucide-react, clsx, tailwind-merge, react-markdown, remark-gfm, razorpay, @vercel/analytics, svix
 - `globals.css` — bc color tokens in Tailwind v4 @theme inline format
 - `.env.local.example` — all env vars documented
 
@@ -32,8 +32,8 @@
 - `src/lib/supabase.ts` — browser client + admin client
 - `src/lib/prompts.ts` — buildSystemPrompt() + buildUserPrompt()
 - `src/lib/humanise.ts` — buildChecklist(), countChecked(), allChecked()
-- `src/app/api/profile/route.ts` — GET/POST profile
-- `src/app/dashboard/profile/page.tsx` — 4-step form (About/Skills/Projects/Tone)
+- `src/app/api/profile/route.ts` — GET/POST profile with automatic user syncing from Clerk
+- `src/app/dashboard/profile/page.tsx` — 4-step form with step validation & submission error displays
 
 ## ✅ Phase 4 — AI Generate API
 - `src/app/api/generate/route.ts` — auth → limit check → Gemini/Claude → JSON parse → save
@@ -49,7 +49,8 @@
 - `src/app/dashboard/page.tsx` — two-column layout, error handling
 
 ## ✅ Phase 6 — History Page
-- `src/app/dashboard/history/page.tsx` — paginated table, empty state
+- `src/app/dashboard/history/page.tsx` — paginated table, empty state, and mapped model labels
+- Preloading logic that reloads selected history proposals (both form inputs and generated outputs) in the dashboard
 
 ## ✅ Phase 7 — Landing Page
 - `src/components/shared/Nav.tsx` + `Footer.tsx`
@@ -84,6 +85,16 @@
 - `src/app/sitemap.ts` — all public routes with priority weights
 - `src/app/robots.ts` — blocks /dashboard/ and /api/
 
+## ✅ Phase 13 — Core Enhancements & Upgrades
+- Dynamic platform-specific rules injected into prompt at generation time
+- Synced Clerk default name pre-population in onboarding flow
+- Live character limit count indicators (Bio & Headline inputs)
+- Local draft auto-save and recovery via `localStorage`
+- Animated loading step-by-step progress status generator UI
+- Advanced prompt quality guidelines for comprehensive proposals, modular feature-based pricing, strict timeline deadlines, and contextual rewrite tips
+- Interactive AI Model Selector dropdown with paywall upgrade redirections and verified backend validation
+- Correct preloaded input variables mapping to fix history proposal regeneration flow
+
 ---
 
 ## 🔧 Before Launch Checklist
@@ -94,7 +105,7 @@
 3. **Supabase**: Add keys to `.env.local`
 4. **Razorpay**: Add test/live keys to `.env.local`
 5. **Google AI**: Add `GOOGLE_AI_API_KEY` to `.env.local`
-6. **Anthropic**: Add `ANTHROPIC_API_KEY` to `.env.local`
+6. **OpenAI**: Add `OPENAI_API_KEY` to `.env.local`
 7. **Clerk webhook**: After Vercel deploy, add webhook endpoint + secret
 8. **Chrome Extension**: Load `extension/` as unpacked in chrome://extensions
 

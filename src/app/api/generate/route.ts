@@ -1,20 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { createAdminClient } from '@/lib/supabase'
-import Anthropic from '@anthropic-ai/sdk'
-import { GoogleGenerativeAI } from '@google/generative-ai'
+import OpenAI from 'openai'
 import { buildSystemPrompt, buildUserPrompt } from '@/lib/prompts'
 import type { UserProfile } from '@/types/profile'
 
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! })
-const gemini    = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY!)
 
-const FREE_DAILY_LIMIT = 5
-const FREE_MODEL       = 'gemini-2.0-flash'
-const PRO_MODEL        = 'claude-sonnet-4-5'
+const FREE_MODEL = 'gpt-4o-mini'
+const PRO_MODEL  = 'gpt-4.1'
 
 export async function POST(req: NextRequest) {
   try {
+    const openai  = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
     const { userId } = await auth()
     if (!userId) {
       return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
@@ -31,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     if (userError || !user) {
       return NextResponse.json(
-        { error: 'User not found. Please complete onboarding.' },
+        { error: 'User not found. Please complete onboarding.', profileIncomplete: true },
         { status: 404 }
       )
     }
@@ -55,18 +52,11 @@ export async function POST(req: NextRequest) {
       user.generations_today = 0
     }
 
-    // Free tier limit
-    if (user.plan === 'free' && user.generations_today >= FREE_DAILY_LIMIT) {
-      return NextResponse.json({
-        error:           'Daily limit reached.',
-        upgradeRequired: true,
-        message:         `Free plan allows ${FREE_DAILY_LIMIT} generations per day. Upgrade to Pro for unlimited.`,
-      }, { status: 429 })
-    }
+    // (No generation limit — free tier is unlimited)
 
     // Parse input
     const body = await req.json()
-    const { jobTitle, jobDescription, jobBudget, platform, extraContext } = body
+    const { jobTitle, jobDescription, jobBudget, platform, extraContext, model } = body
 
     if (!jobDescription || jobDescription.trim().length < 50) {
       return NextResponse.json(
@@ -75,28 +65,24 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const systemPrompt = buildSystemPrompt(profile)
+    const systemPrompt = buildSystemPrompt(profile, platform)
     const userPrompt   = buildUserPrompt({ jobTitle, jobDescription, jobBudget, platform, extraContext })
 
     let rawResult: string
 
-    if (user.plan === 'pro') {
-      const message = await anthropic.messages.create({
-        model:     PRO_MODEL,
-        max_tokens: 2048,
-        system:    systemPrompt,
-        messages:  [{ role: 'user', content: userPrompt }],
-      })
-      rawResult = (message.content[0] as { type: 'text'; text: string }).text
-    } else {
-      const model = gemini.getGenerativeModel({
-        model:             FREE_MODEL,
-        systemInstruction: systemPrompt,
-        generationConfig:  { responseMimeType: 'application/json' },
-      })
-      const response = await model.generateContent(userPrompt)
-      rawResult = response.response.text()
-    }
+    // Both plans use OpenAI — Pro gets gpt-4.1 (or free if requested), Free gets gpt-4o-mini
+    const requestedModel = model === 'gpt-4.1' && user.plan === 'pro' ? PRO_MODEL : FREE_MODEL
+
+    const response = await openai.chat.completions.create({
+      model:           requestedModel,
+      max_tokens:      2048,
+      messages:        [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt },
+      ],
+      response_format: { type: 'json_object' },
+    })
+    rawResult = response.choices[0].message.content || ''
 
     // Parse JSON safely
     let parsed: {
@@ -104,7 +90,7 @@ export async function POST(req: NextRequest) {
       pricing:       Array<{ item: string; hours: number; rate: number; total: number; notes: string }>
       timeline:      Array<{ phase: string; duration: string; deliverables: string[] }>
       followup:      string
-      humanise_tips: string[]
+      humanise_tips: any[]
     }
 
     try {
@@ -124,13 +110,11 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Increment free tier usage
-    if (user.plan === 'free') {
-      await supabase
-        .from('users')
-        .update({ generations_today: user.generations_today + 1 })
-        .eq('clerk_id', userId)
-    }
+    // Track usage (no hard limit)
+    await supabase
+      .from('users')
+      .update({ generations_today: user.generations_today + 1 })
+      .eq('clerk_id', userId)
 
     // Save to history
     const { data: saved } = await supabase
@@ -147,7 +131,7 @@ export async function POST(req: NextRequest) {
         timeline:        parsed.timeline,
         followup_text:   parsed.followup,
         humanise_tips:   parsed.humanise_tips,
-        model_used:      user.plan === 'pro' ? PRO_MODEL : FREE_MODEL,
+        model_used:      requestedModel,
         word_count:      parsed.proposal?.split(' ').length ?? 0,
       })
       .select('id')
@@ -157,10 +141,8 @@ export async function POST(req: NextRequest) {
       success:         true,
       proposalId:      saved?.id,
       output:          parsed,
-      modelUsed:       user.plan === 'pro' ? 'Claude Sonnet 4.5' : 'Gemini 2.0 Flash',
-      generationsLeft: user.plan === 'free'
-        ? FREE_DAILY_LIMIT - (user.generations_today + 1)
-        : null,
+      modelUsed:       requestedModel === PRO_MODEL ? 'GPT-4.1' : 'GPT-4o mini',
+      generationsLeft: null,
     })
 
   } catch (error) {

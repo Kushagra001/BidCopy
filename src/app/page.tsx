@@ -27,7 +27,7 @@ export default function LandingPage() {
               Ready to win more bids?
             </h2>
             <p className="text-white/70 mb-8 text-lg">
-              5 free generations daily. No credit card required.
+              Free forever. Upgrade for GPT-4.1 quality.
             </p>
             <Link href="/sign-up"
               className="inline-block bg-white text-[--color-bc-blue] px-10 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all">

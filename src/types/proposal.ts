@@ -12,12 +12,18 @@ export interface TimelinePhase {
   deliverables: string[]
 }
 
+export interface HumaniseTipDetail {
+  original:    string
+  replacement: string
+  explanation: string
+}
+
 export interface ProposalOutput {
   proposal:       string
   pricing:        PricingRow[]
   timeline:       TimelinePhase[]
   followup:       string
-  humanise_tips:  string[]
+  humanise_tips:  HumaniseTipDetail[]
 }
 
 export interface Proposal {
@@ -32,7 +38,7 @@ export interface Proposal {
   pricing_table:   PricingRow[]
   timeline:        TimelinePhase[]
   followup_text?:  string
-  humanise_tips:   string[]
+  humanise_tips:   any[]
   model_used?:     string
   word_count?:     number
   rating?:         number

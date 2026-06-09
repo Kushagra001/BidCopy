@@ -52,8 +52,9 @@ export default function ProfilePage() {
   const [saving, setSaving] = useState(false)
   const [saved, setSaved]   = useState(false)
   const [loading, setLoading] = useState(true)
+  const [error, setError]   = useState<string | null>(null)
 
-  const { register, handleSubmit, control, watch, setValue, formState: { errors } } = useForm<ProfileForm>({
+  const { register, handleSubmit, control, watch, setValue, trigger, formState: { errors } } = useForm<ProfileForm>({
     resolver:      zodResolver(profileSchema),
     defaultValues: {
       currency: 'USD',
@@ -65,22 +66,49 @@ export default function ProfilePage() {
   const { fields, append, remove } = useFieldArray({ control, name: 'projects' })
   const selectedTone = watch('tone')
 
-  // Load existing profile
+  // Load existing profile & recover draft from localStorage
   useEffect(() => {
     fetch('/api/profile')
       .then((r) => r.json())
-      .then(({ profile }) => {
+      .then(({ profile, defaultName }) => {
+        const draft = localStorage.getItem('bidcopy_profile_draft')
+        let draftData: any = null
+        if (draft) {
+          try {
+            draftData = JSON.parse(draft)
+          } catch (e) {}
+        }
+
         if (profile) {
-          setValue('name',          profile.name ?? '')
-          setValue('headline',      profile.headline ?? '')
-          setValue('bio',           profile.bio ?? '')
-          setValue('skills',        (profile.skills ?? []).join(', '))
-          setValue('hourly_rate',   String(profile.hourly_rate ?? 50))
-          setValue('currency',      profile.currency ?? 'USD')
-          setValue('portfolio_url', profile.portfolio_url ?? '')
-          setValue('tone',          profile.tone ?? 'professional')
-          setValue('speciality',    profile.speciality ?? '')
-          if (profile.projects?.length) setValue('projects', profile.projects)
+          setValue('name',          draftData?.name ?? profile.name ?? defaultName ?? '')
+          setValue('headline',      draftData?.headline ?? profile.headline ?? '')
+          setValue('bio',           draftData?.bio ?? profile.bio ?? '')
+          setValue('skills',        draftData?.skills ?? (profile.skills ?? []).join(', '))
+          setValue('hourly_rate',   draftData?.hourly_rate ?? String(profile.hourly_rate ?? 50))
+          setValue('currency',      draftData?.currency ?? profile.currency ?? 'USD')
+          setValue('portfolio_url', draftData?.portfolio_url ?? profile.portfolio_url ?? '')
+          setValue('tone',          draftData?.tone ?? profile.tone ?? 'professional')
+          setValue('speciality',    draftData?.speciality ?? profile.speciality ?? '')
+          if (draftData?.projects) {
+            setValue('projects', draftData.projects)
+          } else if (profile.projects?.length) {
+            setValue('projects', profile.projects)
+          }
+          if (draftData?.step !== undefined) {
+            setStep(draftData.step)
+          }
+        } else {
+          setValue('name',          draftData?.name ?? defaultName ?? '')
+          setValue('headline',      draftData?.headline ?? '')
+          setValue('bio',           draftData?.bio ?? '')
+          setValue('skills',        draftData?.skills ?? '')
+          setValue('hourly_rate',   draftData?.hourly_rate ?? '50')
+          setValue('currency',      draftData?.currency ?? 'USD')
+          setValue('portfolio_url', draftData?.portfolio_url ?? '')
+          setValue('tone',          draftData?.tone ?? 'professional')
+          setValue('speciality',    draftData?.speciality ?? '')
+          if (draftData?.projects) setValue('projects', draftData.projects)
+          if (draftData?.step !== undefined) setStep(draftData.step)
         }
       })
       .finally(() => setLoading(false))
@@ -88,6 +116,7 @@ export default function ProfilePage() {
 
   const onSubmit = async (data: ProfileForm) => {
     setSaving(true)
+    setError(null)
     try {
       const payload: Partial<UserProfile> = {
         ...data,
@@ -102,10 +131,40 @@ export default function ProfilePage() {
       })
       if (res.ok) {
         setSaved(true)
+        localStorage.removeItem('bidcopy_profile_draft')
         setTimeout(() => (window.location.href = '/dashboard'), 1500)
+      } else {
+        const errData = await res.json().catch(() => ({}))
+        setError(errData.error || 'Failed to save profile. Please check all fields or try again.')
       }
+    } catch (e: any) {
+      setError(e.message || 'An unexpected error occurred. Please try again.')
     } finally {
       setSaving(false)
+    }
+  }
+
+  const bioVal = watch('bio') || ''
+  const headlineVal = watch('headline') || ''
+
+  const handleContinue = async () => {
+    let fieldsToValidate: Array<keyof ProfileForm> = []
+    if (step === 0) {
+      fieldsToValidate = ['name', 'headline', 'bio', 'speciality']
+    } else if (step === 1) {
+      fieldsToValidate = ['skills', 'hourly_rate', 'currency', 'portfolio_url']
+    } else if (step === 2) {
+      fieldsToValidate = ['projects']
+    }
+
+    const isValid = await trigger(fieldsToValidate)
+    if (isValid) {
+      const nextStep = step + 1
+      setStep(nextStep)
+      localStorage.setItem('bidcopy_profile_draft', JSON.stringify({
+        ...watch(),
+        step: nextStep
+      }))
     }
   }
 
@@ -150,9 +209,32 @@ export default function ProfilePage() {
           {step === 0 && (
             <>
               <Input label="Your name" id="name" {...register('name')} error={errors.name?.message} placeholder="e.g. Rahul Sharma" />
-              <Input label="Headline" id="headline" {...register('headline')} error={errors.headline?.message} placeholder="Full-stack developer · 5 years · React, Node.js" />
-              <Textarea label="Bio" id="bio" {...register('bio')} error={errors.bio?.message} rows={4}
-                placeholder="Write a short bio that captures your expertise. This goes directly into the AI prompt." />
+              
+              <div className="space-y-1">
+                <Input label="Headline" id="headline" {...register('headline')} error={errors.headline?.message} placeholder="Full-stack developer · 5 years · React, Node.js" />
+                <div className="flex justify-between items-center text-[10px] sm:text-xs">
+                  <span className={errors.headline ? 'text-red-500 font-medium' : 'text-[--color-bc-muted]'}>
+                    Min 10 characters required
+                  </span>
+                  <span className={`font-semibold ${headlineVal.length >= 10 ? 'text-green-600' : 'text-amber-600'}`}>
+                    {headlineVal.length} characters {headlineVal.length >= 10 ? '✓' : ''}
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <Textarea label="Bio" id="bio" {...register('bio')} error={errors.bio?.message} rows={4}
+                  placeholder="Write a short bio that captures your expertise. This goes directly into the AI prompt." />
+                <div className="flex justify-between items-center text-[10px] sm:text-xs">
+                  <span className={errors.bio ? 'text-red-500 font-medium' : 'text-[--color-bc-muted]'}>
+                    Min 50 characters required for personalized proposals
+                  </span>
+                  <span className={`font-semibold ${bioVal.length >= 50 ? 'text-green-600' : 'text-amber-600'}`}>
+                    {bioVal.length} / 50 characters {bioVal.length >= 50 ? '✓' : ''}
+                  </span>
+                </div>
+              </div>
+
               <Input label="Speciality" id="speciality" {...register('speciality')} error={errors.speciality?.message} placeholder="e.g. SaaS products, e-commerce, mobile apps" />
             </>
           )}
@@ -220,15 +302,29 @@ export default function ProfilePage() {
             </div>
           )}
 
+          {/* Submission / validation errors */}
+          {error && (
+            <div className="p-4 rounded-xl border border-red-200 bg-red-50 text-sm text-red-600 font-medium">
+              {error}
+            </div>
+          )}
+
           {/* Navigation */}
           <div className="flex gap-3 pt-2">
             {step > 0 && (
-              <Button type="button" variant="secondary" onClick={() => setStep((s) => s - 1)} className="flex-1">
+              <Button type="button" variant="secondary" onClick={() => {
+                const prevStep = step - 1
+                setStep(prevStep)
+                localStorage.setItem('bidcopy_profile_draft', JSON.stringify({
+                  ...watch(),
+                  step: prevStep
+                }))
+              }} className="flex-1">
                 ← Back
               </Button>
             )}
             {step < STEPS.length - 1 ? (
-              <Button type="button" onClick={() => setStep((s) => s + 1)} className="flex-1">
+              <Button type="button" onClick={handleContinue} className="flex-1">
                 Continue →
               </Button>
             ) : (

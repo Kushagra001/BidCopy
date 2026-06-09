@@ -13,7 +13,7 @@ export default function ContraProposalGeneratorPage() {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-20 px-6">
+      <main className="pt-28 pb-20 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="mb-10">
             <div className="inline-flex items-center gap-2 bg-[--color-bc-blue-light] border border-[--color-bc-blue-mid] text-[--color-bc-blue] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
@@ -30,9 +30,9 @@ export default function ContraProposalGeneratorPage() {
               className="inline-block bg-[--color-bc-blue] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[--color-bc-blue-dark] transition-colors">
               Generate proposal →
             </Link>
-            <p className="text-xs text-[--color-bc-muted] mt-3">5 free proposals per day · No credit card</p>
+            <p className="text-xs text-[--color-bc-muted] mt-3">Unlimited generations · No credit card</p>
           </div>
-          <div className="prose prose-slate max-w-none">
+          <div className="text-[--color-bc-ink-2] text-lg leading-relaxed space-y-6 [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-[--color-bc-ink] [&>h2]:mt-12 [&>h2]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-2 [&>strong]:text-[--color-bc-ink]">
             <h2>What makes a great Contra proposal</h2>
             <p>Contra is different from Upwork and Freelancer.com. The platform attracts clients who value independent creators, not just task-completers. Your proposal should feel like a genuine conversation, not a pitch deck.</p>
             <h2>Contra proposal tips</h2>

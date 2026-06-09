@@ -14,6 +14,17 @@ const PLATFORM_LABELS: Record<string, string> = {
   general:    'General',
 }
 
+const getModelLabel = (model: string | null | undefined) => {
+  if (!model) return '—'
+  const lower = model.toLowerCase()
+  if (lower.includes('gpt-4o-mini')) return 'GPT-4o mini'
+  if (lower.includes('gpt-4.1')) return 'GPT-4.1 (Pro)'
+  if (lower.includes('gpt-4o')) return 'GPT-4o'
+  if (lower.includes('gemini')) return 'Gemini Flash'
+  if (lower.includes('claude')) return 'Claude Sonnet'
+  return model
+}
+
 export default function HistoryPage() {
   const [proposals, setProposals] = useState<HistoryItem[]>([])
   const [loading, setLoading]     = useState(true)
@@ -91,7 +102,7 @@ export default function HistoryPage() {
                         </Badge>
                       </td>
                       <td className="px-5 py-4 text-[--color-bc-muted]">
-                        {p.model_used?.includes('gemini') ? 'Gemini Flash' : 'Claude Sonnet'}
+                        {getModelLabel(p.model_used)}
                       </td>
                       <td className="px-5 py-4 text-[--color-bc-muted]">{p.word_count ?? '—'}</td>
                       <td className="px-5 py-4 text-[--color-bc-muted]">{formatDate(p.created_at)}</td>

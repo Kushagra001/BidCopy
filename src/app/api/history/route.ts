@@ -7,10 +7,7 @@ export async function GET(req: NextRequest) {
   if (!userId) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
 
   const { searchParams } = new URL(req.url)
-  const page  = parseInt(searchParams.get('page') ?? '1')
-  const limit = parseInt(searchParams.get('limit') ?? '20')
-  const from  = (page - 1) * limit
-  const to    = from + limit - 1
+  const id = searchParams.get('id')
 
   const supabase = createAdminClient()
 
@@ -21,6 +18,23 @@ export async function GET(req: NextRequest) {
     .single()
 
   if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 })
+
+  if (id) {
+    const { data: proposal, error } = await supabase
+      .from('proposals')
+      .select('*')
+      .eq('id', id)
+      .eq('user_id', user.id)
+      .single()
+
+    if (error) return NextResponse.json({ error: error.message }, { status: 404 })
+    return NextResponse.json({ proposal })
+  }
+
+  const page  = parseInt(searchParams.get('page') ?? '1')
+  const limit = parseInt(searchParams.get('limit') ?? '20')
+  const from  = (page - 1) * limit
+  const to    = from + limit - 1
 
   const { data, error, count } = await supabase
     .from('proposals')
