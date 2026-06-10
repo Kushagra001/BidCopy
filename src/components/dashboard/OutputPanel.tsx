@@ -260,7 +260,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
                       {row.hours > 0 ? `${row.hours}h` : '—'}
                     </td>
                     <td className="py-3 text-right text-[--color-bc-ink-2]">
-                      {row.hours > 0 ? `$${row.rate}` : '—'}
+                      {row.hours > 0 ? `$${row.rate || Math.round(row.total / row.hours)}` : '—'}
                     </td>
                     <td className="py-3 text-right font-semibold text-[--color-bc-ink]">${row.total}</td>
                   </tr>
