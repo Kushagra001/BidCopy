@@ -124,7 +124,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
           </div>
           <input
             {...register('jobBudget')}
-            placeholder={budgetType === 'hourly' ? "e.g. $15 - $25 / hr" : "e.g. $10 - $30 or $500"}
+            placeholder={budgetType === 'hourly' ? "e.g. $15 - $25 / hr" : "e.g. $500 or $1000 - $3000"}
             className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all"
           />
         </div>
