@@ -45,6 +45,7 @@ export default function DashboardPage() {
             const loadedInput: InputFormData = {
               platform:       (proposal.platform || 'upwork') as any,
               jobTitle:       proposal.job_title || '',
+              budgetType:     (proposal.job_budget?.toLowerCase().includes('hr') || proposal.job_budget?.toLowerCase().includes('hour')) ? 'hourly' : 'fixed',
               jobBudget:      proposal.job_budget || '',
               jobDescription: proposal.job_description || '',
               extraContext:   proposal.extra_context || '',

@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
 
     // Parse input
     const body = await req.json()
-    const { jobTitle, jobDescription, jobBudget, platform, extraContext, model } = body
+    const { jobTitle, jobDescription, jobBudget, platform, extraContext, model, budgetType } = body
 
     if (!jobDescription || jobDescription.trim().length < 50) {
       return NextResponse.json(
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     }
 
     const systemPrompt = buildSystemPrompt(profile, platform)
-    const userPrompt   = buildUserPrompt({ jobTitle, jobDescription, jobBudget, platform, extraContext })
+    const userPrompt   = buildUserPrompt({ jobTitle, jobDescription, jobBudget, platform, extraContext, budgetType })
 
     let rawResult: string
 

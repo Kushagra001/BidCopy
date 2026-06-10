@@ -6,6 +6,7 @@ export interface JobInput {
   jobBudget:      string
   platform:       string
   extraContext:   string
+  budgetType?:    'fixed' | 'hourly'
 }
 
 const PLATFORM_GUIDE: Record<string, string> = {
@@ -74,9 +75,10 @@ Return ONLY a valid JSON object. No markdown fences. No explanation. No text bef
 
 ## PRICING RULES
 - Quote for specific functional modules based on the job description (e.g., "OTP Authentication & Setup", "Document Upload & Cloud Storage", "Razorpay Payment Gateway Setup", "Admin Dashboard & Tracking System") rather than generic project phases.
-- Estimate highly realistic, optimized active development hours. Reflect modern developer efficiency utilizing AI-assisted coding tools (like Cursor/Copilot) which speed up implementation: standard modules should take 4-12 hours each, and the total estimated hours for a project should typically range between 20 to 50 hours total depending on complexity. Do NOT inflate hours to match calendar timelines.
-- Rate = freelancer's hourly rate (${profile.hourly_rate} ${profile.currency}).
-- If the job has a budget, the total price (rate * total hours) must stay within 10% of the budget. If the budget is very low, adjust hours accordingly to keep it realistic. If the budget is not specified, keep the total hours highly competitive and lean (e.g., 20-40 hours total).
+- Budget Type & Rate Calculation:
+  - If Budget Type is 'hourly': Quote for specific functional modules based on the job description. Hours must be realistic (4-12 hours per module, totaling 20-50 hours overall). Rate = freelancer's hourly rate (${profile.hourly_rate} ${profile.currency}). The total cost is computed as Hours * Rate.
+  - If Budget Type is 'fixed': Do NOT use the freelancer's default hourly rate if it violates the budget. Instead, quote a fixed-cost milestone breakdown where the sum of all milestone totals strictly fits within the client's fixed budget/range (e.g. if the budget is '$10 - $30', bid a total of '$25', divided into milestones like 'Finn.no URL Scraper Setup: $10', 'Data Output & Export Module: $15'). For fixed-price projects, set 'hours' to 0, 'rate' to 0, and 'total' to the flat total cost of that module, so that the pricing table renders correctly as flat-rate milestones.
+- Keep all pricing highly detailed and competitive.
 
 ## TIMELINE RULES
 - Be competitive and efficient. Do NOT stretch timelines to match a long calendar deadline requested by the client. Propose a fast, realistic turnaround (typically 2 to 3 weeks total for standard web apps), highlighting in the proposal that you can deliver early due to your optimized, AI-accelerated development workflow.
@@ -104,6 +106,7 @@ Bad tips (never do these):
 export function buildUserPrompt(job: JobInput): string {
   return `Platform: ${job.platform || 'Not specified'}
 Job Title: ${job.jobTitle || 'Not provided'}
+Budget Type: ${job.budgetType || 'fixed'}
 Budget: ${job.jobBudget || 'Not specified'}
 Extra context: ${job.extraContext || 'None'}
 

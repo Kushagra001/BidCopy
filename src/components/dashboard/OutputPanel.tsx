@@ -256,8 +256,12 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
                       <div className="font-medium text-[--color-bc-ink]">{row.item}</div>
                       {row.notes && <div className="text-xs text-[--color-bc-muted] mt-0.5">{row.notes}</div>}
                     </td>
-                    <td className="py-3 text-right text-[--color-bc-ink-2]">{row.hours}h</td>
-                    <td className="py-3 text-right text-[--color-bc-ink-2]">${row.rate}</td>
+                    <td className="py-3 text-right text-[--color-bc-ink-2]">
+                      {row.hours > 0 ? `${row.hours}h` : '—'}
+                    </td>
+                    <td className="py-3 text-right text-[--color-bc-ink-2]">
+                      {row.hours > 0 ? `$${row.rate}` : '—'}
+                    </td>
                     <td className="py-3 text-right font-semibold text-[--color-bc-ink]">${row.total}</td>
                   </tr>
                 ))}
