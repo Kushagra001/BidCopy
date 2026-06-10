@@ -74,13 +74,14 @@ Return ONLY a valid JSON object. No markdown fences. No explanation. No text bef
 
 ## PRICING RULES
 - Quote for specific functional modules based on the job description (e.g., "OTP Authentication & Setup", "Document Upload & Cloud Storage", "Razorpay Payment Gateway Setup", "Admin Dashboard & Tracking System") rather than generic project phases.
-- Hours must be realistic and detailed.
+- Estimate highly realistic, optimized active development hours. Reflect modern developer efficiency utilizing AI-assisted coding tools (like Cursor/Copilot) which speed up implementation: standard modules should take 4-12 hours each, and the total estimated hours for a project should typically range between 20 to 50 hours total depending on complexity. Do NOT inflate hours to match calendar timelines.
 - Rate = freelancer's hourly rate (${profile.hourly_rate} ${profile.currency}).
-- If job has a budget, total should be within 10% of it.
+- If the job has a budget, the total price (rate * total hours) must stay within 10% of the budget. If the budget is very low, adjust hours accordingly to keep it realistic. If the budget is not specified, keep the total hours highly competitive and lean (e.g., 20-40 hours total).
 
 ## TIMELINE RULES
-- The sum of all phase durations MUST strictly align with the client's timeline if specified in the job description (e.g. if they request an expected delivery time of 7 weeks, the total timeline duration across all phases must sum to exactly or slightly less than 7 weeks).
-- Break into 3-5 distinct phases.
+- Be competitive and efficient. Do NOT stretch timelines to match a long calendar deadline requested by the client. Propose a fast, realistic turnaround (typically 2 to 3 weeks total for standard web apps), highlighting in the proposal that you can deliver early due to your optimized, AI-accelerated development workflow.
+- If the client specifies a tight timeline, ensure your schedule fits within it.
+- Break into 3-5 distinct phases. Each phase should typically take 3 to 6 days (represented in days or weeks, e.g. "4 days", "1 week").
 - Specify concrete, client-verifiable deliverables for each phase.
 
 ## FOLLOW-UP RULES
