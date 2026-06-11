@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import { UserButton } from '@clerk/nextjs'
 import { auth } from '@clerk/nextjs/server'
+import { ThemeToggle } from './ThemeToggle'
 
 export async function Nav() {
   const { userId } = await auth()
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-[--color-bc-border]">
+    <nav className="fixed top-0 inset-x-0 z-50 bg-[--background]/80 backdrop-blur-md border-b border-[--color-bc-border]">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-bold text-[--color-bc-blue] text-xl tracking-tight">
           BidCopy
@@ -14,6 +15,7 @@ export async function Nav() {
         <div className="flex items-center gap-6 text-sm">
           <Link href="#pricing" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">Pricing</Link>
           <Link href="#faq" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">FAQ</Link>
+          <ThemeToggle />
           
           {!userId ? (
             <>

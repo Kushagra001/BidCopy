@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { InputPanel, type InputFormData } from '@/components/dashboard/InputPanel'
 import { OutputPanel } from '@/components/dashboard/OutputPanel'
 import type { ProposalOutput } from '@/types/proposal'
+import { ThemeToggle } from '@/components/shared/ThemeToggle'
 
 export default function DashboardPage() {
   const [output, setOutput]               = useState<ProposalOutput | null>(null)
@@ -14,6 +15,7 @@ export default function DashboardPage() {
   const [error, setError]                 = useState<string | null>(null)
   const [lastInput, setLastInput]         = useState<InputFormData | null>(null)
   const [initialInputValues, setInitialInputValues] = useState<Partial<InputFormData> | undefined>(undefined)
+  const [inputKey, setInputKey]           = useState(0)
 
   // Plan & Model selector states
   const [plan, setPlan]                   = useState<'free' | 'pro'>('free')
@@ -124,10 +126,20 @@ export default function DashboardPage() {
     if (lastInput) generate(lastInput)
   }, [lastInput, generate])
 
+  const handleNewBid = useCallback(() => {
+    setOutput(null)
+    setModelUsed(null)
+    setProposalId(null)
+    setError(null)
+    setLastInput(null)
+    setInitialInputValues(undefined)
+    setInputKey((k) => k + 1)
+  }, [])
+
   return (
     <div className="min-h-screen bg-[--color-bc-surface]">
       {/* Nav */}
-      <header className="bg-white border-b border-[--color-bc-border] px-6 py-4">
+      <header className="bg-[--color-bc-white] border-b border-[--color-bc-border] px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="/" className="font-bold text-[--color-bc-blue] text-xl tracking-tight">
             BidCopy
@@ -135,6 +147,7 @@ export default function DashboardPage() {
           <nav className="flex items-center gap-6 text-sm">
             <a href="/dashboard/history" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">History</a>
             <a href="/dashboard/profile" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">Profile</a>
+            <ThemeToggle />
             <a href="/dashboard/upgrade" className="bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[--color-bc-blue-dark] transition-colors">
               Go Pro
             </a>
@@ -144,14 +157,14 @@ export default function DashboardPage() {
 
       {/* Error banner */}
       {error && (
-        <div className="bg-red-50 border-b border-red-200 px-6 py-3">
+        <div className="bg-red-50 dark:bg-red-950/20 border-b border-red-200 dark:border-red-900/30 px-6 py-3">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <p className="text-sm text-red-700">{error}</p>
+            <p className="text-sm text-red-700 dark:text-red-400">{error}</p>
             <div className="flex gap-3">
               {error.includes('Daily limit') && (
-                <a href="/dashboard/upgrade" className="text-sm font-semibold text-red-700 underline">Upgrade →</a>
+                <a href="/dashboard/upgrade" className="text-sm font-semibold text-red-700 dark:text-red-400 underline">Upgrade →</a>
               )}
-              <button onClick={() => setError(null)} className="text-sm text-red-500 hover:text-red-700">Dismiss</button>
+              <button onClick={() => setError(null)} className="text-sm text-red-500 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300">Dismiss</button>
             </div>
           </div>
         </div>
@@ -165,20 +178,28 @@ export default function DashboardPage() {
             <p className="text-[--color-bc-muted] text-sm mt-1">Paste a job description → get a complete bid package in 30 seconds.</p>
           </div>
 
-          {/* Model Selector Dropdown */}
-          <div className="relative flex-shrink-0">
+          <div className="flex items-center gap-3 flex-shrink-0">
             <button
-              onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
-              className="flex items-center gap-2 px-4 py-2 bg-white border border-[--color-bc-border] rounded-xl text-sm font-semibold text-[--color-bc-ink] hover:bg-gray-50 shadow-sm transition-all cursor-pointer"
+              onClick={handleNewBid}
+              className="flex items-center gap-1.5 px-4 py-2 border border-[--color-bc-border] rounded-xl text-sm font-semibold text-[--color-bc-ink] bg-[--color-bc-white] hover:bg-[--color-bc-surface] shadow-sm transition-all cursor-pointer"
             >
-              <span>{selectedModel === 'gpt-4.1' ? 'GPT-4.1 (Pro)' : 'GPT-4o mini'}</span>
-              <span className="text-gray-400 text-xs">▼</span>
+              <span className="text-xs">+</span> New bid
             </button>
+
+            {/* Model Selector Dropdown */}
+            <div className="relative flex-shrink-0">
+              <button
+                onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
+                className="flex items-center gap-2 px-4 py-2 bg-[--color-bc-white] border border-[--color-bc-border] rounded-xl text-sm font-semibold text-[--color-bc-ink] hover:bg-[--color-bc-surface] shadow-sm transition-all cursor-pointer"
+              >
+                <span>{selectedModel === 'gpt-4.1' ? 'GPT-4.1 (Pro)' : 'GPT-4o mini'}</span>
+                <span className="text-gray-400 text-xs">▼</span>
+              </button>
 
             {isModelDropdownOpen && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => setIsModelDropdownOpen(false)} />
-                <div className="absolute right-0 mt-2 w-72 bg-white border border-[--color-bc-border] rounded-2xl shadow-xl z-50 p-2 space-y-1">
+                <div className="absolute right-0 mt-2 w-72 bg-[--color-bc-white] border border-[--color-bc-border] rounded-2xl shadow-xl z-50 p-2 space-y-1">
                   
                   {/* GPT-4.1 Pro Option */}
                   <div
@@ -190,8 +211,8 @@ export default function DashboardPage() {
                     }}
                     className={`flex items-center justify-between p-3 rounded-xl transition-all ${
                       plan === 'pro'
-                        ? 'cursor-pointer hover:bg-gray-50'
-                        : 'bg-gray-50/50'
+                        ? 'cursor-pointer hover:bg-[--color-bc-surface]'
+                        : 'bg-[--color-bc-surface]/50'
                     }`}
                   >
                     <div className="flex flex-col gap-0.5">
@@ -223,7 +244,7 @@ export default function DashboardPage() {
                       setSelectedModel('gpt-4o-mini')
                       setIsModelDropdownOpen(false)
                     }}
-                    className="flex items-center justify-between p-3 rounded-xl cursor-pointer hover:bg-gray-50 transition-all"
+                    className="flex items-center justify-between p-3 rounded-xl cursor-pointer hover:bg-[--color-bc-surface] transition-all"
                   >
                     <div className="flex flex-col gap-0.5">
                       <div className="font-semibold text-sm text-[--color-bc-ink] flex items-center gap-1.5">
@@ -241,11 +262,13 @@ export default function DashboardPage() {
             )}
           </div>
         </div>
+      </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left: input */}
-          <div className="bg-white border border-[--color-bc-border] rounded-xl p-6 flex flex-col min-h-[600px]">
+          <div className="bg-[--color-bc-white] border border-[--color-bc-border] rounded-xl p-6 flex flex-col min-h-[600px]">
             <InputPanel
+              key={inputKey}
               onGenerate={generate}
               isGenerating={isGenerating}
               generationsLeft={generationsLeft}
@@ -254,7 +277,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Right: output */}
-          <div className="bg-white border border-[--color-bc-border] rounded-xl p-6 flex flex-col min-h-[600px]">
+          <div className="bg-[--color-bc-white] border border-[--color-bc-border] rounded-xl p-6 flex flex-col min-h-[600px]">
             <OutputPanel
               output={output}
               modelUsed={modelUsed}

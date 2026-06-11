@@ -4,7 +4,7 @@ import { Nav } from '@/components/shared/Nav'
 import { Footer } from '@/components/shared/Footer'
 
 export const metadata: Metadata = {
-  title:       'Free Freelancer.com Proposal Generator — BidCopy',
+  title:       'Free Freelancer.com Proposal Generator | BidCopy',
   description: 'Generate a winning Freelancer.com proposal in 30 seconds. AI-powered bid writer for Freelancer.com. Direct, fast, mention experience early.',
   keywords:    ['freelancer proposal generator', 'freelancer.com bid generator', 'AI proposal writer freelancer'],
 }
@@ -13,7 +13,7 @@ export default function FreelancerProposalGeneratorPage() {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-20 px-6 bg-white">
+      <main className="pt-28 pb-20 px-6 bg-[--background]">
         <div className="max-w-3xl mx-auto">
           <div className="mb-10">
             <div className="inline-flex items-center gap-2 bg-[--color-bc-blue-light] border border-[--color-bc-blue-mid] text-[--color-bc-blue] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
@@ -21,7 +21,7 @@ export default function FreelancerProposalGeneratorPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-[--color-bc-ink] mb-4">Free Freelancer.com Proposal Generator</h1>
             <p className="text-lg text-[--color-bc-muted] leading-relaxed">
-              Generate concise, direct Freelancer.com bids that get noticed. BidCopy keeps proposals under 350 words, mentions your experience early, and leads with the solution — not your CV.
+              Generate concise, direct Freelancer.com bids that get noticed. BidCopy keeps proposals under 350 words, mentions your experience early, and leads with the solution, not your CV.
             </p>
           </div>
           <div className="bg-[--color-bc-blue-light] border border-[--color-bc-blue-mid] rounded-2xl p-8 mb-16 text-center">
@@ -38,7 +38,7 @@ export default function FreelancerProposalGeneratorPage() {
             <h2>What makes a Freelancer.com bid stand out</h2>
             <ul>
               <li>Lead with your most relevant experience for this specific project</li>
-              <li>Keep it under 350 words — shorter bids get more attention</li>
+              <li>Keep it under 350 words. Shorter bids get more attention</li>
               <li>Mention one specific result from a past project</li>
               <li>Include your timeline estimate upfront</li>
             </ul>

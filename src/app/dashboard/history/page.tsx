@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Badge } from '@/components/ui/Badge'
 import { formatDate, truncate } from '@/lib/utils'
 import type { Proposal } from '@/types/proposal'
+import { ThemeToggle } from '@/components/shared/ThemeToggle'
 
 type HistoryItem = Pick<Proposal, 'id' | 'job_title' | 'platform' | 'word_count' | 'model_used' | 'rating' | 'is_saved' | 'created_at'>
 
@@ -45,12 +46,13 @@ export default function HistoryPage() {
 
   return (
     <div className="min-h-screen bg-[--color-bc-surface]">
-      <header className="bg-white border-b border-[--color-bc-border] px-6 py-4">
+      <header className="bg-[--color-bc-white] border-b border-[--color-bc-border] px-6 py-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <a href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</a>
           <nav className="flex items-center gap-4 text-sm">
             <a href="/dashboard" className="text-[--color-bc-muted] hover:text-[--color-bc-ink]">← Generate</a>
             <a href="/dashboard/profile" className="text-[--color-bc-muted] hover:text-[--color-bc-ink]">Profile</a>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
@@ -63,7 +65,7 @@ export default function HistoryPage() {
 
         {loading ? (
           <div className="flex items-center justify-center py-24">
-            <div className="w-8 h-8 border-2 border-[--color-bc-blue] border-t-transparent rounded-full animate-spin" />
+            <div className="w-8 h-8 border-2 border-bc-blue border-t-transparent rounded-full animate-spin" />
           </div>
         ) : proposals.length === 0 ? (
           <div className="text-center py-24">
@@ -76,7 +78,7 @@ export default function HistoryPage() {
           </div>
         ) : (
           <>
-            <div className="bg-white border border-[--color-bc-border] rounded-xl overflow-hidden">
+            <div className="bg-[--color-bc-white] border border-[--color-bc-border] rounded-xl overflow-hidden">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-[--color-bc-border] bg-[--color-bc-surface]">

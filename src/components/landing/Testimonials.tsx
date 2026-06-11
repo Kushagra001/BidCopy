@@ -1,6 +1,6 @@
 const TESTIMONIALS = [
   {
-    quote: 'I used to spend 30–45 minutes writing each proposal. BidCopy cuts that to under 2 minutes. My win rate went from 8% to 21% in the first month.',
+    quote: 'I used to spend 30 to 45 minutes writing each proposal. BidCopy cuts that to under 2 minutes. My win rate went from 8% to 21% in the first month.',
     name:  'Arjun Mehta',
     role:  'Full-stack developer · Upwork Top Rated',
     avatar: 'AM',
@@ -30,7 +30,7 @@ export function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t, i) => (
-            <div key={i} className="bg-white border border-[--color-bc-border] rounded-2xl p-7">
+            <div key={i} className="bg-[--background] border border-[--color-bc-border] rounded-2xl p-7">
               <div className="flex gap-1 mb-4">
                 {[1,2,3,4,5].map((s) => (
                   <span key={s} className="text-amber-400 text-sm">★</span>

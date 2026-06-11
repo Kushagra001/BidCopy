@@ -44,7 +44,7 @@ const PLANS = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6 bg-white">
+    <section id="pricing" className="py-24 px-6 bg-[--background]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[--color-bc-ink] mb-4">Simple pricing</h2>
@@ -56,8 +56,8 @@ export function Pricing() {
             <div key={plan.name}
               className={`relative flex flex-col rounded-2xl p-8 ${
                 plan.popular
-                  ? 'bg-[--color-bc-ink] text-white border-2 border-[--color-bc-blue] shadow-xl'
-                  : 'bg-white border border-[--color-bc-border]'
+                  ? 'bg-[--color-bc-dark-card] text-white border-2 border-[--color-bc-blue] shadow-xl'
+                  : 'bg-[--background] border border-[--color-bc-border]'
               }`}>
 
               <div className="mb-6">

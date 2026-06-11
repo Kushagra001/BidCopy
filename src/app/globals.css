@@ -1,19 +1,22 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ───────── BidCopy Design Tokens ───────── */
 @theme {
-  /* Brand colors — generate bg-bc-blue, text-bc-blue, border-bc-blue etc. */
-  --color-bc-blue:       #2563eb;
-  --color-bc-blue-dark:  #1d4ed8;
-  --color-bc-blue-light: #eff6ff;
-  --color-bc-blue-mid:   #bfdbfe;
-  --color-bc-ink:        #0f172a;
-  --color-bc-ink-2:      #334155;
-  --color-bc-muted:      #64748b;
-  --color-bc-faint:      #94a3b8;
-  --color-bc-border:     #e2e8f0;
-  --color-bc-surface:    #f8fafc;
-  --color-bc-white:      #ffffff;
+  /* Brand colors dynamically mapped to CSS variables */
+  --color-bc-blue:       var(--color-bc-blue);
+  --color-bc-blue-dark:  var(--color-bc-blue-dark);
+  --color-bc-blue-light: var(--color-bc-blue-light);
+  --color-bc-blue-mid:   var(--color-bc-blue-mid);
+  --color-bc-ink:        var(--color-bc-ink);
+  --color-bc-ink-2:      var(--color-bc-ink-2);
+  --color-bc-muted:      var(--color-bc-muted);
+  --color-bc-faint:      var(--color-bc-faint);
+  --color-bc-border:     var(--color-bc-border);
+  --color-bc-surface:    var(--color-bc-surface);
+  --color-bc-white:      var(--color-bc-white);
+  --color-bc-dark-card:  var(--color-bc-dark-card);
 
   /* Font */
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -24,25 +27,38 @@
   --background: #ffffff;
   --foreground: #0f172a;
 
-  /* BidCopy tokens as real CSS vars (needed for arbitrary class var() usage) */
+  /* BidCopy tokens as real CSS vars (contrast ratios verified against light backgrounds) */
   --color-bc-blue:       #2563eb;
   --color-bc-blue-dark:  #1d4ed8;
   --color-bc-blue-light: #eff6ff;
   --color-bc-blue-mid:   #bfdbfe;
-  --color-bc-ink:        #0f172a;
-  --color-bc-ink-2:      #334155;
-  --color-bc-muted:      #64748b;
-  --color-bc-faint:      #94a3b8;
+  --color-bc-ink:        #0f172a; /* Slate 900 */
+  --color-bc-ink-2:      #334155; /* Slate 700 */
+  --color-bc-muted:      #475569; /* Slate 600 (contrast > 4.5:1 on white/surface) */
+  --color-bc-faint:      #5c6f84; /* Slate 500/600 hybrid (contrast > 4.5:1 on white) */
   --color-bc-border:     #e2e8f0;
   --color-bc-surface:    #f8fafc;
   --color-bc-white:      #ffffff;
+  --color-bc-dark-card:  #0f172a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #f1f5f9;
-  }
+html.dark {
+  --background: #0f172a; /* Same as light mode ink for a seamless dark theme */
+  --foreground: #f8fafc;
+
+  /* BidCopy tokens as real CSS vars (contrast ratios verified against dark backgrounds) */
+  --color-bc-blue:       #2563eb;
+  --color-bc-blue-dark:  #1d4ed8;
+  --color-bc-blue-light: #1e3a8a;
+  --color-bc-blue-mid:   #1e40af;
+  --color-bc-ink:        #f8fafc; /* Slate 50 */
+  --color-bc-ink-2:      #e2e8f0; /* Slate 200 */
+  --color-bc-muted:      #cbd5e1; /* Slate 300 (contrast > 4.5:1 on slate 800/900) */
+  --color-bc-faint:      #94a3b8; /* Slate 400 (contrast > 4.5:1 on slate 800/900) */
+  --color-bc-border:     #334155; /* Slate 700 */
+  --color-bc-surface:    #1e293b; /* Slate 800 */
+  --color-bc-white:      #0f172a; /* Slate 900 (cards invert to dark bg) */
+  --color-bc-dark-card:  #1e293b; /* Slate 800 */
 }
 
 * {
@@ -89,6 +105,7 @@ body {
   .bg-\[--color-bc-border\]      { background-color: var(--color-bc-border); }
   .bg-\[--color-bc-surface\]     { background-color: var(--color-bc-surface); }
   .bg-\[--color-bc-white\]       { background-color: var(--color-bc-white); }
+  .bg-\[--color-bc-dark-card\]   { background-color: var(--color-bc-dark-card); }
 
   /* text */
   .text-\[--color-bc-blue\]      { color: var(--color-bc-blue); }

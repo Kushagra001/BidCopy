@@ -4,8 +4,8 @@ import { Nav } from '@/components/shared/Nav'
 import { Footer } from '@/components/shared/Footer'
 
 export const metadata: Metadata = {
-  title:       'Free AI Proposal Generator for Freelancers — BidCopy',
-  description: 'The best free AI proposal generator for freelancers. Generate a complete bid package — proposal, pricing, timeline, follow-up — in 30 seconds. No credit card.',
+  title:       'Free AI Proposal Generator for Freelancers | BidCopy',
+  description: 'The best free AI proposal generator for freelancers. Generate a complete bid package in 30 seconds. This includes your proposal, pricing, timeline, and follow-up. No credit card.',
   keywords:    ['free AI proposal generator', 'free proposal generator for freelancers', 'AI bid writer free'],
 }
 
@@ -13,12 +13,12 @@ export default function FreeProposalGeneratorPage() {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-20 px-6 bg-white">
+      <main className="pt-28 pb-20 px-6 bg-[--background]">
         <div className="max-w-3xl mx-auto">
           <div className="mb-10">
             <h1 className="text-4xl md:text-5xl font-bold text-[--color-bc-ink] mb-4">Free AI Proposal Generator for Freelancers</h1>
             <p className="text-lg text-[--color-bc-muted] leading-relaxed">
-              BidCopy is the most complete free AI proposal generator for freelancers. Get a full bid package — proposal, pricing breakdown, project timeline, and a follow-up message — in under 30 seconds. No credit card required.
+              BidCopy is the most complete free AI proposal generator for freelancers. Get a full bid package in under 30 seconds. This includes your proposal, pricing breakdown, project timeline, and a follow-up message. No credit card required.
             </p>
           </div>
           <div className="bg-[--color-bc-blue-light] border border-[--color-bc-blue-mid] rounded-2xl p-8 mb-16 text-center">
@@ -31,9 +31,9 @@ export default function FreeProposalGeneratorPage() {
           </div>
           <div className="text-[--color-bc-ink-2] text-lg leading-relaxed space-y-6 [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-[--color-bc-ink] [&>h2]:mt-12 [&>h2]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-2 [&>strong]:text-[--color-bc-ink]">
             <h2>What does the free plan include?</h2>
-            <p>The BidCopy free plan gives you 5 complete bid packages per day. Each includes a tailored proposal, itemised pricing breakdown, project timeline, and follow-up message — plus the Humanise Checklist with 5 specific tips to personalise it.</p>
+            <p>The BidCopy free plan gives you 5 complete bid packages per day. Each includes a tailored proposal, itemised pricing breakdown, project timeline, and follow-up message, plus the Humanise Checklist with 5 specific tips to personalise it.</p>
             <h2>Is the free AI proposal generator good enough?</h2>
-            <p>The free plan uses Gemini 2.0 Flash, which produces high-quality proposals for most jobs. Upgrade to Pro for Claude Sonnet — better at nuance, complex technical projects, and jobs requiring a specific voice.</p>
+            <p>The free plan uses GPT-4o mini, which produces high-quality proposals for most jobs. Upgrade to Pro for GPT-4.1, which is better at nuance, complex technical projects, and jobs requiring a specific voice.</p>
           </div>
         </div>
       </main>

@@ -25,11 +25,30 @@ interface InputPanelProps {
 }
 
 const PLATFORMS = [
-  { id: 'upwork',     label: 'Upwork' },
-  { id: 'freelancer', label: 'Freelancer' },
-  { id: 'contra',     label: 'Contra' },
-  { id: 'general',    label: 'General' },
+  { id: 'upwork',     label: 'Upwork',     dotColor: 'bg-emerald-500' },
+  { id: 'freelancer', label: 'Freelancer', dotColor: 'bg-blue-500' },
+  { id: 'contra',     label: 'Contra',     dotColor: 'bg-teal-400' },
+  { id: 'general',    label: 'General',    dotColor: 'bg-slate-400 dark:bg-slate-500' },
 ] as const
+
+const PLATFORM_STYLES: Record<string, { selected: string; unselected: string }> = {
+  upwork: {
+    selected: 'border-emerald-500/80 bg-emerald-50/50 dark:bg-emerald-950/20 text-emerald-750 dark:text-emerald-400 ring-2 ring-emerald-500/10',
+    unselected: 'border-[--color-bc-border] text-[--color-bc-muted] hover:border-emerald-500/40 hover:text-emerald-700 dark:hover:text-emerald-400',
+  },
+  freelancer: {
+    selected: 'border-blue-500/80 bg-blue-50/50 dark:bg-blue-950/20 text-blue-750 dark:text-blue-400 ring-2 ring-blue-500/10',
+    unselected: 'border-[--color-bc-border] text-[--color-bc-muted] hover:border-blue-500/40 hover:text-blue-700 dark:hover:text-blue-400',
+  },
+  contra: {
+    selected: 'border-teal-500/80 bg-teal-50/50 dark:bg-teal-950/20 text-teal-750 dark:text-teal-400 ring-2 ring-teal-500/10',
+    unselected: 'border-[--color-bc-border] text-[--color-bc-muted] hover:border-teal-500/40 hover:text-teal-700 dark:hover:text-teal-400',
+  },
+  general: {
+    selected: 'border-slate-500/80 bg-slate-50/50 dark:bg-slate-800/40 text-slate-750 dark:text-slate-300 ring-2 ring-slate-500/10',
+    unselected: 'border-[--color-bc-border] text-[--color-bc-muted] hover:border-slate-500/40 hover:text-slate-700 dark:hover:text-slate-300',
+  },
+}
 
 export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialValues }: InputPanelProps) {
   const {
@@ -53,8 +72,15 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
   const selectedPlatform = watch('platform')
   const budgetType = watch('budgetType') || 'fixed'
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault()
+      handleSubmit(onGenerate)()
+    }
+  }
+
   return (
-    <form onSubmit={handleSubmit(onGenerate)} className="flex flex-col gap-5 h-full">
+    <form onSubmit={handleSubmit(onGenerate)} onKeyDown={handleKeyDown} className="flex flex-col gap-5 h-full">
       <input type="hidden" {...register('budgetType')} />
 
       {/* Platform */}
@@ -68,12 +94,15 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
               key={p.id}
               type="button"
               onClick={() => setValue('platform', p.id)}
-              className={`py-2 rounded-lg text-xs font-semibold border transition-all ${
+              className={`py-2 px-1 rounded-lg text-[11px] sm:text-xs font-semibold border transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                 selectedPlatform === p.id
-                  ? 'border-[--color-bc-blue] bg-[--color-bc-blue-light] text-[--color-bc-blue]'
-                  : 'border-[--color-bc-border] text-[--color-bc-muted] hover:border-[--color-bc-blue]/40'
+                  ? PLATFORM_STYLES[p.id].selected
+                  : PLATFORM_STYLES[p.id].unselected
               }`}
             >
+              <span className={`w-1.5 h-1.5 rounded-full shrink-0 transition-all ${p.dotColor} ${
+                selectedPlatform === p.id ? 'scale-110 opacity-100' : 'opacity-60'
+              }`} />
               {p.label}
             </button>
           ))}
@@ -89,7 +118,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
           <input
             {...register('jobTitle')}
             placeholder="e.g. Next.js developer needed"
-            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all"
+            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
           />
         </div>
         <div className="flex flex-col gap-1.5">
@@ -97,13 +126,13 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
             <label className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
               Budget <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
             </label>
-            <div className="flex bg-gray-100 p-0.5 rounded-md text-[10px] font-bold">
+            <div className="flex bg-[--color-bc-surface] p-0.5 rounded-md text-[10px] font-bold">
               <button
                 type="button"
                 onClick={() => setValue('budgetType', 'fixed')}
                 className={`px-2 py-0.5 rounded transition-all cursor-pointer ${
                   budgetType === 'fixed'
-                    ? 'bg-white text-[--color-bc-ink] shadow-sm'
+                    ? 'bg-[--color-bc-white] text-[--color-bc-ink] shadow-sm'
                     : 'text-[--color-bc-muted] hover:text-[--color-bc-ink]'
                 }`}
               >
@@ -114,7 +143,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
                 onClick={() => setValue('budgetType', 'hourly')}
                 className={`px-2 py-0.5 rounded transition-all cursor-pointer ${
                   budgetType === 'hourly'
-                    ? 'bg-white text-[--color-bc-ink] shadow-sm'
+                    ? 'bg-[--color-bc-white] text-[--color-bc-ink] shadow-sm'
                     : 'text-[--color-bc-muted] hover:text-[--color-bc-ink]'
                 }`}
               >
@@ -125,7 +154,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
           <input
             {...register('jobBudget')}
             placeholder={budgetType === 'hourly' ? "e.g. $15 - $25 / hr" : "e.g. $500 or $1000 - $3000"}
-            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all"
+            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
           />
         </div>
       </div>
@@ -138,7 +167,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
         <textarea
           {...register('jobDescription')}
           placeholder="Paste the full job description here. The more detail, the better the proposal."
-          className={`flex-1 min-h-[200px] border rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] resize-none focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all ${
+          className={`flex-1 min-h-[200px] border rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] resize-none focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all ${
             errors.jobDescription ? 'border-red-400' : 'border-[--color-bc-border]'
           }`}
         />
@@ -156,7 +185,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
           {...register('extraContext')}
           rows={2}
           placeholder="e.g. 'Stress my Shopify experience' or 'Keep it under 300 words'"
-          className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] resize-none focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all"
+          className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] resize-none focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
         />
       </div>
 
@@ -170,6 +199,16 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
         >
           {isGenerating ? 'Generating your bid…' : 'Generate bid package →'}
         </Button>
+
+        <div className="mt-2 text-[10px] text-[--color-bc-faint] text-center flex items-center justify-center gap-1">
+          <span>Press</span>
+          <kbd className="font-mono text-[9px] bg-[--color-bc-surface] border border-[--color-bc-border] px-1 py-0.5 rounded text-[--color-bc-ink-2]">Ctrl</kbd>
+          <span>/</span>
+          <kbd className="font-mono text-[9px] bg-[--color-bc-surface] border border-[--color-bc-border] px-1 py-0.5 rounded text-[--color-bc-ink-2]">⌘</kbd>
+          <span>+</span>
+          <kbd className="font-mono text-[9px] bg-[--color-bc-surface] border border-[--color-bc-border] px-1 py-0.5 rounded text-[--color-bc-ink-2]">Enter</kbd>
+          <span>to generate</span>
+        </div>
 
         {generationsLeft !== null && (
           <div className="mt-3 flex items-center justify-between text-xs text-[--color-bc-muted]">

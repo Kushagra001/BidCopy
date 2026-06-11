@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
+import { Target } from 'lucide-react'
 
 const JOB_DESC = `Looking for a React developer to build a client dashboard for our SaaS product. We need data visualization charts, real-time updates via WebSocket, and a clean responsive UI. Timeline: 3 weeks. Budget: $2,500.`
 
@@ -86,11 +87,17 @@ export function DemoPreview() {
                     600 + idx * 700,
                   )
                 })
-                // Phase 5: restart after pause
+                
+                // Switch to pricing tab after showing checklist
                 cycleRef.current = setTimeout(() => {
-                  setPhase('done')
-                  cycleRef.current = setTimeout(runCycle, 1800)
-                }, 4000)
+                  setActiveTab('pricing')
+
+                  // Phase 5: restart cycle after pausing on pricing tab
+                  cycleRef.current = setTimeout(() => {
+                    setPhase('done')
+                    cycleRef.current = setTimeout(runCycle, 1500)
+                  }, 3000)
+                }, 4200) // Allow reading checklist before switching
               }
             }
             streamNext()
@@ -119,12 +126,12 @@ export function DemoPreview() {
         className="absolute inset-x-0 bottom-0 z-10 pointer-events-none"
         style={{
           height: '45%',
-          background: 'linear-gradient(to bottom, transparent, white)',
+          background: 'linear-gradient(to bottom, transparent, var(--background))',
         }}
       />
 
       {/* Browser chrome */}
-      <div className="rounded-2xl border border-[--color-bc-border] bg-white shadow-2xl overflow-hidden">
+      <div className="rounded-2xl border border-[--color-bc-border] bg-[--background] shadow-2xl overflow-hidden">
         {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-3 bg-[--color-bc-surface] border-b border-[--color-bc-border]">
           <div className="flex gap-1.5">
@@ -133,7 +140,7 @@ export function DemoPreview() {
             <div className="w-3 h-3 rounded-full bg-green-400" />
           </div>
           <div className="flex-1 mx-4">
-            <div className="bg-white border border-[--color-bc-border] rounded-md px-3 py-1 text-xs text-[--color-bc-faint] text-center max-w-xs mx-auto">
+            <div className="bg-[--background] border border-[--color-bc-border] rounded-md px-3 py-1 text-xs text-[--color-bc-faint] text-center max-w-xs mx-auto">
               bidcopy.com/dashboard
             </div>
           </div>
@@ -250,7 +257,7 @@ export function DemoPreview() {
             {(phase === 'checklist' || phase === 'done') && activeTab === 'proposal' && (
               <div className="border-t border-[--color-bc-border] pt-3 mt-1">
                 <div className="text-xs font-bold text-[--color-bc-ink] mb-2 flex items-center gap-1.5">
-                  <span>🎯</span> Before you send
+                  <Target className="w-3.5 h-3.5 text-[--color-bc-blue] shrink-0" /> Before you send
                 </div>
                 <div className="space-y-1.5">
                   {TIPS.slice(0, visibleTips).map((tip, i) => (

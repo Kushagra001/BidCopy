@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import type { UserProfile } from '@/types/profile'
+import { ThemeToggle } from '@/components/shared/ThemeToggle'
 
 // ── Zod schema ──────────────────────────────────────────────
 const profileSchema = z.object({
@@ -171,17 +172,20 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[--color-bc-surface]">
-        <div className="w-8 h-8 border-2 border-[--color-bc-blue] border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-bc-blue border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
 
   return (
     <div className="min-h-screen bg-[--color-bc-surface]">
-      <header className="bg-white border-b border-[--color-bc-border] px-6 py-4">
+      <header className="bg-[--color-bc-white] border-b border-[--color-bc-border] px-6 py-4">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <a href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</a>
-          <a href="/dashboard" className="text-sm text-[--color-bc-muted] hover:text-[--color-bc-ink]">← Back to dashboard</a>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <a href="/dashboard" className="text-sm text-[--color-bc-muted] hover:text-[--color-bc-ink]">← Back to dashboard</a>
+          </div>
         </div>
       </header>
 
@@ -248,7 +252,7 @@ export default function ProfilePage() {
                 <Input label="Hourly rate" id="hourly_rate" type="number" {...register('hourly_rate')} error={errors.hourly_rate?.message} placeholder="50" min="1" />
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">Currency</label>
-                  <select {...register('currency')} className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all">
+                  <select {...register('currency')} className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue]/20 focus:border-[--color-bc-blue] transition-all">
                     {CURRENCIES.map((c) => <option key={c} value={c}>{c}</option>)}
                   </select>
                 </div>

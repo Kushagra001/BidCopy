@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -46,12 +47,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <h1 className="text-4xl font-bold text-[--color-bc-ink] mb-4">{post.title}</h1>
             <p className="text-xs text-[--color-bc-faint] mb-10">{formatDate(post.published_at)}</p>
             {post.excerpt && (
-              <p className="text-lg text-[--color-bc-muted] mb-8 leading-relaxed border-l-4 border-[--color-bc-blue] pl-4">
+              <p className="text-lg text-[--color-bc-ink-2] mb-8 leading-relaxed">
                 {post.excerpt}
               </p>
             )}
-            <div className="prose prose-slate max-w-none">
-              {post.content}
+            <div className="prose prose-slate dark:prose-invert max-w-none">
+              <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
           </article>
         </div>

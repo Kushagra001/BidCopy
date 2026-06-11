@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Copy, Check, RefreshCw, Star, Edit3, Eye, Clipboard } from 'lucide-react'
+import { Copy, Check, RefreshCw, Star, Edit3, Eye, Clipboard, FileText, Lightbulb, Target, Sparkles } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { buildChecklist, countChecked, type HumaniseTip } from '@/lib/humanise'
 import type { ProposalOutput } from '@/types/proposal'
@@ -36,6 +36,8 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
   const [editedProposal, setEditedProposal] = useState<string>('')
   const [isEditingProposal, setIsEditingProposal] = useState(false)
 
+  const totalPrice = output?.pricing.reduce((s, r) => s + r.total, 0) ?? 0
+
   useEffect(() => {
     if (isGenerating) {
       setLoadingStep(0)
@@ -45,6 +47,30 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
       return () => clearInterval(interval)
     }
   }, [isGenerating])
+
+  useEffect(() => {
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      if (e.altKey && e.key?.toLowerCase() === 'c') {
+        if (!output || isGenerating) return
+        e.preventDefault()
+        if (activeTab === 'proposal') {
+          copy(editedProposal, 'proposal')
+        } else if (activeTab === 'pricing') {
+          copy(
+            output.pricing.map((r) => `${r.item}\t${r.hours}h\t$${r.rate}/hr\t$${r.total}`).join('\n') + `\n\nTotal: $${totalPrice}`,
+            'pricing'
+          )
+        } else if (activeTab === 'followup') {
+          copy(output.followup, 'followup')
+        }
+      }
+    }
+
+    window.addEventListener('keydown', handleGlobalKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleGlobalKeyDown)
+    }
+  }, [activeTab, output, editedProposal, totalPrice, isGenerating])
 
   // Rebuild checklist & local proposal when output changes
   const [lastOutputKey, setLastOutputKey] = useState<string | null>(null)
@@ -91,20 +117,18 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
     setTimeout(() => setCopiedTipId(null), 2000)
   }
 
-  const totalPrice = output?.pricing.reduce((s, r) => s + r.total, 0) ?? 0
-
   if (isGenerating) {
     return (
       <div className="h-full flex flex-col items-center justify-center text-center p-12">
         <div className="relative w-16 h-16 mb-6">
-          <div className="absolute inset-0 border-4 border-[--color-bc-blue]/20 rounded-full" />
-          <div className="absolute inset-0 border-4 border-t-[--color-bc-blue] rounded-full animate-spin" />
+          <div className="absolute inset-0 border-4 border-bc-blue/20 rounded-full" />
+          <div className="absolute inset-0 border-4 border-t-bc-blue rounded-full animate-spin" />
         </div>
         <h3 className="font-semibold text-[--color-bc-ink] text-lg mb-2">Generating your bid package</h3>
         <p className="text-sm text-[--color-bc-muted] max-w-xs leading-relaxed mb-8">
           Our AI is writing your proposal, calculating project milestones, and tailoring the pricing.
         </p>
-        <div className="w-full max-w-xs bg-gray-50 border border-[--color-bc-border] rounded-xl p-5 space-y-4">
+        <div className="w-full max-w-xs bg-[--color-bc-surface] border border-[--color-bc-border] rounded-xl p-5 space-y-4">
           <LoadingStep step={0} currentStep={loadingStep} label="Analyzing job details..." />
           <LoadingStep step={1} currentStep={loadingStep} label="Selecting relevant projects..." />
           <LoadingStep step={2} currentStep={loadingStep} label="Polishing tone & style..." />
@@ -117,7 +141,9 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
   if (!output) {
     return (
       <div className="h-full flex flex-col items-center justify-center text-center border-2 border-dashed border-[--color-bc-border] rounded-xl p-12">
-        <div className="text-5xl mb-5">✍️</div>
+        <div className="w-16 h-16 rounded-2xl bg-[--color-bc-surface] border border-[--color-bc-border] flex items-center justify-center mb-5 text-[--color-bc-muted] shadow-sm">
+          <FileText className="w-8 h-8 text-[--color-bc-blue]" />
+        </div>
         <h3 className="font-semibold text-[--color-bc-ink] text-lg mb-2">Your bid package will appear here</h3>
         <p className="text-sm text-[--color-bc-muted] max-w-xs leading-relaxed">
           Paste a job description on the left and click generate. You'll get a complete proposal, pricing breakdown, timeline, and follow-up message.
@@ -171,14 +197,14 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
         {activeTab === 'proposal' && (
           <div className="space-y-4">
             {/* Read / Edit Toggle Header */}
-            <div className="flex items-center justify-between border-b border-gray-100 pb-2 flex-shrink-0">
+            <div className="flex items-center justify-between border-b border-[--color-bc-border] pb-2 flex-shrink-0">
               <span className="text-xs text-[--color-bc-muted] font-medium">Refine your proposal below</span>
-              <div className="flex bg-gray-100 p-0.5 rounded-lg text-xs">
+              <div className="flex bg-[--color-bc-surface] p-0.5 rounded-lg text-xs">
                 <button
                   onClick={() => setIsEditingProposal(false)}
                   className={`flex items-center gap-1 px-3 py-1 rounded-md transition-all cursor-pointer ${
                     !isEditingProposal
-                      ? 'bg-white text-[--color-bc-ink] font-semibold shadow-sm'
+                      ? 'bg-[--color-bc-white] text-[--color-bc-ink] font-semibold shadow-sm'
                       : 'text-[--color-bc-muted] hover:text-[--color-bc-ink]'
                   }`}
                 >
@@ -189,7 +215,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
                   onClick={() => setIsEditingProposal(true)}
                   className={`flex items-center gap-1 px-3 py-1 rounded-md transition-all cursor-pointer ${
                     isEditingProposal
-                      ? 'bg-white text-[--color-bc-ink] font-semibold shadow-sm'
+                      ? 'bg-[--color-bc-white] text-[--color-bc-ink] font-semibold shadow-sm'
                       : 'text-[--color-bc-muted] hover:text-[--color-bc-ink]'
                   }`}
                 >
@@ -231,7 +257,23 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
               onClick={() => copy(editedProposal, 'proposal')}
               className="flex items-center gap-2 text-xs bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg hover:bg-[--color-bc-blue-dark] transition-colors font-semibold"
             >
-              {copied === 'proposal' ? <><Check size={12} /> Copied!</> : <><Copy size={12} /> Copy proposal</>}
+              {copied === 'proposal' ? (
+                <>
+                  <Check size={12} /> Copied!
+                </>
+              ) : (
+                <>
+                  <Copy size={12} />
+                  <span>Copy proposal</span>
+                  <span className="flex items-center gap-1 ml-1.5 opacity-80 select-none">
+                    <span>(</span>
+                    <kbd className="font-mono text-[9px] bg-white/20 px-1 py-0.5 rounded font-normal">Alt</kbd>
+                    <span>+</span>
+                    <kbd className="font-mono text-[9px] bg-white/20 px-1 py-0.5 rounded font-normal">C</kbd>
+                    <span>)</span>
+                  </span>
+                </>
+              )}
             </button>
           </div>
         )}
@@ -280,7 +322,23 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
               )}
               className="mt-4 flex items-center gap-2 text-xs bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg hover:bg-[--color-bc-blue-dark] transition-colors"
             >
-              {copied === 'pricing' ? <><Check size={12} /> Copied!</> : <><Copy size={12} /> Copy pricing table</>}
+              {copied === 'pricing' ? (
+                <>
+                  <Check size={12} /> Copied!
+                </>
+              ) : (
+                <>
+                  <Copy size={12} />
+                  <span>Copy pricing table</span>
+                  <span className="flex items-center gap-1 ml-1.5 opacity-80 select-none">
+                    <span>(</span>
+                    <kbd className="font-mono text-[9px] bg-white/20 px-1 py-0.5 rounded font-normal">Alt</kbd>
+                    <span>+</span>
+                    <kbd className="font-mono text-[9px] bg-white/20 px-1 py-0.5 rounded font-normal">C</kbd>
+                    <span>)</span>
+                  </span>
+                </>
+              )}
             </button>
           </div>
         )}
@@ -320,15 +378,32 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
         {/* FOLLOW-UP */}
         {activeTab === 'followup' && (
           <div className="space-y-4">
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800">
-              💡 Send this message <strong>48 hours</strong> after submitting your proposal if you haven't heard back.
+            <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 rounded-lg p-3 text-xs text-amber-850 dark:text-amber-300 flex gap-2.5 items-start">
+              <Lightbulb size={14} className="text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+              <span>Send this message <strong>48 hours</strong> after submitting your proposal if you haven't heard back.</span>
             </div>
             <p className="text-sm text-[--color-bc-ink] leading-relaxed">{output.followup}</p>
             <button
               onClick={() => copy(output.followup, 'followup')}
               className="flex items-center gap-2 text-xs bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg hover:bg-[--color-bc-blue-dark] transition-colors"
             >
-              {copied === 'followup' ? <><Check size={12} /> Copied!</> : <><Copy size={12} /> Copy follow-up</>}
+              {copied === 'followup' ? (
+                <>
+                  <Check size={12} /> Copied!
+                </>
+              ) : (
+                <>
+                  <Copy size={12} />
+                  <span>Copy follow-up</span>
+                  <span className="flex items-center gap-1 ml-1.5 opacity-80 select-none">
+                    <span>(</span>
+                    <kbd className="font-mono text-[9px] bg-white/20 px-1 py-0.5 rounded font-normal">Alt</kbd>
+                    <span>+</span>
+                    <kbd className="font-mono text-[9px] bg-white/20 px-1 py-0.5 rounded font-normal">C</kbd>
+                    <span>)</span>
+                  </span>
+                </>
+              )}
             </button>
           </div>
         )}
@@ -341,7 +416,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
           <div className="flex items-center justify-between mb-4">
             <div className="flex flex-col gap-0.5">
               <h4 className="text-xs font-bold text-[--color-bc-ink] uppercase tracking-wide flex items-center gap-1.5">
-                <span className="text-base">🎯</span> AI Humaniser Assistant
+                <Target size={14} className="text-[--color-bc-blue] shrink-0" /> AI Humaniser Assistant
               </h4>
               <p className="text-[10px] text-[--color-bc-muted]">Rewrite robotic phrasing to increase client response rate</p>
             </div>
@@ -357,29 +432,30 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
               const isApplied = tip.checked || hasReplacement
 
               return (
-                <div key={tip.id} className="bg-gray-50/70 border border-[--color-bc-border] rounded-xl p-3.5 hover:shadow-sm transition-all duration-200">
-                  <p className="text-xs font-medium text-[--color-bc-ink] mb-2 leading-relaxed">
-                    💡 {tip.explanation}
-                  </p>
+                <div key={tip.id} className="bg-[--color-bc-surface]/50 border border-[--color-bc-border] rounded-xl p-3.5 hover:shadow-sm transition-all duration-200">
+                  <div className="flex gap-2 items-start text-xs font-medium text-[--color-bc-ink] mb-2 leading-relaxed">
+                    <Lightbulb size={13.5} className="text-amber-500 shrink-0 mt-0.5" />
+                    <span>{tip.explanation}</span>
+                  </div>
                   
                   {tip.original && tip.replacement ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
-                      <div className="bg-red-50/50 border border-red-100 rounded-lg p-2.5">
-                        <span className="text-[10px] uppercase font-bold text-red-500 tracking-wider block mb-1">Robotic Draft</span>
-                        <p className={`text-xs text-red-800 leading-relaxed ${isApplied ? 'line-through opacity-50' : ''}`}>
+                      <div className="bg-red-50/50 dark:bg-red-950/20 border border-red-100 dark:border-red-900/30 rounded-lg p-2.5">
+                        <span className="text-[10px] uppercase font-bold text-red-500 dark:text-red-400 tracking-wider block mb-1">Robotic Draft</span>
+                        <p className={`text-xs text-red-800 dark:text-red-300 leading-relaxed ${isApplied ? 'line-through opacity-50' : ''}`}>
                           "{tip.original}"
                         </p>
                       </div>
-                      <div className="bg-emerald-50/50 border border-emerald-100 rounded-lg p-2.5">
-                        <span className="text-[10px] uppercase font-bold text-emerald-600 tracking-wider block mb-1">Human Rewrite</span>
-                        <p className="text-xs text-emerald-800 font-medium leading-relaxed">
+                      <div className="bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-lg p-2.5">
+                        <span className="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 tracking-wider block mb-1">Human Rewrite</span>
+                        <p className="text-xs text-emerald-800 dark:text-emerald-300 font-medium leading-relaxed">
                           "{tip.replacement}"
                         </p>
                       </div>
                     </div>
                   ) : (
-                    <div className="bg-blue-50/50 border border-blue-100 rounded-lg p-2.5 mb-2">
-                      <p className="text-xs text-blue-800 leading-relaxed">
+                    <div className="bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/30 rounded-lg p-2.5 mb-2">
+                      <p className="text-xs text-blue-800 dark:text-blue-300 leading-relaxed">
                         "{tip.explanation}"
                       </p>
                     </div>
@@ -390,7 +466,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
                       {isApplied ? (
                         <button
                           onClick={() => handleRevertTip(tip)}
-                          className="flex items-center gap-1 text-[10px] font-semibold text-gray-500 hover:text-[--color-bc-ink] bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm transition-all cursor-pointer"
+                          className="flex items-center gap-1 text-[10px] font-semibold text-[--color-bc-muted] hover:text-[--color-bc-ink] bg-[--color-bc-white] border border-[--color-bc-border] px-3 py-1.5 rounded-lg shadow-sm transition-all cursor-pointer"
                         >
                           Undo Revision
                         </button>
@@ -444,16 +520,16 @@ function LoadingStep({ step, currentStep, label }: { step: number; currentStep: 
   return (
     <div className="flex items-center gap-3 w-full text-left">
       <div className={`w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0 transition-all duration-300 ${
-        isDone ? 'bg-green-100 text-green-600 font-semibold' :
+        isDone ? 'bg-green-100 dark:bg-green-950/30 text-green-600 dark:text-green-400 font-semibold' :
         isActive ? 'bg-[--color-bc-blue-light] text-[--color-bc-blue] animate-pulse font-bold' :
-        'bg-gray-100 text-gray-400'
+        'bg-gray-100 dark:bg-slate-800 text-gray-400 dark:text-slate-500'
       }`}>
         {isDone ? '✓' : step + 1}
       </div>
       <span className={`text-xs transition-all duration-300 ${
-        isDone ? 'text-gray-500 font-medium' :
+        isDone ? 'text-gray-500 dark:text-slate-400 font-medium' :
         isActive ? 'text-[--color-bc-ink] font-semibold' :
-        'text-gray-400'
+        'text-gray-400 dark:text-slate-500'
       }`}>
         {label}
       </span>

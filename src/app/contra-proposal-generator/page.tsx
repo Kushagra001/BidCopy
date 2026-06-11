@@ -4,7 +4,7 @@ import { Nav } from '@/components/shared/Nav'
 import { Footer } from '@/components/shared/Footer'
 
 export const metadata: Metadata = {
-  title:       'Free Contra Proposal Generator — BidCopy',
+  title:       'Free Contra Proposal Generator | BidCopy',
   description: 'Generate a winning Contra proposal in 30 seconds. AI bid writer for Contra freelancers. Show personality, values, and craft.',
   keywords:    ['contra proposal generator', 'contra bid writer', 'contra freelance proposal'],
 }
@@ -13,7 +13,7 @@ export default function ContraProposalGeneratorPage() {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-20 px-6 bg-white">
+      <main className="pt-28 pb-20 px-6 bg-[--background]">
         <div className="max-w-3xl mx-auto">
           <div className="mb-10">
             <div className="inline-flex items-center gap-2 bg-[--color-bc-blue-light] border border-[--color-bc-blue-mid] text-[--color-bc-blue] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
@@ -37,10 +37,10 @@ export default function ContraProposalGeneratorPage() {
             <p>Contra is different from Upwork and Freelancer.com. The platform attracts clients who value independent creators, not just task-completers. Your proposal should feel like a genuine conversation, not a pitch deck.</p>
             <h2>Contra proposal tips</h2>
             <ul>
-              <li>Show genuine interest in their project — mention something specific about their vision</li>
+              <li>Show genuine interest in their project. Mention something specific about their vision</li>
               <li>Mention your values and why you do this work</li>
               <li>Reference past projects with the story, not just the output</li>
-              <li>Contra allows slightly longer proposals — use the space to build connection</li>
+              <li>Contra allows slightly longer proposals. Use the space to build connection</li>
             </ul>
           </div>
         </div>

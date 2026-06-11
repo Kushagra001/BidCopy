@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button'
 
 const PRO_FEATURES = [
   'Unlimited bid generations',
-  'Claude Sonnet 4.5 — best AI quality',
+  'GPT-4.1 AI — best quality',
   'Full proposal history',
   'Priority generation speed',
   'All 4 platforms supported',
@@ -79,7 +79,7 @@ export default function UpgradePage() {
           <p className="text-[--color-bc-muted]">Unlimited generations. Better AI. Full history.</p>
         </div>
 
-        <div className="bg-[--color-bc-ink] text-white rounded-2xl p-8">
+        <div className="bg-[--color-bc-dark-card] text-white rounded-2xl p-8">
           <div className="flex items-baseline gap-1 mb-2">
             <span className="text-5xl font-bold">₹499</span>
             <span className="text-white/60">/month</span>
