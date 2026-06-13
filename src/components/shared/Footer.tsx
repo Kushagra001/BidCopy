@@ -36,6 +36,7 @@ export function Footer() {
           <div className="flex gap-6">
             <Link href="/privacy" className="text-slate-400/80 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Privacy</Link>
             <Link href="/terms" className="text-slate-400/80 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Terms</Link>
+            <Link href="/refund" className="text-slate-400/80 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

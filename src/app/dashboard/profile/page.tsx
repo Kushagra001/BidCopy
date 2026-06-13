@@ -56,7 +56,7 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError]   = useState<string | null>(null)
 
-  const { register, handleSubmit, control, watch, setValue, trigger, formState: { errors } } = useForm<ProfileForm>({
+  const { register, handleSubmit, control, watch, setValue, trigger, getValues, formState: { errors } } = useForm<ProfileForm>({
     resolver:      zodResolver(profileSchema),
     defaultValues: {
       currency: 'USD',
@@ -167,7 +167,7 @@ export default function ProfilePage() {
       const nextStep = step + 1
       setStep(nextStep)
       localStorage.setItem('bidcopy_profile_draft', JSON.stringify({
-        ...watch(),
+        ...getValues(),
         step: nextStep
       }))
     }
@@ -324,7 +324,7 @@ export default function ProfilePage() {
                 const prevStep = step - 1
                 setStep(prevStep)
                 localStorage.setItem('bidcopy_profile_draft', JSON.stringify({
-                  ...watch(),
+                  ...getValues(),
                   step: prevStep
                 }))
               }} className="flex-1">

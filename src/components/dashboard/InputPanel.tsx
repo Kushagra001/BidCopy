@@ -26,10 +26,10 @@ interface InputPanelProps {
 }
 
 const PLATFORMS = [
-  { id: 'upwork',     label: 'Upwork',     dotColor: 'bg-emerald-500' },
-  { id: 'freelancer', label: 'Freelancer', dotColor: 'bg-blue-500' },
-  { id: 'contra',     label: 'Contra',     dotColor: 'bg-teal-400' },
-  { id: 'general',    label: 'General',    dotColor: 'bg-slate-400 dark:bg-slate-500' },
+  { id: 'upwork',     label: 'Upwork',     dotColor: 'bg-[--color-upwork]' },
+  { id: 'freelancer', label: 'Freelancer', dotColor: 'bg-[--color-freelancer]' },
+  { id: 'contra',     label: 'Contra',     dotColor: 'bg-[--color-contra]' },
+  { id: 'general',    label: 'General',    dotColor: 'bg-[--color-general]' },
 ] as const
 
 const PLATFORM_STYLES: Record<string, { selected: string; unselected: string }> = {
