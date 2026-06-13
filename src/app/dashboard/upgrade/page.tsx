@@ -72,7 +72,7 @@ export default function UpgradePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[--color-bc-surface] flex items-center justify-center px-6 py-20">
+    <main className="min-h-screen bg-[--color-bc-surface] dark:bg-[--background] flex items-center justify-center px-6 py-20">
       <div className="max-w-md w-full">
         <div className="text-center mb-10">
           <Link href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</Link>
