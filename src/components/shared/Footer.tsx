@@ -14,7 +14,7 @@ export function Footer() {
             <p className="text-xs mt-4 text-slate-400 dark:text-[--color-bc-faint]">hello@bidcopy.com</p>
           </div>
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">Product</h4>
+            <div className="text-white text-sm font-semibold mb-4">Product</div>
             <ul className="space-y-2 text-sm">
               <li><Link href="/dashboard" className="text-slate-400 dark:text-[--color-bc-muted] hover:text-white dark:hover:text-[--color-bc-ink] transition-colors">Generator</Link></li>
               <li><Link href="/dashboard/upgrade" className="text-slate-400 dark:text-[--color-bc-muted] hover:text-white dark:hover:text-[--color-bc-ink] transition-colors">Pricing</Link></li>
@@ -22,7 +22,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">Tools</h4>
+            <div className="text-white text-sm font-semibold mb-4">Tools</div>
             <ul className="space-y-2 text-sm">
               <li><Link href="/upwork-proposal-generator" className="text-slate-400 dark:text-[--color-bc-muted] hover:text-white dark:hover:text-[--color-bc-ink] transition-colors">Upwork Proposal Generator</Link></li>
               <li><Link href="/freelancer-proposal-generator" className="text-slate-400 dark:text-[--color-bc-muted] hover:text-white dark:hover:text-[--color-bc-ink] transition-colors">Freelancer Proposal Generator</Link></li>
