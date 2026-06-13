@@ -10,6 +10,7 @@ async function getOrCreateUser(supabase: any, clerkUserId: string) {
     .eq('clerk_id', clerkUserId)
     .single()
 
+  let lastError: any = null
   if (!user) {
     try {
       const clerkUser = await currentUser()
@@ -28,15 +29,17 @@ async function getOrCreateUser(supabase: any, clerkUserId: string) {
             user = newUser
           } else if (insertError) {
             console.error('Failed to create user in db:', insertError)
+            lastError = insertError
           }
         }
       }
     } catch (err) {
       console.error('Error fetching/creating user from Clerk:', err)
+      lastError = err
     }
   }
 
-  return user
+  return { user, error: lastError }
 }
 
 export async function GET() {
@@ -45,8 +48,8 @@ export async function GET() {
 
   const supabase = createAdminClient()
 
-  const user = await getOrCreateUser(supabase, userId)
-  if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 })
+  const { user, error: dbError } = await getOrCreateUser(supabase, userId)
+  if (!user) return NextResponse.json({ error: 'User not found', details: dbError }, { status: 404 })
 
   const { data: profile } = await supabase
     .from('profiles')
@@ -63,8 +66,8 @@ export async function POST(req: NextRequest) {
 
   const supabase = createAdminClient()
 
-  const user = await getOrCreateUser(supabase, userId)
-  if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 })
+  const { user, error: dbError } = await getOrCreateUser(supabase, userId)
+  if (!user) return NextResponse.json({ error: 'User not found', details: dbError }, { status: 404 })
 
   const body = await req.json()
 
