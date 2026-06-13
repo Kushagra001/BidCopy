@@ -38,6 +38,7 @@ export interface Proposal {
   pricing_table:   PricingRow[]
   timeline:        TimelinePhase[]
   followup_text?:  string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   humanise_tips:   any[]
   model_used?:     string
   word_count?:     number

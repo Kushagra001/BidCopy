@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 266" width="100%" height="100%">
+  <!-- Icon -->
+  <g transform="translate(0, 0)">
+    <path d="M 0 0 L 0 265 L 147 265 L 160 262 L 163 260 L 165 260 L 173 256 L 175 254 L 178 253 L 182 250 L 196 236 L 200 230 L 201 227 L 204 223 L 204 221 L 206 218 L 206 216 L 208 213 L 211 199 L 211 182 L 209 171 L 206 162 L 201 152 L 195 143 L 185 132 L 195 122 L 200 115 L 201 112 L 203 110 L 205 106 L 205 104 L 207 101 L 209 95 L 209 93 L 171 94 L 170 97 L 167 101 L 162 106 L 158 109 L 148 114 L 144 115 L 53 116 L 54 150 L 143 150 L 150 152 L 159 157 L 168 166 L 170 169 L 175 180 L 176 185 L 176 196 L 174 204 L 169 214 L 159 224 L 148 230 L 138 232 L 34 231 L 35 33 L 109 33 L 109 0 Z" fill="#ffffff" />
+    <path d="M 124 1 L 124 78 L 209 78 Z" fill="#209be8" />
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="260" y="195" font-family="Inter, system-ui, -apple-system, sans-serif" font-weight="800" font-size="170" fill="#ffffff" letter-spacing="-4">BidCopy</text>
+</svg>

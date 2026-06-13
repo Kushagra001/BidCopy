@@ -1,0 +1,79 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "BidCopy Logo BidCopy" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "BidCopy Logo" [ref=e5]
+        - text: BidCopy
+      - generic [ref=e6]:
+        - link "Pricing" [ref=e7] [cursor=pointer]:
+          - /url: "#pricing"
+        - link "FAQ" [ref=e8] [cursor=pointer]:
+          - /url: "#faq"
+        - button "Toggle theme" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+        - link "Sign in" [ref=e12] [cursor=pointer]:
+          - /url: /sign-in
+        - link "Start free →" [ref=e13] [cursor=pointer]:
+          - /url: /sign-up
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Free AI Proposal Generator for Freelancers" [level=1] [ref=e17]
+        - paragraph [ref=e18]: BidCopy is the most complete free AI proposal generator for freelancers. Get a full bid package in under 30 seconds. This includes your proposal, pricing breakdown, project timeline, and a follow-up message. No credit card required.
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: Start generating proposals for free
+        - link "Generate free proposals →" [ref=e21] [cursor=pointer]:
+          - /url: /sign-up
+        - paragraph [ref=e22]: Unlimited generations · No credit card
+      - generic [ref=e23]:
+        - heading "What does the free plan include?" [level=2] [ref=e24]
+        - paragraph [ref=e25]: The BidCopy free plan gives you 5 complete bid packages per day. Each includes a tailored proposal, itemised pricing breakdown, project timeline, and follow-up message, plus the Humanise Checklist with 5 specific tips to personalise it.
+        - heading "Is the free AI proposal generator good enough?" [level=2] [ref=e26]
+        - paragraph [ref=e27]: The free plan uses GPT-4o mini, which produces high-quality proposals for most jobs. Upgrade to Pro for GPT-4.1, which is better at nuance, complex technical projects, and jobs requiring a specific voice.
+  - contentinfo [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - img "BidCopy Logo" [ref=e33]
+            - text: BidCopy
+          - paragraph [ref=e34]: AI-powered bid proposal generator for freelancers. Write bids that win — in 30 seconds.
+          - paragraph [ref=e35]: hello@bidcopy.com
+        - generic [ref=e36]:
+          - heading "Product" [level=4] [ref=e37]
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Generator" [ref=e40] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e41]:
+              - link "Pricing" [ref=e42] [cursor=pointer]:
+                - /url: /dashboard/upgrade
+            - listitem [ref=e43]:
+              - link "Blog" [ref=e44] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e45]:
+          - heading "Tools" [level=4] [ref=e46]
+          - list [ref=e47]:
+            - listitem [ref=e48]:
+              - link "Upwork Proposal Generator" [ref=e49] [cursor=pointer]:
+                - /url: /upwork-proposal-generator
+            - listitem [ref=e50]:
+              - link "Freelancer Proposal Generator" [ref=e51] [cursor=pointer]:
+                - /url: /freelancer-proposal-generator
+            - listitem [ref=e52]:
+              - link "Contra Proposal Generator" [ref=e53] [cursor=pointer]:
+                - /url: /contra-proposal-generator
+            - listitem [ref=e54]:
+              - link "Free AI Proposal Generator" [ref=e55] [cursor=pointer]:
+                - /url: /free-proposal-generator
+      - generic [ref=e56]:
+        - paragraph [ref=e57]: © 2026 BidCopy. All rights reserved.
+        - generic [ref=e58]:
+          - link "Privacy" [ref=e59] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e60] [cursor=pointer]:
+            - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e66] [cursor=pointer]:
+    - img [ref=e67]
+  - alert [ref=e70]

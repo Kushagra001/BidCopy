@@ -1,0 +1,84 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "BidCopy Logo BidCopy" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "BidCopy Logo" [ref=e5]
+        - text: BidCopy
+      - generic [ref=e6]:
+        - link "Pricing" [ref=e7] [cursor=pointer]:
+          - /url: "#pricing"
+        - link "FAQ" [ref=e8] [cursor=pointer]:
+          - /url: "#faq"
+        - button "Toggle theme" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+        - link "Sign in" [ref=e12] [cursor=pointer]:
+          - /url: /sign-in
+        - link "Start free →" [ref=e13] [cursor=pointer]:
+          - /url: /sign-up
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]: Freelancer.com-optimised · Under 350 words · Direct
+        - heading "Free Freelancer.com Proposal Generator" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Generate concise, direct Freelancer.com bids that get noticed. BidCopy keeps proposals under 350 words, mentions your experience early, and leads with the solution, not your CV.
+      - generic [ref=e20]:
+        - paragraph [ref=e21]: Generate your Freelancer.com bid now
+        - link "Generate proposal →" [ref=e22] [cursor=pointer]:
+          - /url: /sign-up?platform=freelancer
+        - paragraph [ref=e23]: Unlimited generations · No credit card
+      - generic [ref=e24]:
+        - heading "Freelancer.com proposal tips" [level=2] [ref=e25]
+        - paragraph [ref=e26]: Freelancer.com clients see hundreds of bids. The ones that win are direct, reference the client's project specifically, and show relevant experience in the first two lines. Avoid generic openers and long introductions.
+        - heading "What makes a Freelancer.com bid stand out" [level=2] [ref=e27]
+        - list [ref=e28]:
+          - listitem [ref=e29]: Lead with your most relevant experience for this specific project
+          - listitem [ref=e30]: Keep it under 350 words. Shorter bids get more attention
+          - listitem [ref=e31]: Mention one specific result from a past project
+          - listitem [ref=e32]: Include your timeline estimate upfront
+  - contentinfo [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - img "BidCopy Logo" [ref=e38]
+            - text: BidCopy
+          - paragraph [ref=e39]: AI-powered bid proposal generator for freelancers. Write bids that win — in 30 seconds.
+          - paragraph [ref=e40]: hello@bidcopy.com
+        - generic [ref=e41]:
+          - heading "Product" [level=4] [ref=e42]
+          - list [ref=e43]:
+            - listitem [ref=e44]:
+              - link "Generator" [ref=e45] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e46]:
+              - link "Pricing" [ref=e47] [cursor=pointer]:
+                - /url: /dashboard/upgrade
+            - listitem [ref=e48]:
+              - link "Blog" [ref=e49] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e50]:
+          - heading "Tools" [level=4] [ref=e51]
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - link "Upwork Proposal Generator" [ref=e54] [cursor=pointer]:
+                - /url: /upwork-proposal-generator
+            - listitem [ref=e55]:
+              - link "Freelancer Proposal Generator" [ref=e56] [cursor=pointer]:
+                - /url: /freelancer-proposal-generator
+            - listitem [ref=e57]:
+              - link "Contra Proposal Generator" [ref=e58] [cursor=pointer]:
+                - /url: /contra-proposal-generator
+            - listitem [ref=e59]:
+              - link "Free AI Proposal Generator" [ref=e60] [cursor=pointer]:
+                - /url: /free-proposal-generator
+      - generic [ref=e61]:
+        - paragraph [ref=e62]: © 2026 BidCopy. All rights reserved.
+        - generic [ref=e63]:
+          - link "Privacy" [ref=e64] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e65] [cursor=pointer]:
+            - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e71] [cursor=pointer]:
+    - img [ref=e72]
+  - alert [ref=e75]

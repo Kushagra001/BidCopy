@@ -1,0 +1,22 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "BidCopy Logo BidCopy" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "BidCopy Logo" [ref=e6]
+          - text: BidCopy
+        - navigation [ref=e7]:
+          - link "← Generate" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Profile" [ref=e9] [cursor=pointer]:
+            - /url: /dashboard/profile
+          - button "Toggle theme" [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+    - main [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Proposal history" [level=1] [ref=e15]
+        - paragraph [ref=e16]: 0 proposals generated
+  - button "Open Next.js Dev Tools" [ref=e24] [cursor=pointer]:
+    - img [ref=e25]
+  - alert [ref=e28]

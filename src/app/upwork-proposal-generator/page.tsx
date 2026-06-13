@@ -32,7 +32,7 @@ export default function UpworkProposalGeneratorPage() {
               className="inline-block bg-[--color-bc-blue] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[--color-bc-blue-dark] transition-colors">
               Generate Upwork proposal →
             </Link>
-            <p className="text-xs text-[--color-bc-muted] mt-3">Unlimited generations · No credit card</p>
+            <p className="text-xs text-[--color-bc-muted] mt-3">15 free generations daily · No credit card</p>
           </div>
 
           {/* SEO content */}

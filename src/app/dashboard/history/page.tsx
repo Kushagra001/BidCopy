@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Badge } from '@/components/ui/Badge'
 import { formatDate, truncate } from '@/lib/utils'
@@ -33,14 +35,23 @@ export default function HistoryPage() {
   const [total, setTotal]         = useState(0)
   const LIMIT = 20
 
+  const [error, setError]         = useState<string | null>(null)
+
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true)
+    setError(null)
     fetch(`/api/history?page=${page}&limit=${LIMIT}`)
-      .then((r) => r.json())
+      .then(async (r) => {
+        const json = await r.json()
+        if (!r.ok) throw new Error(json.error || 'Failed to fetch history')
+        return json
+      })
       .then(({ proposals: p, total: t }) => {
         setProposals(p ?? [])
         setTotal(t ?? 0)
       })
+      .catch((e) => setError(e.message))
       .finally(() => setLoading(false))
   }, [page])
 
@@ -48,9 +59,9 @@ export default function HistoryPage() {
     <div className="min-h-screen bg-[--color-bc-surface]">
       <header className="bg-[--color-bc-white] border-b border-[--color-bc-border] px-6 py-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <a href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</a>
+          <Link href="/" className="font-bold text-[--color-bc-blue] text-xl flex items-center gap-2"><Image src="/icon.svg" alt="BidCopy Logo" width={19} height={24} className="rounded-sm" />BidCopy</Link>
           <nav className="flex items-center gap-4 text-sm">
-            <a href="/dashboard" className="text-[--color-bc-muted] hover:text-[--color-bc-ink]">← Generate</a>
+            <Link href="/dashboard" className="text-[--color-bc-muted] hover:text-[--color-bc-ink]">← Generate</Link>
             <a href="/dashboard/profile" className="text-[--color-bc-muted] hover:text-[--color-bc-ink]">Profile</a>
             <ThemeToggle />
           </nav>
@@ -67,14 +78,23 @@ export default function HistoryPage() {
           <div className="flex items-center justify-center py-24">
             <div className="w-8 h-8 border-2 border-bc-blue border-t-transparent rounded-full animate-spin" />
           </div>
+        ) : error ? (
+          <div className="text-center py-24 bg-[--color-bc-white] border border-[--color-bc-border] rounded-xl">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="font-semibold text-[--color-bc-ink] mb-2">{error}</h3>
+            <p className="text-sm text-[--color-bc-muted] mb-6">Upgrade to Pro to unlock unlimited history, GPT-4.1, and all platforms.</p>
+            <Link href="/dashboard/upgrade" className="inline-flex items-center gap-2 bg-[--color-bc-blue] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[--color-bc-blue-dark] transition-colors">
+              Upgrade to Pro →
+            </Link>
+          </div>
         ) : proposals.length === 0 ? (
-          <div className="text-center py-24">
+          <div className="text-center py-24 bg-[--color-bc-white] border border-[--color-bc-border] rounded-xl">
             <div className="text-4xl mb-4">📭</div>
             <h3 className="font-semibold text-[--color-bc-ink] mb-2">No proposals yet</h3>
             <p className="text-sm text-[--color-bc-muted] mb-6">Generate your first bid to see it here.</p>
-            <a href="/dashboard" className="inline-flex items-center gap-2 bg-[--color-bc-blue] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[--color-bc-blue-dark] transition-colors">
+            <Link href="/dashboard" className="inline-flex items-center gap-2 bg-[--color-bc-blue] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[--color-bc-blue-dark] transition-colors">
               Generate a bid →
-            </a>
+            </Link>
           </div>
         ) : (
           <>

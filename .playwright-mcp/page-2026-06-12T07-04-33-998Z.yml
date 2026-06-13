@@ -1,0 +1,84 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "BidCopy Logo BidCopy" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "BidCopy Logo" [ref=e5]
+        - text: BidCopy
+      - generic [ref=e6]:
+        - link "Pricing" [ref=e7] [cursor=pointer]:
+          - /url: "#pricing"
+        - link "FAQ" [ref=e8] [cursor=pointer]:
+          - /url: "#faq"
+        - button "Toggle theme" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+        - link "Sign in" [ref=e12] [cursor=pointer]:
+          - /url: /sign-in
+        - link "Start free →" [ref=e13] [cursor=pointer]:
+          - /url: /sign-up
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]: Contra-optimised · Values-forward · Craft-focused
+        - heading "Free Contra Proposal Generator" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Contra clients value personality and craft. BidCopy generates proposals that show your values, mention why you love the work, and connect your past projects to their vision.
+      - generic [ref=e20]:
+        - paragraph [ref=e21]: Generate your Contra proposal now
+        - link "Generate proposal →" [ref=e22] [cursor=pointer]:
+          - /url: /sign-up?platform=contra
+        - paragraph [ref=e23]: Unlimited generations · No credit card
+      - generic [ref=e24]:
+        - heading "What makes a great Contra proposal" [level=2] [ref=e25]
+        - paragraph [ref=e26]: Contra is different from Upwork and Freelancer.com. The platform attracts clients who value independent creators, not just task-completers. Your proposal should feel like a genuine conversation, not a pitch deck.
+        - heading "Contra proposal tips" [level=2] [ref=e27]
+        - list [ref=e28]:
+          - listitem [ref=e29]: Show genuine interest in their project. Mention something specific about their vision
+          - listitem [ref=e30]: Mention your values and why you do this work
+          - listitem [ref=e31]: Reference past projects with the story, not just the output
+          - listitem [ref=e32]: Contra allows slightly longer proposals. Use the space to build connection
+  - contentinfo [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - img "BidCopy Logo" [ref=e38]
+            - text: BidCopy
+          - paragraph [ref=e39]: AI-powered bid proposal generator for freelancers. Write bids that win — in 30 seconds.
+          - paragraph [ref=e40]: hello@bidcopy.com
+        - generic [ref=e41]:
+          - heading "Product" [level=4] [ref=e42]
+          - list [ref=e43]:
+            - listitem [ref=e44]:
+              - link "Generator" [ref=e45] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e46]:
+              - link "Pricing" [ref=e47] [cursor=pointer]:
+                - /url: /dashboard/upgrade
+            - listitem [ref=e48]:
+              - link "Blog" [ref=e49] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e50]:
+          - heading "Tools" [level=4] [ref=e51]
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - link "Upwork Proposal Generator" [ref=e54] [cursor=pointer]:
+                - /url: /upwork-proposal-generator
+            - listitem [ref=e55]:
+              - link "Freelancer Proposal Generator" [ref=e56] [cursor=pointer]:
+                - /url: /freelancer-proposal-generator
+            - listitem [ref=e57]:
+              - link "Contra Proposal Generator" [ref=e58] [cursor=pointer]:
+                - /url: /contra-proposal-generator
+            - listitem [ref=e59]:
+              - link "Free AI Proposal Generator" [ref=e60] [cursor=pointer]:
+                - /url: /free-proposal-generator
+      - generic [ref=e61]:
+        - paragraph [ref=e62]: © 2026 BidCopy. All rights reserved.
+        - generic [ref=e63]:
+          - link "Privacy" [ref=e64] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e65] [cursor=pointer]:
+            - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e71] [cursor=pointer]:
+    - img [ref=e72]
+  - alert [ref=e75]

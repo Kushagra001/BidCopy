@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import type { UserProfile } from '@/types/profile'
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
+import Link from 'next/link'
 
 // ── Zod schema ──────────────────────────────────────────────
 const profileSchema = z.object({
@@ -73,11 +74,14 @@ export default function ProfilePage() {
       .then((r) => r.json())
       .then(({ profile, defaultName }) => {
         const draft = localStorage.getItem('bidcopy_profile_draft')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let draftData: any = null
         if (draft) {
           try {
             draftData = JSON.parse(draft)
-          } catch (e) {}
+          } catch {
+            // ignore
+          }
         }
 
         if (profile) {
@@ -138,8 +142,8 @@ export default function ProfilePage() {
         const errData = await res.json().catch(() => ({}))
         setError(errData.error || 'Failed to save profile. Please check all fields or try again.')
       }
-    } catch (e: any) {
-      setError(e.message || 'An unexpected error occurred. Please try again.')
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : 'An unexpected error occurred. Please try again.')
     } finally {
       setSaving(false)
     }
@@ -181,7 +185,7 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-[--color-bc-surface]">
       <header className="bg-[--color-bc-white] border-b border-[--color-bc-border] px-6 py-4">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <a href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</a>
+          <Link href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</Link>
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <a href="/dashboard" className="text-sm text-[--color-bc-muted] hover:text-[--color-bc-ink]">← Back to dashboard</a>

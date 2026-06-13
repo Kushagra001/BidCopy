@@ -1,0 +1,295 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "BidCopy Logo BidCopy" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "BidCopy Logo" [ref=e5]
+        - text: BidCopy
+      - generic [ref=e6]:
+        - button "Toggle theme" [ref=e7] [cursor=pointer]:
+          - img [ref=e8]
+        - link "Start free →" [ref=e10] [cursor=pointer]:
+          - /url: /sign-up
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - heading "Write bids that win." [level=1] [ref=e14]
+      - paragraph [ref=e15]:
+        - text: Paste a job description. Get a complete bid package in
+        - strong [ref=e16]: 30 seconds.
+        - text: This includes your proposal, pricing breakdown, timeline, and follow-up.
+      - generic [ref=e17]:
+        - link "Start for free →" [ref=e18] [cursor=pointer]:
+          - /url: /sign-up
+        - link "See how it works ↓" [ref=e19] [cursor=pointer]:
+          - /url: "#how-it-works"
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - img [ref=e22]
+          - text: Sign up with Google in one click
+        - generic [ref=e27]: ·
+        - generic [ref=e28]: 5 free generations daily · No credit card
+      - generic [ref=e30]:
+        - generic [ref=e37]: bidcopy.com/dashboard
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - generic [ref=e41]: Upwork
+              - generic [ref=e42]: Freelancer
+              - generic [ref=e43]: Contra
+            - generic [ref=e45]: Job description
+            - button "Generate Bid →" [ref=e48]
+          - generic [ref=e50]:
+            - button "proposal" [ref=e51]
+            - button "pricing" [ref=e52]
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - heading "How it works" [level=2] [ref=e56]
+        - paragraph [ref=e57]: From job post to ready-to-send bid in under a minute.
+      - generic [ref=e58]:
+        - generic [ref=e60]:
+          - img [ref=e62]
+          - generic [ref=e65]: "01"
+          - heading "Paste the job description" [level=3] [ref=e66]
+          - paragraph [ref=e67]: Copy and paste the full job post from Upwork, Freelancer.com, Contra, or anywhere else. The more detail, the better the output.
+        - generic [ref=e69]:
+          - img [ref=e71]
+          - generic [ref=e73]: "02"
+          - heading "BidCopy generates your complete package" [level=3] [ref=e74]
+          - paragraph [ref=e75]: In 30 seconds you get a tailored proposal, pricing breakdown, project timeline, and a follow-up message.
+        - generic [ref=e77]:
+          - img [ref=e79]
+          - generic [ref=e82]: "03"
+          - heading "Personalise with the Humanise Checklist" [level=3] [ref=e83]
+          - paragraph [ref=e84]: BidCopy generates 5 specific tips to make your proposal sound like you, not a template. Check them off and send with confidence.
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - heading "Why BidCopy beats every other proposal tool" [level=2] [ref=e88]
+        - paragraph [ref=e89]: Other tools give you a proposal. BidCopy gives you everything you need to win the project.
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: Feature
+            - generic [ref=e94]: Others
+            - generic [ref=e95]: BidCopy
+          - generic [ref=e96]:
+            - generic [ref=e97]: Proposal only
+            - img [ref=e99]
+            - img [ref=e102]
+          - generic [ref=e104]:
+            - generic [ref=e105]: Pricing breakdown
+            - img [ref=e107]
+            - img [ref=e111]
+          - generic [ref=e113]:
+            - generic [ref=e114]: Project timeline
+            - img [ref=e116]
+            - img [ref=e120]
+          - generic [ref=e122]:
+            - generic [ref=e123]: Follow-up message
+            - img [ref=e125]
+            - img [ref=e129]
+          - generic [ref=e131]:
+            - generic [ref=e132]: Humanise Checklist
+            - img [ref=e134]
+            - img [ref=e138]
+          - generic [ref=e140]:
+            - generic [ref=e141]: Platform-specific rules
+            - img [ref=e143]
+            - img [ref=e147]
+          - generic [ref=e149]:
+            - generic [ref=e150]: Powered by GPT-4.1
+            - img [ref=e152]
+            - img [ref=e156]
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - img [ref=e161]
+            - heading "The Humanise Checklist" [level=3] [ref=e165]
+            - paragraph [ref=e166]:
+              - text: No other tool has this. After every generation, BidCopy gives you 5
+              - strong [ref=e167]: specific tips
+              - text: tailored to that job. These tell you exactly what to change to make the proposal sound authentically like you.
+            - generic [ref=e168]:
+              - generic [ref=e171]: Replace 'extensive experience' with your Medica project example
+              - generic [ref=e174]: The client mentioned React — add your preferred React patterns
+              - generic [ref=e177]: Remove 'as per your requirements' — it screams template
+          - link "Try it free →" [ref=e178] [cursor=pointer]:
+            - /url: /sign-up
+    - generic [ref=e180]:
+      - generic [ref=e181]:
+        - heading "Freelancers who are winning more" [level=2] [ref=e182]
+        - paragraph [ref=e183]: Real results from real freelancers.
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - generic [ref=e187]: ★
+            - generic [ref=e188]: ★
+            - generic [ref=e189]: ★
+            - generic [ref=e190]: ★
+            - generic [ref=e191]: ★
+          - paragraph [ref=e192]: “I used to spend 30 to 45 minutes writing each proposal. BidCopy cuts that to under 2 minutes. My win rate went from 8% to 21% in the first month.”
+          - generic [ref=e193]:
+            - generic [ref=e194]: AM
+            - generic [ref=e195]:
+              - generic [ref=e196]: Arjun Mehta
+              - generic [ref=e197]: Full-stack developer · Upwork Top Rated
+        - generic [ref=e198]:
+          - generic [ref=e199]:
+            - generic [ref=e200]: ★
+            - generic [ref=e201]: ★
+            - generic [ref=e202]: ★
+            - generic [ref=e203]: ★
+            - generic [ref=e204]: ★
+          - paragraph [ref=e205]: “The Humanise Checklist is the feature no other tool has. It tells me exactly what to change so clients can't tell it's AI. I've won 6 projects this week.”
+          - generic [ref=e206]:
+            - generic [ref=e207]: PN
+            - generic [ref=e208]:
+              - generic [ref=e209]: Priya Nair
+              - generic [ref=e210]: UI/UX Designer · Contra creator
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]: ★
+            - generic [ref=e214]: ★
+            - generic [ref=e215]: ★
+            - generic [ref=e216]: ★
+            - generic [ref=e217]: ★
+          - paragraph [ref=e218]: “My proposals were generic and got ignored. BidCopy personalises them with my actual past projects. Three clients said my proposal stood out from 40+ others.”
+          - generic [ref=e219]:
+            - generic [ref=e220]: SA
+            - generic [ref=e221]:
+              - generic [ref=e222]: Sam Adewale
+              - generic [ref=e223]: Copywriter · Freelancer.com
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - heading "Simple pricing" [level=2] [ref=e227]
+        - paragraph [ref=e228]: Start free. Upgrade when you need more.
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - heading "Free" [level=3] [ref=e232]
+            - generic [ref=e233]:
+              - generic [ref=e234]: $0
+              - generic [ref=e235]: /forever
+            - paragraph [ref=e236]: Everything you need to get started
+          - list [ref=e237]:
+            - listitem [ref=e238]:
+              - img [ref=e239]
+              - generic [ref=e241]: 5 generations per day
+            - listitem [ref=e242]:
+              - img [ref=e243]
+              - generic [ref=e245]: GPT-4o mini AI
+            - listitem [ref=e246]:
+              - img [ref=e247]
+              - generic [ref=e249]: Proposal + pricing + timeline
+            - listitem [ref=e250]:
+              - img [ref=e251]
+              - generic [ref=e253]: Humanise checklist
+            - listitem [ref=e254]:
+              - img [ref=e255]
+              - generic [ref=e257]: Follow-up message
+            - listitem [ref=e258]:
+              - generic [ref=e259]: ✕
+              - generic [ref=e260]: GPT-4.1 AI (best quality)
+            - listitem [ref=e261]:
+              - generic [ref=e262]: ✕
+              - generic [ref=e263]: Proposal history
+          - link "Start for free" [ref=e264] [cursor=pointer]:
+            - /url: /sign-up
+        - generic [ref=e265]:
+          - generic [ref=e266]:
+            - heading "Pro" [level=3] [ref=e267]
+            - generic [ref=e268]:
+              - generic [ref=e269]: $6
+              - generic [ref=e270]: /per month
+            - paragraph [ref=e271]: For serious freelancers
+          - list [ref=e272]:
+            - listitem [ref=e273]:
+              - img [ref=e274]
+              - generic [ref=e276]: Unlimited generations
+            - listitem [ref=e277]:
+              - img [ref=e278]
+              - generic [ref=e280]: GPT-4.1 AI (best quality)
+            - listitem [ref=e281]:
+              - img [ref=e282]
+              - generic [ref=e284]: Full proposal history
+            - listitem [ref=e285]:
+              - img [ref=e286]
+              - generic [ref=e288]: Humanise checklist
+            - listitem [ref=e289]:
+              - img [ref=e290]
+              - generic [ref=e292]: Priority generation speed
+            - listitem [ref=e293]:
+              - img [ref=e294]
+              - generic [ref=e296]: All platforms supported
+          - link "Go Pro →" [ref=e297] [cursor=pointer]:
+            - /url: /sign-up
+    - generic [ref=e299]:
+      - heading "Frequently asked questions" [level=2] [ref=e301]
+      - generic [ref=e302]:
+        - button "Will clients know my proposal is AI-generated?" [ref=e304]:
+          - generic [ref=e305]: Will clients know my proposal is AI-generated?
+          - img [ref=e306]
+        - button "Does it work for non-developer freelancers?" [ref=e309]:
+          - generic [ref=e310]: Does it work for non-developer freelancers?
+          - img [ref=e311]
+        - button "What platforms does it support?" [ref=e314]:
+          - generic [ref=e315]: What platforms does it support?
+          - img [ref=e316]
+        - button "How is this different from just using ChatGPT?" [ref=e319]:
+          - generic [ref=e320]: How is this different from just using ChatGPT?
+          - img [ref=e321]
+        - button "How does the pricing breakdown work?" [ref=e324]:
+          - generic [ref=e325]: How does the pricing breakdown work?
+          - img [ref=e326]
+        - button "What are the free plan limits?" [ref=e329]:
+          - generic [ref=e330]: What are the free plan limits?
+          - img [ref=e331]
+    - generic [ref=e334]:
+      - heading "Ready to win more bids?" [level=2] [ref=e335]
+      - paragraph [ref=e336]: Free forever. Upgrade for GPT-4.1 quality.
+      - link "Start for free →" [ref=e337] [cursor=pointer]:
+        - /url: /sign-up
+  - contentinfo [ref=e338]:
+    - generic [ref=e339]:
+      - generic [ref=e340]:
+        - generic [ref=e341]:
+          - generic [ref=e342]:
+            - img "BidCopy Logo" [ref=e343]
+            - text: BidCopy
+          - paragraph [ref=e344]: AI-powered bid proposal generator for freelancers. Write bids that win — in 30 seconds.
+          - paragraph [ref=e345]: hello@bidcopy.com
+        - generic [ref=e346]:
+          - heading "Product" [level=4] [ref=e347]
+          - list [ref=e348]:
+            - listitem [ref=e349]:
+              - link "Generator" [ref=e350] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e351]:
+              - link "Pricing" [ref=e352] [cursor=pointer]:
+                - /url: /dashboard/upgrade
+            - listitem [ref=e353]:
+              - link "Blog" [ref=e354] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e355]:
+          - heading "Tools" [level=4] [ref=e356]
+          - list [ref=e357]:
+            - listitem [ref=e358]:
+              - link "Upwork Proposal Generator" [ref=e359] [cursor=pointer]:
+                - /url: /upwork-proposal-generator
+            - listitem [ref=e360]:
+              - link "Freelancer Proposal Generator" [ref=e361] [cursor=pointer]:
+                - /url: /freelancer-proposal-generator
+            - listitem [ref=e362]:
+              - link "Contra Proposal Generator" [ref=e363] [cursor=pointer]:
+                - /url: /contra-proposal-generator
+            - listitem [ref=e364]:
+              - link "Free AI Proposal Generator" [ref=e365] [cursor=pointer]:
+                - /url: /free-proposal-generator
+      - generic [ref=e366]:
+        - paragraph [ref=e367]: © 2026 BidCopy. All rights reserved.
+        - generic [ref=e368]:
+          - link "Privacy" [ref=e369] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e370] [cursor=pointer]:
+            - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e376] [cursor=pointer]:
+    - img [ref=e377]
+  - alert [ref=e380]

@@ -52,7 +52,13 @@ export async function POST(req: NextRequest) {
       user.generations_today = 0
     }
 
-    // (No generation limit — free tier is unlimited)
+    // Enforce 15-generation daily limit on Free plan
+    if (user.plan !== 'pro' && user.generations_today >= 15) {
+      return NextResponse.json(
+        { error: 'Daily limit reached. Upgrade to Pro for unlimited generations.', upgradeRequired: true },
+        { status: 403 }
+      )
+    }
 
     // Parse input
     const body = await req.json()
@@ -62,6 +68,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'Job description is too short. Paste the full description for best results.' },
         { status: 400 }
+      )
+    }
+
+    if (user.plan !== 'pro' && platform !== 'upwork' && platform !== 'general') {
+      return NextResponse.json(
+        { error: `Generating proposals for ${platform} is a Pro feature.`, upgradeRequired: true },
+        { status: 403 }
       )
     }
 
@@ -82,6 +95,7 @@ export async function POST(req: NextRequest) {
       ],
       response_format: { type: 'json_object' },
     })
+    // eslint-disable-next-line prefer-const
     rawResult = response.choices[0].message.content || ''
 
     // Parse JSON safely
@@ -90,6 +104,7 @@ export async function POST(req: NextRequest) {
       pricing:       Array<{ item: string; hours: number; rate: number; total: number; notes: string }>
       timeline:      Array<{ phase: string; duration: string; deliverables: string[] }>
       followup:      string
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       humanise_tips: any[]
     }
 
@@ -137,12 +152,14 @@ export async function POST(req: NextRequest) {
       .select('id')
       .single()
 
+    const generationsLeft = user.plan === 'pro' ? null : Math.max(0, 15 - (user.generations_today + 1))
+
     return NextResponse.json({
       success:         true,
       proposalId:      saved?.id,
       output:          parsed,
       modelUsed:       requestedModel === PRO_MODEL ? 'GPT-4.1' : 'GPT-4o mini',
-      generationsLeft: null,
+      generationsLeft,
     })
 
   } catch (error) {

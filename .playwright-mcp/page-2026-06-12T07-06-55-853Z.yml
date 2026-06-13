@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "BidCopy Logo BidCopy" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "BidCopy Logo" [ref=e6]
+        - text: BidCopy
+      - heading "Upgrade to Pro" [level=1] [ref=e7]
+      - paragraph [ref=e8]: Unlimited generations. Better AI. Full history.
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: ₹499
+        - generic [ref=e12]: /month
+      - paragraph [ref=e13]: Cancel anytime. Billed monthly.
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - img [ref=e16]
+          - generic [ref=e18]: Unlimited bid generations
+        - listitem [ref=e19]:
+          - img [ref=e20]
+          - generic [ref=e22]: GPT-4.1 AI — best quality
+        - listitem [ref=e23]:
+          - img [ref=e24]
+          - generic [ref=e26]: Full proposal history
+        - listitem [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e30]: Priority generation speed
+        - listitem [ref=e31]:
+          - img [ref=e32]
+          - generic [ref=e34]: All 4 platforms supported
+        - listitem [ref=e35]:
+          - img [ref=e36]
+          - generic [ref=e38]: Humanise Checklist on every bid
+        - listitem [ref=e39]:
+          - img [ref=e40]
+          - generic [ref=e42]: Pricing breakdown + timeline + follow-up
+      - button "Upgrade now →" [ref=e43]
+    - paragraph [ref=e44]: Secure payment via Razorpay. Cancel anytime from your profile.
+  - button "Open Next.js Dev Tools" [ref=e50] [cursor=pointer]:
+    - img [ref=e51]
+  - alert [ref=e54]

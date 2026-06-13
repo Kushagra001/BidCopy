@@ -42,7 +42,7 @@ export async function Hero() {
                 Sign up with Google in one click
               </div>
               <span className="text-[--color-bc-border]" aria-hidden>·</span>
-              <span className="text-xs text-[--color-bc-faint]">Unlimited generations · No credit card</span>
+              <span className="text-xs text-[--color-bc-faint]">15 free generations daily · No credit card</span>
             </div>
           </>
         ) : (

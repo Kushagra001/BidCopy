@@ -11,7 +11,7 @@ export default function NotFound() {
           <span className="text-sm font-semibold uppercase tracking-widest text-[--color-bc-blue] mb-4 block">404 Error</span>
           <h1 className="text-4xl font-bold text-[--color-bc-ink] mb-4">Page not found</h1>
           <p className="text-lg text-[--color-bc-muted] mb-8">
-            The page you're looking for doesn't exist or has been moved.
+            The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
           <Link 
             href="/"

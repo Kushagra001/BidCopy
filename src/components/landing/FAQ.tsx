@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: 'What are the free plan limits?',
-    a: '5 generations per day on the free plan, using GPT-4o mini. That\'s enough to apply for 5 jobs daily. The counter resets at midnight. Pro plan is unlimited, uses GPT-4.1 (better quality), and includes proposal history.',
+    a: '15 generations per day on the free plan, using GPT-4o mini. That\'s enough to apply for 15 jobs daily. The counter resets at midnight. Pro plan is unlimited, uses GPT-4.1 (better quality), and includes proposal history.',
   },
 ]
 

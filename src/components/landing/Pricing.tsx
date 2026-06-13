@@ -8,7 +8,7 @@ const PLANS = [
     period:      'forever',
     description: 'Everything you need to get started',
     features: [
-      'Unlimited generations',
+      '15 generations per day',
       'GPT-4o mini AI',
       'Proposal + pricing + timeline',
       'Humanise checklist',

@@ -22,6 +22,7 @@ interface InputPanelProps {
   isGenerating:    boolean
   generationsLeft: number | null
   initialValues?:  Partial<InputFormData>
+  plan?:           'free' | 'pro'
 }
 
 const PLATFORMS = [
@@ -50,7 +51,7 @@ const PLATFORM_STYLES: Record<string, { selected: string; unselected: string }> 
   },
 }
 
-export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialValues }: InputPanelProps) {
+export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialValues, plan = 'free' }: InputPanelProps) {
   const {
     register,
     handleSubmit,
@@ -69,6 +70,18 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
     }
   }, [initialValues, reset])
 
+  const loadSampleData = () => {
+    reset({
+      platform: 'upwork',
+      jobTitle: 'Senior React Developer for Healthcare Dashboard',
+      budgetType: 'fixed',
+      jobBudget: '$2,500',
+      jobDescription: 'We are seeking an experienced React developer to help us polish and build out our new patient analytics dashboard. The design is mostly done in Figma, but we need someone to build the frontend, hook up the charting library (Recharts), and implement smooth, premium transitions. Must have 3+ years experience with Next.js, TypeScript, and Tailwind CSS. Responsive design and WCAG AA accessibility compliance are highly important. The project needs to be delivered in 2 weeks.',
+      extraContext: 'Focus on my extensive experience with Recharts and pixel-perfect UI execution.',
+    })
+  }
+
+  // eslint-disable-next-line react-hooks/incompatible-library
   const selectedPlatform = watch('platform')
   const budgetType = watch('budgetType') || 'fixed'
 
@@ -88,47 +101,62 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
         <p className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide mb-2">
           Platform
         </p>
-        <div className="grid grid-cols-4 gap-2">
-          {PLATFORMS.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              onClick={() => setValue('platform', p.id)}
-              className={`py-2 px-1 rounded-lg text-[11px] sm:text-xs font-semibold border transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
-                selectedPlatform === p.id
-                  ? PLATFORM_STYLES[p.id].selected
-                  : PLATFORM_STYLES[p.id].unselected
-              }`}
-            >
-              <span className={`w-1.5 h-1.5 rounded-full shrink-0 transition-all ${p.dotColor} ${
-                selectedPlatform === p.id ? 'scale-110 opacity-100' : 'opacity-60'
-              }`} />
-              {p.label}
-            </button>
-          ))}
+        <div role="radiogroup" aria-label="Platform selection" className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          {PLATFORMS.map((p) => {
+            const isLocked = plan !== 'pro' && p.id !== 'upwork' && p.id !== 'general'
+            return (
+              <button
+                key={p.id}
+                type="button"
+                role="radio"
+                aria-checked={selectedPlatform === p.id}
+                onClick={() => {
+                  if (isLocked) {
+                    window.location.href = '/dashboard/upgrade'
+                    return
+                  }
+                  setValue('platform', p.id)
+                }}
+                className={`relative py-3 sm:py-2.5 px-1 rounded-lg text-[11px] sm:text-xs font-semibold border transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                  selectedPlatform === p.id
+                    ? PLATFORM_STYLES[p.id].selected
+                    : PLATFORM_STYLES[p.id].unselected
+                } ${isLocked ? 'opacity-50 cursor-not-allowed hover:border-[--color-bc-border] hover:text-[--color-bc-muted]' : ''}`}
+              >
+                {isLocked && <span className="absolute -top-1.5 -right-1.5 bg-[--color-bc-surface] border border-[--color-bc-border] text-[8px] rounded px-1 text-[--color-bc-ink-2]">PRO</span>}
+                <span className={`w-1.5 h-1.5 rounded-full shrink-0 transition-all ${p.dotColor} ${
+                  selectedPlatform === p.id ? 'scale-110 opacity-100' : 'opacity-60'
+                }`} />
+                {p.label}
+              </button>
+            )
+          })}
         </div>
       </div>
 
       {/* Title + Budget */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
+          <label htmlFor="jobTitle" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
             Job title <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
           </label>
           <input
             {...register('jobTitle')}
+            id="jobTitle"
             placeholder="e.g. Next.js developer needed"
-            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
+            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder-bc-faint bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
           />
         </div>
         <div className="flex flex-col gap-1.5">
           <div className="flex items-center justify-between">
-            <label className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
+            <label htmlFor="jobBudget" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
               Budget <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
             </label>
-            <div className="flex bg-[--color-bc-surface] p-0.5 rounded-md text-[10px] font-bold">
+            <div role="radiogroup" aria-label="Budget type" className="flex bg-[--color-bc-surface] p-0.5 rounded-md text-[10px] font-bold">
               <button
                 type="button"
+                role="radio"
+                aria-checked={budgetType === 'fixed'}
                 onClick={() => setValue('budgetType', 'fixed')}
                 className={`px-2 py-0.5 rounded transition-all cursor-pointer ${
                   budgetType === 'fixed'
@@ -140,6 +168,8 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
               </button>
               <button
                 type="button"
+                role="radio"
+                aria-checked={budgetType === 'hourly'}
                 onClick={() => setValue('budgetType', 'hourly')}
                 className={`px-2 py-0.5 rounded transition-all cursor-pointer ${
                   budgetType === 'hourly'
@@ -153,21 +183,32 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
           </div>
           <input
             {...register('jobBudget')}
+            id="jobBudget"
             placeholder={budgetType === 'hourly' ? "e.g. $15 - $25 / hr" : "e.g. $500 or $1000 - $3000"}
-            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
+            className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder-bc-faint bg-[--color-bc-white] focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
           />
         </div>
       </div>
 
       {/* Job description */}
       <div className="flex-1 flex flex-col gap-1.5">
-        <label className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
-          Job description <span className="text-red-500">*</span>
-        </label>
+        <div className="flex justify-between items-center">
+          <label htmlFor="jobDescription" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
+            Job description <span className="text-red-500">*</span>
+          </label>
+          <button
+            type="button"
+            onClick={loadSampleData}
+            className="text-[10px] font-bold text-[--color-bc-blue] hover:underline uppercase tracking-wider transition-colors cursor-pointer"
+          >
+            💡 Load Sample Job
+          </button>
+        </div>
         <textarea
           {...register('jobDescription')}
+          id="jobDescription"
           placeholder="Paste the full job description here. The more detail, the better the proposal."
-          className={`flex-1 min-h-[200px] border rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] resize-none focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all ${
+          className={`flex-1 min-h-[200px] border rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder-bc-faint bg-[--color-bc-white] resize-none focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all ${
             errors.jobDescription ? 'border-red-400' : 'border-[--color-bc-border]'
           }`}
         />
@@ -178,14 +219,15 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
 
       {/* Extra context */}
       <div className="flex flex-col gap-1.5">
-        <label className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
+        <label htmlFor="extraContext" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
           Any extra context? <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
         </label>
         <textarea
           {...register('extraContext')}
+          id="extraContext"
           rows={2}
           placeholder="e.g. 'Stress my Shopify experience' or 'Keep it under 300 words'"
-          className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder:text-[--color-bc-faint] bg-[--color-bc-white] resize-none focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
+          className="border border-[--color-bc-border] rounded-lg px-3 py-2.5 text-sm text-[--color-bc-ink] placeholder-bc-faint bg-[--color-bc-white] resize-none focus:outline-none focus:ring-2 focus:ring-bc-blue/20 focus:border-bc-blue transition-all"
         />
       </div>
 
@@ -216,7 +258,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
               <span className={`font-semibold ${generationsLeft <= 1 ? 'text-amber-600' : 'text-[--color-bc-ink]'}`}>
                 {generationsLeft}
               </span>{' '}
-              of 5 free generations remaining today
+              of 15 free generations remaining today
             </span>
             <a href="/dashboard/upgrade" className="text-[--color-bc-blue] hover:underline font-semibold">
               Go Pro →

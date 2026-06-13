@@ -13,6 +13,7 @@ export interface HumaniseTip {
   checked:     boolean
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function buildChecklist(tips: any[]): HumaniseTip[] {
   if (!Array.isArray(tips)) return []
   return tips.map((tip, i) => {

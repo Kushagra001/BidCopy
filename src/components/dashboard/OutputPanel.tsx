@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Copy, Check, RefreshCw, Star, Edit3, Eye, Clipboard, FileText, Lightbulb, Target, Sparkles } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { buildChecklist, countChecked, type HumaniseTip } from '@/lib/humanise'
@@ -40,6 +41,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
   useEffect(() => {
     if (isGenerating) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLoadingStep(0)
       const interval = setInterval(() => {
         setLoadingStep((s) => (s < 3 ? s + 1 : s))
@@ -50,10 +52,14 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
   useEffect(() => {
     const handleGlobalKeyDown = (e: KeyboardEvent) => {
-      if (e.altKey && e.key?.toLowerCase() === 'c') {
+      const isCopyShortcut = (e.altKey && e.key?.toLowerCase() === 'c') ||
+                             ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key?.toLowerCase() === 'c')
+
+      if (isCopyShortcut) {
         if (!output || isGenerating) return
         e.preventDefault()
         if (activeTab === 'proposal') {
+          // eslint-disable-next-line react-hooks/immutability
           copy(editedProposal, 'proposal')
         } else if (activeTab === 'pricing') {
           copy(
@@ -146,7 +152,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
         </div>
         <h3 className="font-semibold text-[--color-bc-ink] text-lg mb-2">Your bid package will appear here</h3>
         <p className="text-sm text-[--color-bc-muted] max-w-xs leading-relaxed">
-          Paste a job description on the left and click generate. You'll get a complete proposal, pricing breakdown, timeline, and follow-up message.
+          Paste a job description on the left and click generate. You&apos;ll get a complete proposal, pricing breakdown, timeline, and follow-up message.
         </p>
       </div>
     )
@@ -174,10 +180,14 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-[--color-bc-border] mb-4 flex-shrink-0">
+      <div role="tablist" aria-label="Bid package sections" className="flex overflow-x-auto whitespace-nowrap border-b border-[--color-bc-border] mb-4 flex-shrink-0 hide-scrollbar">
         {TABS.map((tab) => (
           <button
             key={tab.id}
+            id={`tab-${tab.id}`}
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            aria-controls={`tabpanel-${tab.id}`}
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2.5 text-sm font-medium border-b-2 transition-colors -mb-px ${
               activeTab === tab.id
@@ -195,7 +205,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
         {/* PROPOSAL */}
         {activeTab === 'proposal' && (
-          <div className="space-y-4">
+          <div id="tabpanel-proposal" role="tabpanel" aria-labelledby="tab-proposal" className="space-y-4">
             {/* Read / Edit Toggle Header */}
             <div className="flex items-center justify-between border-b border-[--color-bc-border] pb-2 flex-shrink-0">
               <span className="text-xs text-[--color-bc-muted] font-medium">Refine your proposal below</span>
@@ -227,24 +237,30 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
             {/* Proposal Content Area */}
             {isEditingProposal ? (
-              <textarea
+              <ProposalEditor
                 value={editedProposal}
-                onChange={(e) => setEditedProposal(e.target.value)}
-                className="w-full min-h-[400px] p-4 text-sm text-[--color-bc-ink] leading-relaxed border border-[--color-bc-border] rounded-xl focus:ring-1 focus:ring-[--color-bc-blue] focus:border-[--color-bc-blue] outline-none font-mono resize-y"
-                placeholder="Write or edit your proposal..."
+                onChange={setEditedProposal}
               />
             ) : (
               <div className="text-sm text-[--color-bc-ink] leading-relaxed border border-transparent px-1 min-h-[400px]">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     h1: ({node, ...props}) => <h1 className="text-lg font-bold text-[--color-bc-ink] mt-4 mb-2 first:mt-0" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     h2: ({node, ...props}) => <h2 className="text-base font-bold text-[--color-bc-ink] mt-4 mb-2 first:mt-0" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     h3: ({node, ...props}) => <h3 className="text-sm font-bold text-[--color-bc-ink] mt-3 mb-1 first:mt-0" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     p: ({node, ...props}) => <p className="mb-3 last:mb-0 leading-relaxed text-[--color-bc-ink-2]" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-3 space-y-1.5" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-3 space-y-1.5" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     li: ({node, ...props}) => <li className="text-sm text-[--color-bc-ink-2]" {...props} />,
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     strong: ({node, ...props}) => <strong className="font-semibold text-[--color-bc-ink]" {...props} />,
                   }}
                 >
@@ -280,7 +296,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
         {/* PRICING */}
         {activeTab === 'pricing' && (
-          <div>
+          <div id="tabpanel-pricing" role="tabpanel" aria-labelledby="tab-pricing">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[--color-bc-border]">
@@ -345,7 +361,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
         {/* TIMELINE */}
         {activeTab === 'timeline' && (
-          <div className="space-y-4">
+          <div id="tabpanel-timeline" role="tabpanel" aria-labelledby="tab-timeline" className="space-y-4">
             {output.timeline.map((phase, i) => (
               <div key={i} className="flex gap-4">
                 <div className="flex flex-col items-center">
@@ -377,10 +393,10 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
 
         {/* FOLLOW-UP */}
         {activeTab === 'followup' && (
-          <div className="space-y-4">
+          <div id="tabpanel-followup" role="tabpanel" aria-labelledby="tab-followup" className="space-y-4">
             <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 rounded-lg p-3 text-xs text-amber-850 dark:text-amber-300 flex gap-2.5 items-start">
               <Lightbulb size={14} className="text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-              <span>Send this message <strong>48 hours</strong> after submitting your proposal if you haven't heard back.</span>
+              <span>Send this message <strong>48 hours</strong> after submitting your proposal if you haven&apos;t heard back.</span>
             </div>
             <p className="text-sm text-[--color-bc-ink] leading-relaxed">{output.followup}</p>
             <button
@@ -443,20 +459,20 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
                       <div className="bg-red-50/50 dark:bg-red-950/20 border border-red-100 dark:border-red-900/30 rounded-lg p-2.5">
                         <span className="text-[10px] uppercase font-bold text-red-500 dark:text-red-400 tracking-wider block mb-1">Robotic Draft</span>
                         <p className={`text-xs text-red-800 dark:text-red-300 leading-relaxed ${isApplied ? 'line-through opacity-50' : ''}`}>
-                          "{tip.original}"
+                          &quot;{tip.original}&quot;
                         </p>
                       </div>
                       <div className="bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-lg p-2.5">
                         <span className="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 tracking-wider block mb-1">Human Rewrite</span>
                         <p className="text-xs text-emerald-800 dark:text-emerald-300 font-medium leading-relaxed">
-                          "{tip.replacement}"
+                          &quot;{tip.replacement}&quot;
                         </p>
                       </div>
                     </div>
                   ) : (
                     <div className="bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/30 rounded-lg p-2.5 mb-2">
                       <p className="text-xs text-blue-800 dark:text-blue-300 leading-relaxed">
-                        "{tip.explanation}"
+                        &quot;{tip.explanation}&quot;
                       </p>
                     </div>
                   )}
@@ -501,10 +517,18 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
       {/* Rating */}
       <div className="flex-shrink-0 mt-4 pt-4 border-t border-[--color-bc-border] flex items-center gap-3">
         <span className="text-xs text-[--color-bc-muted]">Rate this output:</span>
-        <div className="flex gap-1">
+        <div className="flex gap-0.5">
           {[1, 2, 3, 4, 5].map((star) => (
-            <button key={star} onClick={() => setRating(star)} className={`transition-colors ${star <= rating ? 'text-amber-400' : 'text-[--color-bc-border] hover:text-amber-300'}`}>
-              <Star size={16} fill={star <= rating ? 'currentColor' : 'none'} />
+            <button
+              key={star}
+              onClick={() => setRating(star)}
+              className={`w-11 h-11 flex items-center justify-center rounded-lg transition-colors cursor-pointer ${
+                star <= rating ? 'text-amber-400' : 'text-[--color-bc-border] hover:text-amber-300 hover:bg-[--color-bc-surface]'
+              }`}
+              aria-label={`Rate ${star} star${star !== 1 ? 's' : ''}`}
+              type="button"
+            >
+              <Star size={18} fill={star <= rating ? 'currentColor' : 'none'} />
             </button>
           ))}
         </div>
@@ -522,17 +546,57 @@ function LoadingStep({ step, currentStep, label }: { step: number; currentStep: 
       <div className={`w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0 transition-all duration-300 ${
         isDone ? 'bg-green-100 dark:bg-green-950/30 text-green-600 dark:text-green-400 font-semibold' :
         isActive ? 'bg-[--color-bc-blue-light] text-[--color-bc-blue] animate-pulse font-bold' :
-        'bg-gray-100 dark:bg-slate-800 text-gray-400 dark:text-slate-500'
+        'bg-[--color-bc-surface] border border-[--color-bc-border] text-[--color-bc-faint]'
       }`}>
         {isDone ? '✓' : step + 1}
       </div>
       <span className={`text-xs transition-all duration-300 ${
-        isDone ? 'text-gray-500 dark:text-slate-400 font-medium' :
+        isDone ? 'text-[--color-bc-muted] font-medium' :
         isActive ? 'text-[--color-bc-ink] font-semibold' :
-        'text-gray-400 dark:text-slate-500'
+        'text-[--color-bc-faint]'
       }`}>
         {label}
       </span>
     </div>
+  )
+}
+
+interface ProposalEditorProps {
+  value: string
+  onChange: (val: string) => void
+}
+
+function ProposalEditor({ value, onChange }: ProposalEditorProps) {
+  const [localVal, setLocalVal] = useState(value)
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setLocalVal(value)
+  }, [value])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (localVal !== value) {
+        onChange(localVal)
+      }
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [localVal, onChange, value])
+
+  const handleBlur = () => {
+    if (localVal !== value) {
+      onChange(localVal)
+    }
+  }
+
+  return (
+    <textarea
+      value={localVal}
+      onChange={(e) => setLocalVal(e.target.value)}
+      onBlur={handleBlur}
+      className="w-full min-h-[400px] p-4 text-sm text-[--color-bc-ink] placeholder-bc-faint leading-relaxed border border-[--color-bc-border] rounded-xl focus:ring-1 focus:ring-[--color-bc-blue] focus:border-[--color-bc-blue] outline-none font-mono resize-y"
+      placeholder="Write or edit your proposal..."
+    />
   )
 }

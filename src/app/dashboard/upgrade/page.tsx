@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 
 const PRO_FEATURES = [
   'Unlimited bid generations',
@@ -74,7 +75,7 @@ export default function UpgradePage() {
     <div className="min-h-screen bg-[--color-bc-surface] flex items-center justify-center px-6 py-20">
       <div className="max-w-md w-full">
         <div className="text-center mb-10">
-          <a href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</a>
+          <Link href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</Link>
           <h1 className="text-3xl font-bold text-[--color-bc-ink] mt-6 mb-2">Upgrade to Pro</h1>
           <p className="text-[--color-bc-muted]">Unlimited generations. Better AI. Full history.</p>
         </div>

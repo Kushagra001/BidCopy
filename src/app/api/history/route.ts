@@ -13,11 +13,15 @@ export async function GET(req: NextRequest) {
 
   const { data: user } = await supabase
     .from('users')
-    .select('id')
+    .select('id, plan')
     .eq('clerk_id', userId)
     .single()
 
   if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 })
+
+  if (user.plan !== 'pro') {
+    return NextResponse.json({ error: 'Proposal history is a Pro feature.' }, { status: 403 })
+  }
 
   if (id) {
     const { data: proposal, error } = await supabase
@@ -58,11 +62,15 @@ export async function PATCH(req: NextRequest) {
 
   const { data: user } = await supabase
     .from('users')
-    .select('id')
+    .select('id, plan')
     .eq('clerk_id', userId)
     .single()
 
   if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 })
+
+  if (user.plan !== 'pro') {
+    return NextResponse.json({ error: 'Proposal history is a Pro feature.' }, { status: 403 })
+  }
 
   const update: Record<string, unknown> = {}
   if (rating    !== undefined) update.rating   = rating

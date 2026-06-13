@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect } from 'react'
+import Link from 'next/link'
 import { InputPanel, type InputFormData } from '@/components/dashboard/InputPanel'
 import { OutputPanel } from '@/components/dashboard/OutputPanel'
 import type { ProposalOutput } from '@/types/proposal'
@@ -141,9 +142,9 @@ export default function DashboardPage() {
       {/* Nav */}
       <header className="bg-[--color-bc-white] border-b border-[--color-bc-border] px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="/" className="font-bold text-[--color-bc-blue] text-xl tracking-tight">
+          <Link href="/" className="font-bold text-[--color-bc-blue] text-xl tracking-tight">
             BidCopy
-          </a>
+          </Link>
           <nav className="flex items-center gap-6 text-sm">
             <a href="/dashboard/history" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">History</a>
             <a href="/dashboard/profile" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">Profile</a>

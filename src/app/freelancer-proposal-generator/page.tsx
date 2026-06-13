@@ -30,7 +30,7 @@ export default function FreelancerProposalGeneratorPage() {
               className="inline-block bg-[--color-bc-blue] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[--color-bc-blue-dark] transition-colors">
               Generate proposal →
             </Link>
-            <p className="text-xs text-[--color-bc-muted] mt-3">Unlimited generations · No credit card</p>
+            <p className="text-xs text-[--color-bc-muted] mt-3">15 free generations daily · No credit card</p>
           </div>
           <div className="text-[--color-bc-ink-2] text-lg leading-relaxed space-y-6 [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-[--color-bc-ink] [&>h2]:mt-12 [&>h2]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-2 [&>strong]:text-[--color-bc-ink]">
             <h2>Freelancer.com proposal tips</h2>

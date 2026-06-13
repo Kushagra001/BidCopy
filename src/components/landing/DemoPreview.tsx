@@ -147,10 +147,10 @@ export function DemoPreview() {
         </div>
 
         {/* App content */}
-        <div className="grid grid-cols-2 min-h-[340px]">
+        <div className="flex flex-col md:grid md:grid-cols-2 min-h-[340px]">
 
           {/* Left — Input panel */}
-          <div className="p-5 border-r border-[--color-bc-border] flex flex-col gap-4">
+          <div className="p-5 border-b md:border-b-0 md:border-r border-[--color-bc-border] flex flex-col gap-4">
             {/* Platform */}
             <div className="flex gap-2">
               {['Upwork', 'Freelancer', 'Contra'].map((p) => (
