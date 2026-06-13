@@ -72,7 +72,7 @@ export default function UpgradePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[--color-bc-surface] flex items-center justify-center px-6 py-20">
+    <main className="min-h-screen bg-[--color-bc-surface] flex items-center justify-center px-6 py-20">
       <div className="max-w-md w-full">
         <div className="text-center mb-10">
           <Link href="/" className="font-bold text-[--color-bc-blue] text-xl">BidCopy</Link>
@@ -111,6 +111,6 @@ export default function UpgradePage() {
           Secure payment via Razorpay. Cancel anytime from your profile.
         </p>
       </div>
-    </div>
+    </main>
   )
 }

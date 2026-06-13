@@ -2,7 +2,7 @@ import { SignIn } from '@clerk/nextjs'
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[--color-bc-surface]">
+    <main className="min-h-screen flex items-center justify-center bg-[--color-bc-surface]">
       <SignIn
         routing="path"
         path="/sign-in"
@@ -13,6 +13,6 @@ export default function SignInPage() {
           },
         }}
       />
-    </div>
+    </main>
   )
 }

@@ -2,7 +2,7 @@ import { SignUp } from '@clerk/nextjs'
 
 export default function SignUpPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[--color-bc-surface]">
+    <main className="min-h-screen flex items-center justify-center bg-[--color-bc-surface]">
       <SignUp
         routing="path"
         path="/sign-up"
@@ -13,6 +13,6 @@ export default function SignUpPage() {
           },
         }}
       />
-    </div>
+    </main>
   )
 }

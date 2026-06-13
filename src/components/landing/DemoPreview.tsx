@@ -157,7 +157,7 @@ export function DemoPreview() {
                 <span key={p}
                   className={`text-xs px-3 py-1 rounded-full font-medium border ${
                     p === 'Upwork'
-                      ? 'bg-[--color-bc-blue-light] text-[--color-bc-blue] border-[--color-bc-blue-mid]'
+                      ? 'bg-[--color-bc-blue-light] text-[--color-bc-blue-text] border-[--color-bc-blue-mid]'
                       : 'bg-[--color-bc-surface] text-[--color-bc-faint] border-[--color-bc-border]'
                   }`}>
                   {p}
@@ -208,7 +208,7 @@ export function DemoPreview() {
                   onClick={() => setActiveTab(tab)}
                   className={`px-3 py-1 rounded-md text-xs font-medium capitalize transition-colors ${
                     activeTab === tab
-                      ? 'bg-[--color-bc-blue-light] text-[--color-bc-blue] border border-[--color-bc-blue-mid]'
+                      ? 'bg-[--color-bc-blue-light] text-[--color-bc-blue-text] border border-[--color-bc-blue-mid]'
                       : 'text-[--color-bc-faint] hover:text-[--color-bc-ink]'
                   }`}>
                   {tab}
@@ -246,7 +246,7 @@ export function DemoPreview() {
                     ))}
                     <tr>
                       <td className="pt-2 font-bold text-[--color-bc-ink]">Total</td>
-                      <td className="pt-2 text-right font-bold text-[--color-bc-blue]">$2,550</td>
+                      <td className="pt-2 text-right font-bold text-[--color-bc-blue-text]">$2,550</td>
                     </tr>
                   </tbody>
                 </table>
@@ -257,7 +257,7 @@ export function DemoPreview() {
             {(phase === 'checklist' || phase === 'done') && activeTab === 'proposal' && (
               <div className="border-t border-[--color-bc-border] pt-3 mt-1">
                 <div className="text-xs font-bold text-[--color-bc-ink] mb-2 flex items-center gap-1.5">
-                  <Target className="w-3.5 h-3.5 text-[--color-bc-blue] shrink-0" /> Before you send
+                  <Target className="w-3.5 h-3.5 text-[--color-bc-blue-text] shrink-0" /> Before you send
                 </div>
                 <div className="space-y-1.5">
                   {TIPS.slice(0, visibleTips).map((tip, i) => (

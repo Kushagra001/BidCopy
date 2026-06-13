@@ -28953,3 +28953,4889 @@ Import traces:
 [63581862ms] [LOG] [Fast Refresh] done in 185ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
 [63599000ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
 [63599375ms] [LOG] [Fast Refresh] done in 479ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64525425ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64525582ms] [LOG] [Fast Refresh] done in 265ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64526618ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64526780ms] [LOG] [Fast Refresh] done in 270ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64526903ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64526931ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64527725ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64527854ms] [LOG] [Fast Refresh] done in 186ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64529790ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64529983ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530064ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530068ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530121ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530171ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530221ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530279ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530329ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530379ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530429ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530483ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530533ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530583ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530637ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530737ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64530786ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530798ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530854ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530904ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64530954ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531000ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531050ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531100ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531145ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531192ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531237ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531287ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531337ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531388ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531437ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531483ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531529ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531575ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531620ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531695ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531750ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531804ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531854ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531904ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531950ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64531996ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532041ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532087ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532133ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532179ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532225ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532271ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532320ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532370ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532420ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532471ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532520ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532570ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532617ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532669ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532738ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532811ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532875ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532934ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64532998ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533061ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533124ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533199ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533261ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533324ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533388ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533436ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533499ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533563ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533626ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533691ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533743ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533806ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533870ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533936ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64533999ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534064ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534127ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534191ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534253ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534316ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534379ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534427ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534490ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534554ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534618ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534690ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534741ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534807ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534870ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534936ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64534999ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535062ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535125ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535188ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535252ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535311ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535375ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535440ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535503ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535566ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535629ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535700ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535757ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535819ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535868ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535931ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64535995ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536058ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536122ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536186ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536249ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536313ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536374ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536440ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536503ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536568ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536630ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536704ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536762ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536825ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536883ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536933ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64536996ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537059ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537122ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537186ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537250ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537313ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537376ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537439ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537503ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537566ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537629ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537702ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537759ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537816ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537887ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537946ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64537991ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538037ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538100ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538162ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538221ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538271ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538320ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538388ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538452ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538510ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538574ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538637ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538709ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538761ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538825ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538888ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64538952ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539027ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539091ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539154ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539199ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539246ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539290ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539343ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539407ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539470ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539524ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539591ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539655ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539714ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539766ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539817ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539880ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64539944ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540007ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540082ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540146ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540210ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540273ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540337ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540401ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540464ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540527ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540592ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540650ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540713ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540772ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540836ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540899ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64540962ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541026ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541090ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541157ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541222ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541286ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541349ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541413ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541477ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541540ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541603ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541658ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541718ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541781ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541844ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541908ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64541971ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542033ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542096ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542159ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542219ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542282ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542345ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542409ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542473ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542535ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542598ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542662ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542722ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542770ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542833ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542897ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64542961ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543023ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543087ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543152ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543214ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543273ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543337ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543401ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543464ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543527ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543591ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543654ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543702ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543761ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543838ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543901ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64543958ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544008ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544054ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544100ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544146ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544202ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544265ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544324ms] [ERROR] ./src/app/dashboard/upgrade/page.tsx:114:7
+Expected corresponding JSX closing tag for <main>
+  112 |         </p>
+  113 |       </div>
+> 114 |     </div>
+      |       ^^^
+  115 |   )
+  116 | }
+  117 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component Browser]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/upgrade/page.tsx [Client Component SSR]
+    ./src/app/dashboard/upgrade/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[64544432ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64544576ms] [LOG] [Fast Refresh] done in 244ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64548194ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64548351ms] [LOG] [Fast Refresh] done in 260ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64551986ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64552086ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64562760ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64562869ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64564829ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64564978ms] [LOG] [Fast Refresh] done in 262ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64565107ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64565189ms] [LOG] [Fast Refresh] done in 189ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64627110ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64627465ms] [LOG] [Fast Refresh] done in 465ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64671982ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[64672134ms] [LOG] [Fast Refresh] done in 254ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477

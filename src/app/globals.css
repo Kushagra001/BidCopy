@@ -7,6 +7,7 @@
   /* Brand colors dynamically mapped to CSS variables */
   --color-bc-blue:       var(--color-bc-blue);
   --color-bc-blue-dark:  var(--color-bc-blue-dark);
+  --color-bc-blue-text:  var(--color-bc-blue-text);
   --color-bc-blue-light: var(--color-bc-blue-light);
   --color-bc-blue-mid:   var(--color-bc-blue-mid);
   --color-bc-ink:        var(--color-bc-ink);
@@ -30,6 +31,7 @@
 
   /* BidCopy tokens as real CSS vars (contrast ratios verified against light backgrounds) */
   --color-bc-blue:       #2563eb;
+  --color-bc-blue-text:  #2563eb;
   --color-bc-blue-dark:  #1d4ed8;
   --color-bc-blue-light: #eff6ff;
   --color-bc-blue-mid:   #bfdbfe;
@@ -55,6 +57,7 @@ html.dark {
 
   /* BidCopy tokens as real CSS vars (contrast ratios verified against dark backgrounds) */
   --color-bc-blue:       #2563eb;
+  --color-bc-blue-text:  #60a5fa; /* Accessible blue for text on dark backgrounds */
   --color-bc-blue-dark:  #1d4ed8;
   --color-bc-blue-light: #1e3a8a;
   --color-bc-blue-mid:   #1e40af;
