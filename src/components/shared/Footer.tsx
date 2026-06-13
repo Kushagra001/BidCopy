@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-sm leading-relaxed max-w-xs text-slate-400 dark:text-[--color-bc-muted]">
               AI-powered bid proposal generator for freelancers. Write bids that win — in 30 seconds.
             </p>
-            <p className="text-xs mt-4 text-slate-400/80 dark:text-[--color-bc-faint]">hello@bidcopy.com</p>
+            <p className="text-xs mt-4 text-slate-400 dark:text-[--color-bc-faint]">hello@bidcopy.com</p>
           </div>
           <div>
             <h4 className="text-white text-sm font-semibold mb-4">Product</h4>
@@ -34,9 +34,9 @@ export function Footer() {
         <div className="border-t border-[--color-bc-border] pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[--color-bc-faint]">
           <p>© {new Date().getFullYear()} BidCopy. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="text-slate-400/80 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Privacy</Link>
-            <Link href="/terms" className="text-slate-400/80 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Terms</Link>
-            <Link href="/refund" className="text-slate-400/80 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Refund Policy</Link>
+            <Link href="/privacy" className="text-slate-400 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Privacy</Link>
+            <Link href="/terms" className="text-slate-400 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Terms</Link>
+            <Link href="/refund" className="text-slate-400 dark:text-[--color-bc-faint] hover:text-slate-300 dark:hover:text-[--color-bc-ink] transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

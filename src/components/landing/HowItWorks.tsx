@@ -47,7 +47,7 @@ export function HowItWorks() {
                   <div className={`w-11 h-11 rounded-xl border flex items-center justify-center mb-5 shrink-0 transition-all duration-300 group-hover:scale-110 ${step.iconColor}`}>
                     <IconComponent className="w-5.5 h-5.5" />
                   </div>
-                  <div className="text-[10px] font-bold text-[--color-bc-blue] mb-2 tracking-widest uppercase">{step.number}</div>
+                  <div className="text-xs font-bold text-[--color-bc-blue-dark] mb-2 uppercase">{step.number}</div>
                   <h3 className="font-bold text-lg text-[--color-bc-ink] mb-3 group-hover:text-[--color-bc-blue] transition-colors">{step.title}</h3>
                   <p className="text-[--color-bc-muted] text-sm leading-relaxed flex-1">{step.description}</p>
                 </div>

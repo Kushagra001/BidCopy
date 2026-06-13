@@ -85,7 +85,7 @@ export function Pricing() {
                   </li>
                 ))}
                 {plan.missing.map((f) => (
-                  <li key={f} className="flex gap-3 items-start text-sm opacity-40">
+                  <li key={f} className="flex gap-3 items-start text-sm opacity-60">
                     <span className="flex-shrink-0 mt-0.5 text-xs">✕</span>
                     <span className={plan.popular ? 'text-white' : 'text-[--color-bc-muted]'}>{f}</span>
                   </li>

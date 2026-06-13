@@ -26,7 +26,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to win more bids?
             </h2>
-            <p className="text-white/90 mb-8 text-lg">
+            <p className="text-white mb-8 text-lg">
               Free forever. Upgrade for GPT-4.1 quality.
             </p>
             <Link href="/sign-up"

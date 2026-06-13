@@ -38,7 +38,7 @@ export function Testimonials() {
               </div>
               <p className="text-sm text-[--color-bc-ink-2] leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[--color-bc-blue-light] text-[--color-bc-blue] font-bold text-xs flex items-center justify-center">
+                <div className="w-9 h-9 rounded-full bg-[--color-bc-blue-light] text-[--color-bc-blue-dark] font-bold text-xs flex items-center justify-center">
                   {t.avatar}
                 </div>
                 <div>
