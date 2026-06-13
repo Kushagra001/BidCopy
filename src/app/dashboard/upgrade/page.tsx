@@ -49,13 +49,10 @@ export default function UpgradePage() {
         name:        'BidCopy',
         description: 'Pro Plan — Unlimited bid generations',
         order_id:    orderId,
-        handler: async (response: { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }) => {
-          const verify = await fetch('/api/verify-payment', {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(response),
-          })
-          if (verify.ok) {
+        handler: async (response: { razorpay_payment_id: string }) => {
+          // The database is securely updated via background webhook.
+          // We just handle the client-side UI redirect here.
+          if (response.razorpay_payment_id) {
             setSuccess(true)
             setTimeout(() => (window.location.href = '/dashboard'), 2000)
           }
