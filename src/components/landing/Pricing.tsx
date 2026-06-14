@@ -93,9 +93,9 @@ export function Pricing() {
               </ul>
 
               <Link href={plan.href}
-                className={`block w-full mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-all ${
+                className={`block w-full mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-all shadow-sm ${
                   plan.popular
-                    ? 'bg-[--color-bc-blue] text-white hover:bg-[--color-bc-blue-dark]'
+                    ? 'bg-white text-[--color-bc-ink] hover:bg-gray-100 ring-1 ring-black/5'
                     : 'bg-[--color-bc-surface] border border-[--color-bc-border] text-[--color-bc-ink] hover:bg-[--color-bc-border]'
                 }`}>
                 {plan.cta}
