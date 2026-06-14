@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Check } from 'lucide-react'
+import { auth } from '@clerk/nextjs/server'
 
 const PLANS = [
   {
@@ -42,7 +43,9 @@ const PLANS = [
   },
 ]
 
-export function Pricing() {
+export async function Pricing() {
+  const { userId } = await auth()
+
   return (
     <section id="pricing" className="py-24 px-6 bg-[--background]">
       <div className="max-w-4xl mx-auto">
@@ -92,7 +95,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Link href={plan.href}
+              <Link href={userId ? (plan.popular ? '/dashboard/upgrade' : '/dashboard') : plan.href}
                 className={`block w-full mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-all ${
                   plan.popular
                     ? 'bg-[--color-bc-blue] text-white hover:bg-[--color-bc-blue-dark]'
