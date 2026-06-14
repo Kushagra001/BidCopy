@@ -79,7 +79,7 @@ export default function UpgradePage() {
 
         <div className="bg-[--color-bc-dark-card] text-white rounded-2xl p-8">
           <div className="flex items-baseline gap-1 mb-2">
-            <span className="text-5xl font-bold">₹499</span>
+            <span className="text-5xl font-bold">$6</span>
             <span className="text-white/60">/month</span>
           </div>
           <p className="text-white/60 text-sm mb-8">Cancel anytime. Billed monthly.</p>
