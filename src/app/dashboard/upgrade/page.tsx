@@ -40,6 +40,14 @@ export default function UpgradePage() {
       }
 
       const res = await fetch('/api/create-order', { method: 'POST' })
+      if (!res.ok) {
+        const errorData = await res.json()
+        console.error('Order creation failed:', errorData)
+        alert('Payment gateway error. Please ensure your Razorpay keys are correct.')
+        setLoading(false)
+        return
+      }
+      
       const { orderId, amount, currency, keyId } = await res.json()
 
       const rzp = new window.Razorpay({

@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     const clerkId = payment.notes?.clerk_id
     
     // Strict validation of the payment amount to prevent spoofing
-    if (payment.amount === 600 && payment.status === 'captured' && clerkId) {
+    if (payment.amount === 49900 && payment.status === 'captured' && clerkId) {
       const supabase = createAdminClient()
       
       const { error } = await supabase

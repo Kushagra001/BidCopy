@@ -16,8 +16,8 @@ export async function POST() {
   try {
     const rz = getRazorpay()
     const order = await rz.orders.create({
-      amount:   600,
-      currency: 'USD',
+      amount:   49900,
+      currency: 'INR',
       receipt:  `bc_${Date.now()}`,
       notes:    { clerk_id: userId },
     })
