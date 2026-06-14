@@ -85,7 +85,7 @@ export default function UpgradePage() {
           <p className="text-[--color-bc-muted]">Unlimited generations. Better AI. Full history.</p>
         </div>
 
-        <div className="bg-[--color-bc-dark-card] text-white rounded-2xl p-8">
+        <div className="bg-[--color-bc-dark-card] text-white rounded-2xl p-8 border-2 border-[--color-bc-blue] shadow-xl">
           <div className="flex items-baseline gap-1 mb-2">
             <span className="text-5xl font-bold">$6</span>
             <span className="text-white/60">/month</span>
