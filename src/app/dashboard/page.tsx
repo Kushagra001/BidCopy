@@ -149,9 +149,11 @@ export default function DashboardPage() {
             <a href="/dashboard/history" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">History</a>
             <a href="/dashboard/profile" className="text-[--color-bc-muted] hover:text-[--color-bc-ink] transition-colors">Profile</a>
             <ThemeToggle />
-            <a href="/dashboard/upgrade" className="bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[--color-bc-blue-dark] transition-colors">
-              Go Pro
-            </a>
+            {plan !== 'pro' && (
+              <a href="/dashboard/upgrade" className="bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[--color-bc-blue-dark] transition-colors">
+                Go Pro
+              </a>
+            )}
           </nav>
         </div>
       </header>

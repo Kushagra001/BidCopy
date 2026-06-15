@@ -137,9 +137,11 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
       {/* Title + Budget */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="jobTitle" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
-            Job title <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
-          </label>
+          <div className="flex items-center h-7">
+            <label htmlFor="jobTitle" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
+              Job title <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
+            </label>
+          </div>
           <input
             {...register('jobTitle')}
             id="jobTitle"
@@ -148,7 +150,7 @@ export function InputPanel({ onGenerate, isGenerating, generationsLeft, initialV
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between h-7">
             <label htmlFor="jobBudget" className="text-xs font-semibold text-[--color-bc-ink-2] uppercase tracking-wide">
               Budget <span className="text-[--color-bc-faint] normal-case font-normal">(optional)</span>
             </label>
