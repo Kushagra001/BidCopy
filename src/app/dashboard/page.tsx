@@ -46,7 +46,7 @@ export default function DashboardPage() {
         .then(({ proposal }) => {
           if (proposal) {
             const loadedInput: InputFormData = {
-              platform:       (proposal.platform || 'upwork') as any,
+              platform:       (proposal.platform || 'upwork') as InputFormData['platform'],
               jobTitle:       proposal.job_title || '',
               budgetType:     (proposal.job_budget?.toLowerCase().includes('hr') || proposal.job_budget?.toLowerCase().includes('hour')) ? 'hourly' : 'fixed',
               jobBudget:      proposal.job_budget || '',
