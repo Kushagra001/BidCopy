@@ -21,7 +21,7 @@ const PLANS = [
     ],
     cta:     'Start for free',
     href:    '/sign-up',
-    popular: false,
+    variant: 'default',
   },
   {
     name:        'Pro Monthly',
@@ -39,12 +39,12 @@ const PLANS = [
     missing: [],
     cta:     'Go Pro →',
     href:    '/sign-up',
-    popular: true,
+    variant: 'monthly',
   },
   {
     name:        'Pro Lifetime',
     price:       '$19.99',
-    period:      'once',
+    period:      'one time',
     description: 'Pay once, yours forever',
     features: [
       'Unlimited generations',
@@ -57,7 +57,7 @@ const PLANS = [
     missing: [],
     cta:     'Get Lifetime →',
     href:    '/sign-up',
-    popular: false,
+    variant: 'lifetime',
   },
 ]
 
@@ -72,28 +72,36 @@ export async function Pricing() {
           <p className="text-[--color-bc-muted]">Start free. Upgrade when you need more.</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-center">
           {PLANS.map((plan) => (
             <div key={plan.name}
-              className={`relative flex flex-col rounded-2xl p-8 ${
-                plan.popular
-                  ? 'bg-[--color-bc-dark-card] text-white border-2 border-[--color-bc-blue] shadow-xl'
-                  : 'bg-[--background] border border-[--color-bc-border]'
+              className={`relative flex flex-col rounded-2xl p-8 transition-transform duration-300 ${
+                plan.variant === 'lifetime'
+                  ? 'bg-slate-900 dark:bg-slate-700 text-white border-2 border-blue-500 shadow-2xl lg:scale-105 z-10'
+                  : plan.variant === 'monthly'
+                    ? 'bg-[--color-bc-surface] dark:bg-slate-800 border-2 border-blue-200 dark:border-blue-500/50 shadow-lg'
+                    : 'bg-[--background] dark:bg-slate-800/80 border border-[--color-bc-border]'
               }`}>
 
+              {plan.variant === 'lifetime' && (
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-1 text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
+                  Best Value
+                </div>
+              )}
+
               <div className="mb-6">
-                <h3 className={`font-bold text-lg mb-1 ${plan.popular ? 'text-white' : 'text-[--color-bc-ink]'}`}>
+                <h3 className={`font-bold text-lg mb-1 ${plan.variant === 'lifetime' ? 'text-white' : 'text-[--color-bc-ink]'}`}>
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className={`text-4xl font-bold ${plan.popular ? 'text-white' : 'text-[--color-bc-ink]'}`}>
+                  <span className={`text-4xl font-bold ${plan.variant === 'lifetime' ? 'text-white' : 'text-[--color-bc-ink]'}`}>
                     {plan.price}
                   </span>
-                  <span className={`text-sm ${plan.popular ? 'text-white/60' : 'text-[--color-bc-muted]'}`}>
-                    /{plan.period}
+                  <span className={`text-sm ${plan.variant === 'lifetime' ? 'text-white/60' : 'text-[--color-bc-muted]'}`}>
+                    {plan.period === 'one time' ? ` ${plan.period}` : `/${plan.period}`}
                   </span>
                 </div>
-                <p className={`text-sm ${plan.popular ? 'text-white/70' : 'text-[--color-bc-muted]'}`}>
+                <p className={`text-sm ${plan.variant === 'lifetime' ? 'text-white/70' : 'text-[--color-bc-muted]'}`}>
                   {plan.description}
                 </p>
               </div>
@@ -101,23 +109,25 @@ export async function Pricing() {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((f) => (
                   <li key={f} className="flex gap-3 items-start text-sm">
-                    <Check size={16} className={`flex-shrink-0 mt-0.5 ${plan.popular ? 'text-[--color-bc-blue-mid]' : 'text-green-500'}`} />
-                    <span className={plan.popular ? 'text-white/90' : 'text-[--color-bc-ink-2]'}>{f}</span>
+                    <Check size={16} className={`flex-shrink-0 mt-0.5 ${plan.variant === 'lifetime' ? 'text-blue-400' : 'text-green-500'}`} />
+                    <span className={plan.variant === 'lifetime' ? 'text-white/90' : 'text-[--color-bc-ink-2]'}>{f}</span>
                   </li>
                 ))}
                 {plan.missing.map((f) => (
                   <li key={f} className="flex gap-3 items-start text-sm opacity-60">
                     <span className="flex-shrink-0 mt-0.5 text-xs">✕</span>
-                    <span className={plan.popular ? 'text-white' : 'text-[--color-bc-muted]'}>{f}</span>
+                    <span className={plan.variant === 'lifetime' ? 'text-white' : 'text-[--color-bc-muted]'}>{f}</span>
                   </li>
                 ))}
               </ul>
 
               <Link href={userId ? (plan.name !== 'Free' ? `/dashboard/upgrade?type=${plan.name.includes('Lifetime') ? 'lifetime' : 'monthly'}` : '/dashboard') : plan.href}
                 className={`block w-full mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-all ${
-                  plan.popular
-                    ? 'bg-[--color-bc-blue] text-white hover:bg-[--color-bc-blue-dark]'
-                    : 'bg-[--color-bc-surface] border border-[--color-bc-border] text-[--color-bc-ink] hover:bg-[--color-bc-border]'
+                  plan.variant === 'lifetime'
+                    ? 'bg-blue-600 text-white hover:bg-blue-500 shadow-md'
+                    : plan.variant === 'monthly'
+                      ? 'bg-[--color-bc-blue] text-white hover:bg-[--color-bc-blue-dark] shadow-sm'
+                      : 'bg-[--color-bc-surface] border border-[--color-bc-border] text-[--color-bc-ink] hover:bg-[--color-bc-border]'
                 }`}>
                 {plan.cta}
               </Link>
