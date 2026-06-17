@@ -24,8 +24,8 @@ const PLANS = [
     popular: false,
   },
   {
-    name:        'Pro',
-    price:       '$6',
+    name:        'Pro Monthly',
+    price:       '$2.99',
     period:      'per month',
     description: 'For serious freelancers',
     features: [
@@ -41,6 +41,24 @@ const PLANS = [
     href:    '/sign-up',
     popular: true,
   },
+  {
+    name:        'Pro Lifetime',
+    price:       '$19.99',
+    period:      'once',
+    description: 'Pay once, yours forever',
+    features: [
+      'Unlimited generations',
+      'GPT-4.1 AI (best quality)',
+      'Full proposal history',
+      'Humanise checklist',
+      'Priority generation speed',
+      'All platforms supported',
+    ],
+    missing: [],
+    cta:     'Get Lifetime →',
+    href:    '/sign-up',
+    popular: false,
+  },
 ]
 
 export async function Pricing() {
@@ -48,13 +66,13 @@ export async function Pricing() {
 
   return (
     <section id="pricing" className="py-24 px-6 bg-[--background]">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[--color-bc-ink] mb-4">Simple pricing</h2>
           <p className="text-[--color-bc-muted]">Start free. Upgrade when you need more.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {PLANS.map((plan) => (
             <div key={plan.name}
               className={`relative flex flex-col rounded-2xl p-8 ${
@@ -95,7 +113,7 @@ export async function Pricing() {
                 ))}
               </ul>
 
-              <Link href={userId ? (plan.popular ? '/dashboard/upgrade' : '/dashboard') : plan.href}
+              <Link href={userId ? (plan.name !== 'Free' ? `/dashboard/upgrade?type=${plan.name.includes('Lifetime') ? 'lifetime' : 'monthly'}` : '/dashboard') : plan.href}
                 className={`block w-full mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-all ${
                   plan.popular
                     ? 'bg-[--color-bc-blue] text-white hover:bg-[--color-bc-blue-dark]'

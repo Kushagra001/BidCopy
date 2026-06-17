@@ -34,14 +34,36 @@ export async function POST(req: NextRequest) {
   if (event.event === 'payment.captured' || event.event === 'order.paid') {
     const payment = event.payload.payment.entity
     const clerkId = payment.notes?.clerk_id
+    const planType = payment.notes?.plan_type || 'monthly'
     
     // Strict validation of the payment amount to prevent spoofing
-    if (payment.amount === 49900 && payment.status === 'captured' && clerkId) {
+    const isMonthlyValid = planType === 'monthly' && payment.amount === 24900
+    const isLifetimeValid = planType === 'lifetime' && payment.amount === 149900
+
+    if ((isMonthlyValid || isLifetimeValid) && payment.status === 'captured' && clerkId) {
       const supabase = createAdminClient()
+
+      let newExpiresAt: string | null = null
+      if (planType === 'monthly') {
+        const { data: user } = await supabase.from('users').select('pro_expires_at').eq('clerk_id', clerkId).single()
+        
+        let baseDate = new Date()
+        if (user && user.pro_expires_at) {
+          const currentExp = new Date(user.pro_expires_at)
+          if (currentExp > baseDate) baseDate = currentExp
+        }
+        
+        baseDate.setDate(baseDate.getDate() + 30) // add 30 days
+        newExpiresAt = baseDate.toISOString()
+      }
       
       const { error } = await supabase
         .from('users')
-        .update({ plan: 'pro', updated_at: new Date().toISOString() })
+        .update({ 
+          plan: 'pro', 
+          updated_at: new Date().toISOString(),
+          pro_expires_at: newExpiresAt
+        })
         .eq('clerk_id', clerkId)
         
       if (error) {
@@ -49,7 +71,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: 'Database update failed' }, { status: 500 })
       }
     } else {
-      console.warn('[/api/webhooks/razorpay] Ignored valid signature with invalid conditions:', { amount: payment.amount, status: payment.status, clerkId })
+      console.warn('[/api/webhooks/razorpay] Ignored valid signature with invalid conditions:', { amount: payment.amount, status: payment.status, clerkId, planType })
     }
   }
 

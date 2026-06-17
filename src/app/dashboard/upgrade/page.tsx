@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 
 const PRO_FEATURES = [
   'Unlimited bid generations',
@@ -21,9 +22,13 @@ declare global {
   }
 }
 
-export default function UpgradePage() {
+function UpgradeContent() {
+  const searchParams = useSearchParams()
+  const initialType = searchParams.get('type') === 'lifetime' ? 'lifetime' : 'monthly'
+
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [planType, setPlanType] = useState<'monthly' | 'lifetime'>(initialType)
 
   const handleUpgrade = async () => {
     setLoading(true)
@@ -39,7 +44,11 @@ export default function UpgradePage() {
         })
       }
 
-      const res = await fetch('/api/create-order', { method: 'POST' })
+      const res = await fetch('/api/create-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: planType }),
+      })
       if (!res.ok) {
         const errorData = await res.json()
         console.error('Order creation failed:', errorData)
@@ -55,7 +64,7 @@ export default function UpgradePage() {
         amount,
         currency,
         name:        'BidCopy',
-        description: 'Pro Plan — Unlimited bid generations',
+        description: `Pro Plan — ${planType === 'lifetime' ? 'Lifetime Access' : 'Monthly Subscription'}`,
         order_id:    orderId,
         handler: async (response: { razorpay_payment_id: string }) => {
           // The database is securely updated via background webhook.
@@ -85,12 +94,37 @@ export default function UpgradePage() {
           <p className="text-[--color-bc-muted]">Unlimited generations. Better AI. Full history.</p>
         </div>
 
+        <div className="flex bg-[--color-bc-surface] p-1 rounded-lg border border-[--color-bc-border] mb-6">
+          <button
+            onClick={() => setPlanType('monthly')}
+            className={`flex-1 py-2 text-sm font-semibold rounded-md transition-all ${
+              planType === 'monthly'
+                ? 'bg-[--color-bc-blue] text-white shadow'
+                : 'text-[--color-bc-muted] hover:text-[--color-bc-ink]'
+            }`}
+          >
+            Monthly ($2.99)
+          </button>
+          <button
+            onClick={() => setPlanType('lifetime')}
+            className={`flex-1 py-2 text-sm font-semibold rounded-md transition-all ${
+              planType === 'lifetime'
+                ? 'bg-[--color-bc-blue] text-white shadow'
+                : 'text-[--color-bc-muted] hover:text-[--color-bc-ink]'
+            }`}
+          >
+            Lifetime ($19.99)
+          </button>
+        </div>
+
         <div className="bg-[--color-bc-dark-card] text-white rounded-2xl p-8 border-2 border-[--color-bc-blue] shadow-xl">
           <div className="flex items-baseline gap-1 mb-2">
-            <span className="text-5xl font-bold">$6</span>
-            <span className="text-white/60">/month</span>
+            <span className="text-5xl font-bold">{planType === 'monthly' ? '$2.99' : '$19.99'}</span>
+            <span className="text-white/60">{planType === 'monthly' ? '/month' : ' one-time'}</span>
           </div>
-          <p className="text-white/60 text-sm mb-8">Cancel anytime. Billed monthly.</p>
+          <p className="text-white/60 text-sm mb-8">
+            {planType === 'monthly' ? 'Cancel anytime. Billed monthly.' : 'Pay once, yours forever.'}
+          </p>
 
           <ul className="space-y-3 mb-10">
             {PRO_FEATURES.map((f) => (
@@ -107,7 +141,7 @@ export default function UpgradePage() {
             </div>
           ) : (
             <Button onClick={handleUpgrade} loading={loading} className="w-full" size="lg">
-              Upgrade now →
+              {planType === 'monthly' ? 'Subscribe now →' : 'Unlock lifetime →'}
             </Button>
           )}
         </div>
@@ -117,5 +151,13 @@ export default function UpgradePage() {
         </p>
       </div>
     </main>
+  )
+}
+
+export default function UpgradePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[--color-bc-surface] dark:bg-[--background] flex items-center justify-center">Loading...</div>}>
+      <UpgradeContent />
+    </Suspense>
   )
 }

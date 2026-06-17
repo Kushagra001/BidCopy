@@ -6,7 +6,7 @@ import { createAdminClient } from '@/lib/supabase'
 async function getOrCreateUser(supabase: any, clerkUserId: string) {
   let { data: user } = await supabase
     .from('users')
-    .select('id, name, plan')
+    .select('id, name, plan, pro_expires_at')
     .eq('clerk_id', clerkUserId)
     .single()
 
@@ -22,7 +22,7 @@ async function getOrCreateUser(supabase: any, clerkUserId: string) {
           const { data: newUser, error: insertError } = await supabase
             .from('users')
             .insert({ clerk_id: clerkUserId, email, name, updated_at: new Date().toISOString() })
-            .select('id, name, plan')
+            .select('id, name, plan, pro_expires_at')
             .single()
 
           if (!insertError && newUser) {
@@ -57,7 +57,12 @@ export async function GET() {
     .eq('user_id', user.id)
     .single()
 
-  return NextResponse.json({ profile: profile ?? null, defaultName: user.name ?? null, plan: user.plan })
+  let plan = user.plan
+  if (plan === 'pro' && user.pro_expires_at && new Date(user.pro_expires_at) < new Date()) {
+    plan = 'free'
+  }
+
+  return NextResponse.json({ profile: profile ?? null, defaultName: user.name ?? null, plan })
 }
 
 export async function POST(req: NextRequest) {

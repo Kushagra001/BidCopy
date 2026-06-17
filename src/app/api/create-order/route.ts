@@ -9,17 +9,29 @@ function getRazorpay() {
   })
 }
 
-export async function POST() {
+export async function POST(req: Request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
+
+  let planType = 'monthly'
+  try {
+    const body = await req.json()
+    if (body.type === 'lifetime') {
+      planType = 'lifetime'
+    }
+  } catch (e) {
+    // Ignore JSON error and default to monthly
+  }
+
+  const amount = planType === 'lifetime' ? 149900 : 24900
 
   try {
     const rz = getRazorpay()
     const order = await rz.orders.create({
-      amount:   49900,
+      amount,
       currency: 'INR',
       receipt:  `bc_${Date.now()}`,
-      notes:    { clerk_id: userId },
+      notes:    { clerk_id: userId, plan_type: planType },
     })
 
     return NextResponse.json({

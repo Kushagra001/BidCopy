@@ -33,6 +33,10 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    if (user.plan === 'pro' && user.pro_expires_at && new Date(user.pro_expires_at) < new Date()) {
+      user.plan = 'free'
+    }
+
     const profile: UserProfile | null = user.profiles
 
     if (!profile || !profile.completed) {
