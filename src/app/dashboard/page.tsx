@@ -26,7 +26,7 @@ export default function DashboardPage() {
   // Load plan and initial proposal if passed in URL query parameter
   useEffect(() => {
     // Fetch profile to get plan
-    fetch('/api/profile')
+    fetch('/api/profile', { cache: 'no-store' })
       .then((r) => r.json())
       .then(({ plan: p }) => {
         if (p) {
@@ -276,6 +276,7 @@ export default function DashboardPage() {
               isGenerating={isGenerating}
               generationsLeft={generationsLeft}
               initialValues={initialInputValues}
+              plan={plan}
             />
           </div>
 
