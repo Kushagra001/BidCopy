@@ -29,6 +29,7 @@ function UpgradeContent() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [planType, setPlanType] = useState<'monthly' | 'lifetime'>(initialType)
+  const [promoCode, setPromoCode] = useState('')
 
   const handleUpgrade = async () => {
     setLoading(true)
@@ -47,7 +48,7 @@ function UpgradeContent() {
       const res = await fetch('/api/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: planType }),
+        body: JSON.stringify({ type: planType, promoCode: promoCode.trim().toUpperCase() }),
       })
       if (!res.ok) {
         const errorData = await res.json()
@@ -140,9 +141,24 @@ function UpgradeContent() {
               ✓ You&apos;re now Pro! Redirecting…
             </div>
           ) : (
-            <Button onClick={handleUpgrade} loading={loading} className="w-full" size="lg">
-              {planType === 'monthly' ? 'Subscribe now →' : 'Unlock lifetime →'}
-            </Button>
+            <div className="space-y-4">
+              {planType === 'lifetime' && (
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="promo" className="text-xs text-white/60 font-semibold uppercase tracking-wider">Promo Code</label>
+                  <input
+                    id="promo"
+                    type="text"
+                    value={promoCode}
+                    onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
+                    placeholder="Enter code (Optional)"
+                    className="bg-white/10 border border-white/20 rounded-md px-3 py-2.5 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[--color-bc-blue] transition-all"
+                  />
+                </div>
+              )}
+              <Button onClick={handleUpgrade} loading={loading} className="w-full" size="lg">
+                {planType === 'monthly' ? 'Subscribe now →' : 'Unlock lifetime →'}
+              </Button>
+            </div>
           )}
         </div>
 

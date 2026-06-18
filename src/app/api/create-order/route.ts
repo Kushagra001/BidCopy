@@ -14,16 +14,19 @@ export async function POST(req: Request) {
   if (!userId) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
 
   let planType = 'monthly'
+  let promoCode = ''
   try {
     const body = await req.json()
-    if (body.type === 'lifetime') {
-      planType = 'lifetime'
-    }
-  } catch (e) {
-    // Ignore JSON error and default to monthly
-  }
+    if (body.type === 'lifetime') planType = 'lifetime'
+    if (body.promoCode) promoCode = body.promoCode
+  } catch (e) {}
 
-  const amount = planType === 'lifetime' ? 149900 : 24900
+  let amount = planType === 'lifetime' ? 149900 : 24900
+
+  // Apply 10% discount for PH10OFF on lifetime plan
+  if (planType === 'lifetime' && promoCode === 'PH10OFF') {
+    amount = 134910 // 149900 - 10%
+  }
 
   try {
     const rz = getRazorpay()
@@ -31,7 +34,7 @@ export async function POST(req: Request) {
       amount,
       currency: 'INR',
       receipt:  `bc_${Date.now()}`,
-      notes:    { clerk_id: userId, plan_type: planType },
+      notes:    { clerk_id: userId, plan_type: planType, promo_code: promoCode },
     })
 
     return NextResponse.json({

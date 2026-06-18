@@ -35,10 +35,14 @@ export async function POST(req: NextRequest) {
     const payment = event.payload.payment.entity
     const clerkId = payment.notes?.clerk_id
     const planType = payment.notes?.plan_type || 'monthly'
+    const promoCode = payment.notes?.promo_code || ''
     
     // Strict validation of the payment amount to prevent spoofing
     const isMonthlyValid = planType === 'monthly' && payment.amount === 24900
-    const isLifetimeValid = planType === 'lifetime' && payment.amount === 149900
+    
+    let expectedLifetimeAmount = 149900
+    if (promoCode === 'PH10OFF') expectedLifetimeAmount = 134910
+    const isLifetimeValid = planType === 'lifetime' && payment.amount === expectedLifetimeAmount
 
     if ((isMonthlyValid || isLifetimeValid) && payment.status === 'captured' && clerkId) {
       const supabase = createAdminClient()
