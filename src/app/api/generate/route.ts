@@ -8,6 +8,7 @@ import type { UserProfile } from '@/types/profile'
 
 const FREE_MODEL = 'gpt-4o-mini'
 const PRO_MODEL  = 'gpt-4.1'
+const PRO_DAILY_LIMIT = 150
 
 export async function POST(req: NextRequest) {
   try {
@@ -56,10 +57,17 @@ export async function POST(req: NextRequest) {
       user.generations_today = 0
     }
 
-    // Enforce 15-generation daily limit on Free plan
+    // Enforce daily limits: 15 for Free, and PRO_DAILY_LIMIT for Pro plan (fair use)
     if (user.plan !== 'pro' && user.generations_today >= 15) {
       return NextResponse.json(
         { error: 'Daily limit reached. Upgrade to Pro for unlimited generations.', upgradeRequired: true },
+        { status: 403 }
+      )
+    }
+
+    if (user.plan === 'pro' && user.generations_today >= PRO_DAILY_LIMIT) {
+      return NextResponse.json(
+        { error: `Fair use policy limit reached (${PRO_DAILY_LIMIT} generations/day). Please try again tomorrow.` },
         { status: 403 }
       )
     }
