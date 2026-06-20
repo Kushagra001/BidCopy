@@ -69,6 +69,18 @@ export default function DashboardPage() {
               timeline:      proposal.timeline ?? [],
               followup:      proposal.followup_text ?? '',
               humanise_tips: proposal.humanise_tips ?? [],
+              // Preserve currency: stored proposals may not have it, so detect from budget string
+              currency:      (() => {
+                if (proposal.pricing_currency) return proposal.pricing_currency
+                const b = proposal.job_budget ?? ''
+                if (b.includes('£')) return '£'
+                if (b.includes('€')) return '€'
+                if (b.includes('₹')) return '₹'
+                if (b.match(/A\$/)) return 'A$'
+                if (b.match(/C\$/)) return 'C$'
+                if (b.includes('$')) return '$'
+                return '$'
+              })(),
             })
             const modelLabel = proposal.model_used?.includes('gpt-4.1')
               ? 'GPT-4.1 (Pro)'

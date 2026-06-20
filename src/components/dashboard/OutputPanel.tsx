@@ -38,6 +38,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
   const [isEditingProposal, setIsEditingProposal] = useState(false)
 
   const totalPrice = output?.pricing.reduce((s, r) => s + r.total, 0) ?? 0
+  const currency   = output?.currency ?? '$'
 
   useEffect(() => {
     if (isGenerating) {
@@ -63,7 +64,7 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
           copy(editedProposal, 'proposal')
         } else if (activeTab === 'pricing') {
           copy(
-            output.pricing.map((r) => `${r.item}\t${r.hours}h\t$${r.rate}/hr\t$${r.total}`).join('\n') + `\n\nTotal: $${totalPrice}`,
+            output.pricing.map((r) => `${r.item}\t${r.hours}h\t${currency}${r.rate}/hr\t${currency}${r.total}`).join('\n') + `\n\nTotal: ${currency}${totalPrice}`,
             'pricing'
           )
         } else if (activeTab === 'followup') {
@@ -318,22 +319,22 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
                       {row.hours > 0 ? `${row.hours}h` : '—'}
                     </td>
                     <td className="py-3 text-right text-[--color-bc-ink-2]">
-                      {row.hours > 0 ? `$${row.rate || Math.round(row.total / row.hours)}` : '—'}
+                      {row.hours > 0 ? `${currency}${row.rate || Math.round(row.total / row.hours)}` : '—'}
                     </td>
-                    <td className="py-3 text-right font-semibold text-[--color-bc-ink]">${row.total}</td>
+                    <td className="py-3 text-right font-semibold text-[--color-bc-ink]">{currency}{row.total}</td>
                   </tr>
                 ))}
               </tbody>
               <tfoot>
                 <tr>
                   <td colSpan={3} className="pt-4 font-bold text-[--color-bc-ink]">Total</td>
-                  <td className="pt-4 text-right font-bold text-[--color-bc-blue] text-base">${totalPrice.toLocaleString()}</td>
+                  <td className="pt-4 text-right font-bold text-[--color-bc-blue] text-base">{currency}{totalPrice.toLocaleString()}</td>
                 </tr>
               </tfoot>
             </table>
             <button
               onClick={() => copy(
-                output.pricing.map((r) => `${r.item}\t${r.hours}h\t$${r.rate}/hr\t$${r.total}`).join('\n') + `\n\nTotal: $${totalPrice}`,
+                output.pricing.map((r) => `${r.item}\t${r.hours}h\t${currency}${r.rate}/hr\t${currency}${r.total}`).join('\n') + `\n\nTotal: ${currency}${totalPrice}`,
                 'pricing'
               )}
               className="mt-4 flex items-center gap-2 text-xs bg-[--color-bc-blue] text-white px-4 py-2 rounded-lg hover:bg-[--color-bc-blue-dark] transition-colors"

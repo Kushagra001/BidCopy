@@ -53,6 +53,7 @@ ${projectsSection}
 Return ONLY a valid JSON object. No markdown fences. No explanation. No text before or after the JSON. Exactly this schema:
 
 {
+  "currency": "string",
   "proposal": "string",
   "pricing": [
     { "item": "string", "hours": number, "rate": number, "total": number, "notes": "string" }
@@ -65,6 +66,8 @@ Return ONLY a valid JSON object. No markdown fences. No explanation. No text bef
     { "original": "string", "replacement": "string", "explanation": "string" }
   ]
 }
+
+For the "currency" field: inspect the job budget string provided by the user. If it contains a recognisable currency symbol or code (e.g. "£", "€", "₹", "A$", "C$", "NOK", "SEK", "AED", "SGD", "$" etc.), use that exact symbol/code as the value. If no budget is specified or the currency is ambiguous, default to "${profile.currency}". All numeric values in the pricing array must be in the same currency as this field.
 
 ## PROPOSAL RULES
 - Open by identifying the core business goal or user experience pain points of the client's project (e.g., trust, ease-of-use for citizens, document security, etc.).
@@ -80,11 +83,12 @@ Return ONLY a valid JSON object. No markdown fences. No explanation. No text bef
 
 ## PRICING RULES
 - Quote for specific functional modules based on the job description (e.g., "OTP Authentication & Setup", "Document Upload & Cloud Storage", "Razorpay Payment Gateway Setup", "Admin Dashboard & Tracking System") rather than generic project phases.
+- Currency Detection (CRITICAL): First, determine the pricing currency as described in the OUTPUT FORMAT section above and set the top-level "currency" field accordingly. Use this same currency for ALL numeric values in the pricing array. Do NOT mix currencies.
 - Budget Type & Rate Calculation:
-  - If Budget Type is 'hourly': Quote for specific functional modules based on the job description. Hours must be realistic (4-12 hours per module, totaling 20-50 hours overall). Rate = freelancer's hourly rate (${profile.hourly_rate} ${profile.currency}). The total cost is computed as Hours * Rate.
+  - If Budget Type is 'hourly': Quote for specific functional modules based on the job description. Hours must be realistic (4-12 hours per module, totaling 20-50 hours overall). Rate = freelancer's hourly rate (${profile.hourly_rate} ${profile.currency}). The total cost is computed as Hours * Rate. Set "currency" to "${profile.currency}".
   - If Budget Type is 'fixed':
-    - If a budget or range is specified: Quote a fixed-cost milestone breakdown where the sum of all milestone totals strictly fits within the client's fixed budget/range (e.g. if the budget is '$10 - $30', bid a total of '$25', divided into milestones like 'Finn.no URL Scraper Setup: $10', 'Data Output & Export Module: $15'). For these, set 'hours' to 0, 'rate' to 0, and 'total' to the flat cost of that module.
-    - If NO budget is specified: Estimate realistic development hours (4-12 hours per module) and calculate the rate using the freelancer's default hourly rate (${profile.hourly_rate} ${profile.currency}). Set 'hours' to the estimated hours, 'rate' to the freelancer's hourly rate, and 'total' to hours * rate.
+    - If a budget or range is specified: Detect the currency from the budget string and set the "currency" field to that symbol/code. Quote a fixed-cost milestone breakdown where the sum of all milestone totals strictly fits within the client's fixed budget/range (e.g. if the budget is '£10 - £30', set currency to '£', bid a total of '£25', divided into milestones like 'Finn.no URL Scraper Setup: 10', 'Data & Export Module: 15'). For these, set 'hours' to 0, 'rate' to 0, and 'total' to the flat numeric cost of that module (no currency symbol in the number fields — the symbol comes from the top-level "currency" field).
+    - If NO budget is specified: Set "currency" to "${profile.currency}". Estimate realistic development hours (4-12 hours per module) and calculate the rate using the freelancer's default hourly rate (${profile.hourly_rate} ${profile.currency}). Set 'hours' to the estimated hours, 'rate' to the freelancer's hourly rate, and 'total' to hours * rate.
 - Keep all pricing highly detailed and competitive.
 
 ## TIMELINE RULES

@@ -24,6 +24,8 @@ export interface ProposalOutput {
   timeline:       TimelinePhase[]
   followup:       string
   humanise_tips:  HumaniseTipDetail[]
+  /** Currency symbol/code used in the pricing table (e.g. "$", "£", "€", "₹", "AUD"). Inferred by the AI from the job budget; falls back to the freelancer's profile currency. */
+  currency?:      string
 }
 
 export interface Proposal {

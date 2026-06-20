@@ -118,6 +118,7 @@ export async function POST(req: NextRequest) {
       followup:      string
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       humanise_tips: any[]
+      currency?:     string
     }
 
     try {
@@ -134,6 +135,7 @@ export async function POST(req: NextRequest) {
         timeline:      [],
         followup:      '',
         humanise_tips: [],
+        currency:      profile.currency,
       }
     }
 
