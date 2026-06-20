@@ -4,6 +4,8 @@
 
 BidCopy is a SaaS application designed to help freelancers instantly generate highly customized, persuasive, and professional proposals for job boards like Upwork, Freelancer, and direct client emails. 
 
+![BidCopy Hero](./public/bidcopy_laptop_hero.png)
+![BidCopy Dashboard Full](./public/bidcopy_dashboard_laptop_full.png)
 ![BidCopy Dashboard](./public/dashboard.gif)
 
 ---
