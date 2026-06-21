@@ -298,6 +298,7 @@ export default function DashboardPage() {
               output={output}
               modelUsed={modelUsed}
               proposalId={proposalId}
+              platform={lastInput?.platform}
               onRegenerate={regenerate}
               isGenerating={isGenerating}
             />

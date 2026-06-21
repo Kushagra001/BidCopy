@@ -13,6 +13,7 @@ interface OutputPanelProps {
   output:      ProposalOutput | null
   modelUsed:   string | null
   proposalId:  string | null
+  platform?:   string
   onRegenerate: () => void
   isGenerating: boolean
 }
@@ -26,7 +27,7 @@ const TABS: { id: TabId; label: string }[] = [
   { id: 'followup', label: 'Follow-up' },
 ]
 
-export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: OutputPanelProps) {
+export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating, platform }: OutputPanelProps) {
   const [activeTab, setActiveTab]   = useState<TabId>('proposal')
   const [copied, setCopied]         = useState<string | null>(null)
   const [rating, setRating]         = useState(0)
@@ -166,9 +167,26 @@ export function OutputPanel({ output, modelUsed, onRegenerate, isGenerating }: O
       <div className="flex items-center justify-between mb-4 flex-shrink-0">
         <div className="flex items-center gap-2">
           <Badge variant="blue">{modelUsed}</Badge>
-          <span className="text-xs text-[--color-bc-faint]">
-            {editedProposal.split(/\s+/).filter(Boolean).length} words
-          </span>
+          {platform === 'freelancer' ? (() => {
+            const charCount = editedProposal.length
+            const isOver    = charCount > 1500
+            const isWarning = charCount >= 1200 && charCount <= 1500
+            return (
+              <span className={`text-xs font-semibold ${
+                isOver    ? 'text-red-500' :
+                isWarning ? 'text-amber-500' :
+                'text-[--color-bc-faint]'
+              }`}>
+                {charCount.toLocaleString()}{' / 1,500 chars'}
+                {isOver    && ' ⚠ over limit'}
+                {isWarning && !isOver && ' near limit'}
+              </span>
+            )
+          })() : (
+            <span className="text-xs text-[--color-bc-faint]">
+              {editedProposal.split(/\s+/).filter(Boolean).length} words
+            </span>
+          )}
         </div>
         <button
           onClick={onRegenerate}

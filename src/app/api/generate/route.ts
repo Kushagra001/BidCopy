@@ -139,6 +139,21 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Safety net: enforce Freelancer's 1,500-character hard limit
+    if (platform === 'freelancer' && parsed.proposal && parsed.proposal.length > 1500) {
+      const truncated = parsed.proposal.slice(0, 1497)
+      // Try to cut at the last sentence boundary for a clean ending
+      const lastPeriod = Math.max(
+        truncated.lastIndexOf('. '),
+        truncated.lastIndexOf('.\n'),
+        truncated.lastIndexOf('? '),
+        truncated.lastIndexOf('! '),
+      )
+      parsed.proposal = lastPeriod > 1200
+        ? parsed.proposal.slice(0, lastPeriod + 1).trimEnd()
+        : truncated.trimEnd() + '…'
+    }
+
     // Track usage (no hard limit)
     await supabase
       .from('users')

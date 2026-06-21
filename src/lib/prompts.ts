@@ -10,9 +10,9 @@ export interface JobInput {
 }
 
 const PLATFORM_GUIDE: Record<string, string> = {
-  upwork:     'Keep under 450 words. No formatting (Upwork strips markdown). End with a question.',
-  freelancer: 'Keep under 350 words. More direct. Mention relevant experience early.',
-  contra:     'Slightly more personality. Mention values and craft. Can be slightly longer.',
+  upwork:     'HARD LIMIT: 300 words maximum. No markdown formatting (Upwork strips it). Use plain text, capitalize section headers (e.g. "UNDERSTANDING YOUR GOALS:"), and use plain dashes for lists. End with a question.',
+  freelancer: 'HARD LIMIT: 1,500 characters maximum (including spaces). This is a strict platform constraint — the proposal will be cut off if it exceeds this. Be extremely concise. No markdown formatting. Short sentences. Front-load the value.',
+  contra:     'No hard character limit. Slightly more personality — mention values and craft. Can use markdown. Aim for 300–500 words.',
   general:    'Balanced length 300–500 words. Professional markdown formatting.',
 }
 
@@ -76,7 +76,10 @@ For the "currency" field: inspect the job budget string provided by the user. If
 - Only claim experience (including specific number of years of experience, specific company names, or prior roles) that is explicitly defined in the ## FREELANCER PROFILE bio or headline. If the profile does not mention a specific number of years of experience (such as "10 years" or "a decade"), do NOT state or imply any specific duration of experience.
 - Provide a clear, concrete technical implementation strategy for the main features requested (e.g. database schema structure, authentication services, payment workflows, and API architectures).
 - Formatting & Readability: For all platforms EXCEPT Upwork, divide the proposal into 3-4 logical sections using Markdown subheadings (e.g., '### Understanding Your Goals', '### Technical Approach & Architecture', '### Why My Experience Fits'), bullet points ('- '), and bold text ('**word**') to highlight key terms and metrics. For Upwork (which strips markdown), do NOT use any markdown characters (no '#', no '**', no '_'); instead, separate the 3-4 logical sections with double line breaks, capitalize their section headers (e.g., 'UNDERSTANDING YOUR GOALS:'), and use plain text dashes ('- ') for list points. This makes the proposal highly readable and professional on all platforms.
-- Target word count: 300 to 450 words. The proposal must be detailed, highly customized, persuasive, and speak directly to all specified requirements.
+- CRITICAL LENGTH RULE — this overrides everything else:
+  - Platform: freelancer → MAXIMUM 1,500 characters (including spaces and newlines). Count carefully. If you are near the limit, cut bullet points, shorten sentences, remove any non-essential phrases. The proposal must fit within this limit or it will be rejected by the platform.
+  - Platform: upwork → MAXIMUM 300 words.
+  - Platform: contra / general → Aim for 300–500 words; no hard cap.
 - Match tone: ${toneGuide}
 - Platform rules: ${platformGuide}
 - End with ONE clear, low-friction, conversational call-to-action (CTA).
